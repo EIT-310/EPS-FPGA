@@ -39,8 +39,9 @@ architecture ppl_type of DE0_CV_golden_top is
 	signal clk 		: std_logic;
 	signal add_sub_sig : std_logic;
 	signal sel_sig 	: std_logic_vector(2 downto 0);
-	signal clockscale	: unsigned(25 downto 0);
+	signal clockscale	: unsigned(10 downto 0);
 	signal result_sig	: std_logic_vector(7 downto 0);
+
 	
 
 	component adder is
@@ -56,15 +57,14 @@ architecture ppl_type of DE0_CV_golden_top is
 begin
 
 	add_sub_sig <= GPIO_0(0); 		-- input from coparator
-	clk 		<= clockscale(25);	-- 1hz clock
-	GPIO_1(35)	<= clk;				-- write clock for debug
-
-	-- always start ADC in middle
+	clk 		<= clockscale(10);	-- 1hz clock
+	GPIO_1(35)	<= clk;				-- write clock for debug	
+	--always start ADC in middle
 	dataa_arr(0)<= "10000000";
 
 
 	-- Write final adc value to LED
-	display : for i in 0 to 6 generate
+	display : for i in 0 to 7 generate
 		LEDR(i) <= dataa_arr(7)(i);
 	end generate ; -- display
 
@@ -85,7 +85,7 @@ begin
 
 	
 	-- Rotate data to be added/subtracted
-	rotator : process( clk )
+	rotator : process(clk)
 	begin
 		if rising_edge(clk) then
 			rotate <= rotate(0) & rotate(7 downto 1);
