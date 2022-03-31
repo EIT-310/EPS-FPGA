@@ -21,7 +21,7 @@ begin
     begin
         if rising_edge( clk ) then
             cnt <= cnt + 1 ;
-                if cnt > unsigned(duty_cycle) then
+                if cnt < unsigned(duty_cycle) then
                     pwm_out <= '1';
                 else
                     pwm_out <= '0';
