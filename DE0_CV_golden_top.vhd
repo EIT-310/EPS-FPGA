@@ -16,6 +16,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 
 entity DE0_CV_golden_top is
 	port
@@ -55,7 +56,7 @@ begin
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_out			=>  LEDR(9),
+		PWM_out			=>  LEDR(9),                 -- Skal sættes til en GPIO pin!
 		main_clk		=>	CLOCK2_50
 	);
 
@@ -63,7 +64,7 @@ begin
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_out			=>  LEDR(9),
+		PWM_out			=>  LEDR(8),                 -- Skal sættes til en GPIO pin!
 		main_clk		=>	CLOCK2_50
 	);
 
@@ -71,7 +72,7 @@ begin
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_out			=>  LEDR(9),
+		PWM_out			=>  LEDR(7),                 -- Skal sættes til en GPIO pin!
 		main_clk		=>	CLOCK2_50
 	);
 
@@ -85,7 +86,7 @@ begin
 	clockscaler1 : process(all )
 	begin
 		if rising_edge (CLOCK2_50) then
-			scaler <= scaler + '1';
+			scaler <= scaler + 1;
 
 			if scaler = "1000000000000" then
 				scaler <= "0000000000000";
