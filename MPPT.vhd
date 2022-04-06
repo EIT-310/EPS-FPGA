@@ -8,20 +8,19 @@ entity MPPT is
         ADC_Curr_out: out std_logic_vector(7 downto 0);
         PWM_out: out std_logic;
         main_clk: in std_logic;
-        add_sub_sig: in std_logic_vector(1 downto 0);
-		led: out std_logic_vector(8 downto 0)
+        add_sub_sig: in std_logic_vector(1 downto 0)
       ) ;
   end MPPT ;
 
   architecture MPPT of MPPT is
 
-	signal clockscale		: unsigned(24 downto 0);
+	signal clockscale		: unsigned(10 downto 0);
 	signal result_sig_volt	: std_logic_vector(7 downto 0);
 	signal result_sig_curr	: std_logic_vector(7 downto 0);
 	signal result_sig 		:std_logic_vector(15 downto 0);
 
 	signal saveB16 		: std_logic_vector (15 downto 0);
-	signal duty_cycle 	: unsigned (3 downto 0) := "0000";
+	signal duty_cycle 	: unsigned (7 downto 0) := "00000000";
 	signal vej_h 		: std_logic; 
 	signal comp_out 	: std_logic_vector (2 downto 0);
 	signal PWM_clk 		: unsigned (3 downto 0);
@@ -47,7 +46,7 @@ entity MPPT is
 	component PWM_submodule is
 		port (
 			pwm_out 	: out std_logic;
-			duty_cycle 	: in std_logic_vector(3 downto 0);
+			duty_cycle 	: in std_logic_vector(7 downto 0);
 			clk 		: in std_logic
 		);
 	end component;
@@ -56,14 +55,14 @@ entity MPPT is
 begin
 	-- ADC volt
 	adc_volt : ADC port map (
-			clk 				=> clockscale(24),
+			clk 				=> clockscale(10),
 			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0),
 			result_sig_out		=> result_sig_volt,
 			add_sub_sig 		=> add_sub_sig(0)
 		);
 
 	adc_curr : ADC port map(
-			clk					=> clockscale(24),
+			clk					=> clockscale(10),
 			gpio1(7 downto 0)	=> ADC_Curr_out(7 downto 0),
 			result_sig_out		=> result_sig_curr,
 			add_sub_sig 		=> add_sub_sig(1)
@@ -82,24 +81,20 @@ begin
 			exOut16(2 downto 0)  => comp_out(2 downto 0)
 		);
 
+-- Write final adc value to comparator
+result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 
 	-- Scale clock from 50MHz 
 	clockscaler : process( all )
 	begin
-	-- Write final adc value to comparator
-	result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
-
-	led (7 downto 0) <= result_sig(15 downto 8);
-	led(8) <= vej_h;
-
 		if rising_edge(main_clk) then
 			clockscale <= clockscale + 1 ;
 		end if ;
 	end process ; -- clockscaler
 
-	PWM_clockscaler : process( clockscale(24) )
+	PWM_clockscaler : process( clockscale(10) )
 	begin
-		if rising_edge(clockscale(24)) then
+		if rising_edge(clockscale(10)) then
 			PWM_clk <= PWM_clk + 1 ;
 		end if ;
 	end process ; -- PWM_clockscaler

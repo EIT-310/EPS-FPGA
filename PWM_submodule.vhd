@@ -7,13 +7,13 @@ entity PWM_submodule is
 	port
 	(
     pwm_out : out std_logic;
-    duty_cycle : in std_logic_vector(3 downto 0);
+    duty_cycle : in std_logic_vector(7 downto 0);
     clk : in std_logic
     );
 end; 
 
 architecture PWM of PWM_submodule is
-    signal cnt : unsigned(3 downto 0);
+    signal cnt : unsigned(7 downto 0);
 
 
 begin
