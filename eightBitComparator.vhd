@@ -24,7 +24,7 @@ architecture arch of eightBitComparator is
             ind: 	in std_logic_vector (2 downto 0);
             ud: 	out std_logic_vector (2 downto 0)
             );
-            end component;
+        end component;
 begin
     Comp1 : fourBitComparator port map ( 
         A(3 downto 0) => saveA(3 downto 0),
