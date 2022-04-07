@@ -6,9 +6,11 @@ entity MPPT is
     port (
         ADC_Volt_out	: out std_logic_vector(7 downto 0);
         ADC_Curr_out	: out std_logic_vector(7 downto 0);
+		clockscale10	: out std_logic;                        -- test af klokken
+		add_sub_sig		: in std_logic_vector(1 downto 0);
+		main_clk		: in std_logic;
+		PWM_clk3		: out std_logic;						-- test af klokken
         PWM_out			: out std_logic;
-        main_clk		: in std_logic;
-        add_sub_sig		: in std_logic_vector(1 downto 0);
 		Rotate 			: in std_logic_vector(2 downto 0);
 		Enable			: in std_logic_vector(2 downto 0)
       ) ;
@@ -72,24 +74,29 @@ begin
 		);
 
 	PWM_comp : PWM_submodule port map (
-			pwm_out 	=> PWM_out,
-			duty_cycle 	=> std_logic_vector(duty_cycle),
-			clk 		=> main_clk
+			pwm_out 		=> PWM_out,
+			duty_cycle 		=> std_logic_vector(duty_cycle),
+			clk 			=> main_clk
 		);
 
 	Comp1 : sixteenBitComparator port map ( 
-			saveA16(15 downto 0) => result_sig(15 downto 0),
-			saveB16(15 downto 0) => saveB16(15 downto 0),
-			exIn16(1) 			 => '1',
-			exOut16(2 downto 0)  => comp_out(2 downto 0)
+			saveA16(15 downto 0) 	=> result_sig(15 downto 0),
+			saveB16(15 downto 0) 	=> saveB16(15 downto 0),
+			exIn16(1) 			 	=> '1',
+			exOut16(2 downto 0)  	=> comp_out(2 downto 0)
 		);
 
 -- Write final adc value to comparator
 result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 
-	-- Scale clock from 50MHz 
-	clockscaler : process( all )
+
+clockscale10 	<= clockscale(10);             -- Clockscale10 	= ADC klokken
+PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
+
+	
+	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
+
 		if rising_edge(main_clk) then
 			clockscale <= clockscale + 1 ;
 		end if ;
@@ -97,6 +104,7 @@ result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)
 
 	PWM_clockscaler : process( clockscale(10) )
 	begin
+
 		if rising_edge(clockscale(10)) then
 			PWM_clk <= PWM_clk + 1 ;
 		end if ;

@@ -50,7 +50,9 @@ architecture top of DE0_CV_golden_top is
         (
         	ADC_Volt_out : out std_logic_vector(7 downto 0);
         	ADC_Curr_out : out std_logic_vector(7 downto 0);
+			clockscale10 : out std_logic;
 			add_sub_sig	 : in std_logic_vector(1 downto 0);
+			PWM_clk3	 : out std_logic;
 			main_clk	 : in std_logic;
         	PWM_out		 : out std_logic;
 			Rotate 		 : in std_logic_vector(2 downto 0);
@@ -62,9 +64,11 @@ begin
 	EPS_MPPT1: MPPT port map (
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
+		clockscale10	=>	GPIO_1(35),             -- Test af ADC klokken 
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_out			=>  LEDR(9),                 -- Skal sættes til en GPIO pin!
+		PWM_clk3		=>	GPIO_1(32),				-- Test af PWM klokken
 		main_clk		=>	CLOCK2_50,
+		PWM_out			=>  LEDR(9),                -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
 		Enable			=>	Enable_1 (2 downto 0)
 	);
@@ -72,9 +76,11 @@ begin
 	EPS_MPPT2: MPPT port map (
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
+		clockscale10	=>	GPIO_1(34),  			-- Test af ADC klokken
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_out			=>  LEDR(8),                 -- Skal sættes til en GPIO pin!
+		PWM_clk3		=>	GPIO_1(31),				-- Test af PWM klokken
 		main_clk		=>	CLOCK2_50,
+		PWM_out			=>  LEDR(8),                -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
 		Enable			=>	Enable_2 (2 downto 0)
 	);
@@ -82,16 +88,19 @@ begin
 	EPS_MPPT3: MPPT port map (
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
+		clockscale10	=>	GPIO_1(33),  			-- Test af klokken
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_out			=>  LEDR(7),                 -- Skal sættes til en GPIO pin!
+		PWM_clk3		=>	GPIO_1(30),				-- Test af klokken
 		main_clk		=>	CLOCK2_50,
+		PWM_out			=>  LEDR(7),                 -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
 		Enable			=>	Enable_3 (2 downto 0)
 	);
 
-
-	R2R_volt <= GPIO_1 (7 downto 0);
-	R2R_curr <= GPIO_1 (17 downto 10);
+	GPIO_1(29)	<= scaler(12);						-- Test af klokken
+	GPIO_1(28) 	<= CLOCK2_50;						-- Test af klokken
+	R2R_volt 	<= GPIO_1 (7 downto 0);
+	R2R_curr 	<= GPIO_1 (17 downto 10);
 	-- M_x(0) <= GPIO_1(34);
 	-- M_x(1) <= GPIO_1(35);
 
