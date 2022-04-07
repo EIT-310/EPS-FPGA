@@ -63,7 +63,7 @@ architecture top of DE0_CV_golden_top is
 begin
 
 	EPS_MPPT1: MPPT port map (
-		clockscalekey	=> 	KEY(0),					-- Test af ADC klokken med en Key
+		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		clockscale10	=>	GPIO_1(35),             -- Test af ADC klokken 
@@ -76,7 +76,7 @@ begin
 	);
 
 	EPS_MPPT2: MPPT port map (
-		clockscalekey	=> 	KEY(0),					-- Test af ADC klokken med en Key
+		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		clockscale10	=>	GPIO_1(34),  			-- Test af ADC klokken
@@ -89,7 +89,7 @@ begin
 	);
 
 	EPS_MPPT3: MPPT port map (
-		clockscalekey	=> 	KEY(0),					-- Test af ADC klokken med en Key
+		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		clockscale10	=>	GPIO_1(33),  			-- Test af klokken
