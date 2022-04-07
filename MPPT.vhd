@@ -4,6 +4,7 @@ use ieee.numeric_std.all;
 
 entity MPPT is
     port (
+		clockscalekey	: in std_logic;
         ADC_Volt_out	: out std_logic_vector(7 downto 0);
         ADC_Curr_out	: out std_logic_vector(7 downto 0);
 		clockscale10	: out std_logic;                        -- test af klokken
@@ -60,14 +61,16 @@ entity MPPT is
 begin
 	-- ADC volt
 	adc_volt : ADC port map (
-			clk 				=> clockscale(10),
+			clk					=> clockscalekey,
+			-- clk 				=> clockscale(10),
 			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0),
 			result_sig_out		=> result_sig_volt,
 			add_sub_sig 		=> add_sub_sig(0)
 		);
 
 	adc_curr : ADC port map(
-			clk					=> clockscale(10),
+			clk					=> clockscalekey,
+			-- clk					=> clockscale(10),
 			gpio1(7 downto 0)	=> ADC_Curr_out(7 downto 0),
 			result_sig_out		=> result_sig_curr,
 			add_sub_sig 		=> add_sub_sig(1)
@@ -89,8 +92,8 @@ begin
 -- Write final adc value to comparator
 result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 
-
-clockscale10 	<= clockscale(10);             -- Clockscale10 	= ADC klokken
+clockscale10	<= clockscalekey,
+-- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
 PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
 
 	
@@ -102,12 +105,16 @@ PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
 		end if ;
 	end process ; -- clockscaler
 
-	PWM_clockscaler : process( clockscale(10) )
+	PWM_clockscaler : process( clockscalekey )
 	begin
-
-		if rising_edge(clockscale(10)) then
+		
+		if rising_edge(clockscalekey) then
 			PWM_clk <= PWM_clk + 1 ;
 		end if ;
+
+		-- if rising_edge(clockscale(10)) then
+		-- 	PWM_clk <= PWM_clk + 1 ;
+		-- end if ;
 	end process ; -- PWM_clockscaler
 	
 

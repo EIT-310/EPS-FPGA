@@ -48,20 +48,22 @@ architecture top of DE0_CV_golden_top is
 	component MPPT is
         port
         (
-        	ADC_Volt_out : out std_logic_vector(7 downto 0);
-        	ADC_Curr_out : out std_logic_vector(7 downto 0);
-			clockscale10 : out std_logic;
-			add_sub_sig	 : in std_logic_vector(1 downto 0);
-			PWM_clk3	 : out std_logic;
-			main_clk	 : in std_logic;
-        	PWM_out		 : out std_logic;
-			Rotate 		 : in std_logic_vector(2 downto 0);
-			Enable		 : in std_logic_vector(2 downto 0)
+			clockscalekey	: in std_logic;							-- Test af ADC klokken med en Key
+        	ADC_Volt_out 	: out std_logic_vector(7 downto 0);
+        	ADC_Curr_out 	: out std_logic_vector(7 downto 0);
+			clockscale10 	: out std_logic;
+			add_sub_sig	 	: in std_logic_vector(1 downto 0);
+			PWM_clk3	 	: out std_logic;
+			main_clk		: in std_logic;
+        	PWM_out			: out std_logic;
+			Rotate 			: in std_logic_vector(2 downto 0);
+			Enable			: in std_logic_vector(2 downto 0)
         );
         end component;
 begin
 
 	EPS_MPPT1: MPPT port map (
+		clockscalekey	=> 	KEY(0),					-- Test af ADC klokken med en Key
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		clockscale10	=>	GPIO_1(35),             -- Test af ADC klokken 
@@ -74,6 +76,7 @@ begin
 	);
 
 	EPS_MPPT2: MPPT port map (
+		clockscalekey	=> 	KEY(0),					-- Test af ADC klokken med en Key
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		clockscale10	=>	GPIO_1(34),  			-- Test af ADC klokken
@@ -86,6 +89,7 @@ begin
 	);
 
 	EPS_MPPT3: MPPT port map (
+		clockscalekey	=> 	KEY(0),					-- Test af ADC klokken med en Key
 		ADC_Volt_out	=>	R2R_volt (7 downto 0),
 		ADC_Curr_out	=>	R2R_curr (7 downto 0),
 		clockscale10	=>	GPIO_1(33),  			-- Test af klokken
