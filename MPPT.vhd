@@ -28,8 +28,8 @@ entity MPPT is
 	signal duty_cycle 	: unsigned (7 downto 0) := "00000000";
 	signal vej_h 		: std_logic; 
 	signal comp_out 	: std_logic_vector (2 downto 0);
-	signal PWM_clk 		: unsigned (3 downto 0);
-
+	signal PWM_clk 		: unsigned (2 downto 0);
+	signal MPPT_clk		: std_logic;
 
 	component ADC is
 	port (
@@ -96,7 +96,6 @@ clockscale10	<= clockscalekey;
 -- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
 PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
 
-	
 	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
 
@@ -122,7 +121,7 @@ PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
 		begin
 			if Enable = Rotate then                   -- Enabel pin = rotate, so you can switch between the 3 MPPT's
 				-- MPPT algoritme
-				if PWM_clk(3)'event then
+				if rising_edge(PWM_clk(2)) then
 				--opstart
         
 					if saveB16(15 downto 0) = "0000000000000000" then
@@ -146,7 +145,7 @@ PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
 					
 					end if ;
 
-				--Funktion til venstre 
+					--Funktion til venstre 
 					if vej_h = '0' then
 						if comp_out(0) = '1' then --b>a
 							duty_cycle <= duty_cycle + 1;
