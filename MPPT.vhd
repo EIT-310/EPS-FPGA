@@ -92,7 +92,7 @@ begin
 -- Write final adc value to comparator
 result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 
-clockscale10	<= clockscalekey,
+clockscale10	<= clockscalekey;
 -- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
 PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
 
@@ -122,7 +122,7 @@ PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
 		begin
 			if Enable = Rotate then                   -- Enabel pin = rotate, so you can switch between the 3 MPPT's
 				-- MPPT algoritme
-				if rising_edge( PWM_clk(3) ) then
+				if PWM_clk(3)'event then
 				--opstart
         
 					if saveB16(15 downto 0) = "0000000000000000" then
