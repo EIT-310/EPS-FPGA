@@ -94,7 +94,7 @@ result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)
 
 clockscale10	<= clockscalekey;
 -- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
-PWM_clk3 		<= PWM_clk(3);                 -- PWM_clk3 		= 1/8 ADC klokken
+PWM_clk3 		<= PWM_clk(2);                 -- PWM_clk3 		= 1/8 ADC klokken
 
 	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
