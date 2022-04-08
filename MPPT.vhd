@@ -25,7 +25,7 @@ entity MPPT is
 	signal duty_cycle 	: unsigned (7 downto 0) := "00000000";
 	signal vej_h 		: std_logic; 
 	signal comp_out 	: std_logic_vector (2 downto 0);
-	signal PWM_clk 		: unsigned (3 downto 0);
+	signal PWM_clk 		: unsigned (2 downto 0) := "100";
 
 
 	component ADC is
@@ -107,7 +107,7 @@ result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)
 		begin
 			if Enable = Rotate then                   -- Enabel pin = rotate, so you can switch between the 3 MPPT's
 				-- MPPT algoritme
-				if rising_edge( PWM_clk(3) ) then
+				if rising_edge( PWM_clk(2) ) then
 				--opstart
         
 					if saveB16(15 downto 0) = "0000000000000000" then
