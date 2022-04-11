@@ -13,7 +13,8 @@ entity MPPT is
 		PWM_clk3		: out std_logic;						-- test af klokken
         PWM_out			: out std_logic;
 		Rotate 			: in std_logic_vector(2 downto 0);
-		Enable			: in std_logic_vector(2 downto 0)
+		Enable			: in std_logic_vector(2 downto 0);
+		MPPTclk			: out std_logic
       ) ;
   end MPPT ;
 
@@ -28,7 +29,7 @@ entity MPPT is
 	signal duty_cycle 	: unsigned (7 downto 0) := "00000000";
 	signal vej_h 		: std_logic; 
 	signal comp_out 	: std_logic_vector (2 downto 0);
-	signal PWM_clk 		: unsigned (2 downto 0);
+	signal PWM_clk 		: unsigned (2 downto 0) := "100";
 	signal MPPT_clk		: std_logic;
 
 	component ADC is
@@ -95,7 +96,7 @@ result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)
 clockscale10	<= clockscalekey;
 -- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
 PWM_clk3 		<= PWM_clk(2);                 -- PWM_clk3 		= 1/8 ADC klokken
-
+MPPTclk <= MPPT_clk;
 	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
 
@@ -104,9 +105,8 @@ PWM_clk3 		<= PWM_clk(2);                 -- PWM_clk3 		= 1/8 ADC klokken
 		end if ;
 	end process ; -- clockscaler
 
-	PWM_clockscaler : process( clockscalekey )
+	PWM_clockscaler : process( all )
 	begin
-		
 		if rising_edge(clockscalekey) then
 			PWM_clk <= PWM_clk + 1 ;
 		end if ;
@@ -115,13 +115,14 @@ PWM_clk3 		<= PWM_clk(2);                 -- PWM_clk3 		= 1/8 ADC klokken
 		-- 	PWM_clk <= PWM_clk + 1 ;
 		-- end if ;
 	end process ; -- PWM_clockscaler
+
 	
 
 	MPPT_algoritme : process( all )
 		begin
-			if Enable = Rotate then                   -- Enabel pin = rotate, so you can switch between the 3 MPPT's
+			if Enable = Rotate then  -- Enabel pin = rotate, so you can switch between the 3 MPPT's
 				-- MPPT algoritme
-				if rising_edge(PWM_clk(2)) then
+				if (rising_edge(PWM_clk(2))) then
 				--opstart
         
 					if saveB16(15 downto 0) = "0000000000000000" then

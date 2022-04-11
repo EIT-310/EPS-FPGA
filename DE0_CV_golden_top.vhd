@@ -57,7 +57,8 @@ architecture top of DE0_CV_golden_top is
 			main_clk		: in std_logic;
         	PWM_out			: out std_logic;
 			Rotate 			: in std_logic_vector(2 downto 0);
-			Enable			: in std_logic_vector(2 downto 0)
+			Enable			: in std_logic_vector(2 downto 0);
+			MPPTclk			: out std_logic
         );
         end component;
 begin
@@ -72,7 +73,8 @@ begin
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  LEDR(9),                -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_1 (2 downto 0)
+		Enable			=>	Enable_1 (2 downto 0),
+		MPPTclk			=>  GPIO_1(18)
 	);
 
 	EPS_MPPT2: MPPT port map (
@@ -85,7 +87,8 @@ begin
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  LEDR(8),                -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_2 (2 downto 0)
+		Enable			=>	Enable_2 (2 downto 0),
+		MPPTclk			=>  GPIO_1(19)
 	);
 
 	EPS_MPPT3: MPPT port map (
@@ -98,7 +101,8 @@ begin
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  LEDR(7),                 -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_3 (2 downto 0)
+		Enable			=>	Enable_3 (2 downto 0),
+		MPPTclk			=>  GPIO_1(20)
 	);
 
 	GPIO_1(29)	<= scaler(12);						-- Test af klokken
