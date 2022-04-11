@@ -33,10 +33,9 @@ end DE0_CV_golden_top;
 
 architecture top of DE0_CV_golden_top is
 
-	signal cluck 	: unsigned (25 downto 0);
 	signal R2R_volt : std_logic_vector (7 downto 0);
 	signal R2R_curr : std_logic_vector (7 downto 0);
-	signal scaler 	: unsigned (12 downto 0);
+	signal scaler 	: unsigned (14 downto 0);
 	signal rotate 	: std_logic_vector (2 downto 0):= "100";
 	-- signal M_x		: std_logic_vector (1 downto 0);
 	
@@ -57,8 +56,7 @@ architecture top of DE0_CV_golden_top is
 			main_clk		: in std_logic;
         	PWM_out			: out std_logic;
 			Rotate 			: in std_logic_vector(2 downto 0);
-			Enable			: in std_logic_vector(2 downto 0);
-			MPPTclk			: out std_logic
+			Enable			: in std_logic_vector(2 downto 0)
         );
         end component;
 begin
@@ -73,8 +71,7 @@ begin
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  LEDR(9),                -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_1 (2 downto 0),
-		MPPTclk			=>  GPIO_1(18)
+		Enable			=>	Enable_1 (2 downto 0)
 	);
 
 	EPS_MPPT2: MPPT port map (
@@ -87,8 +84,7 @@ begin
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  LEDR(8),                -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_2 (2 downto 0),
-		MPPTclk			=>  GPIO_1(19)
+		Enable			=>	Enable_2 (2 downto 0)
 	);
 
 	EPS_MPPT3: MPPT port map (
@@ -101,14 +97,17 @@ begin
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  LEDR(7),                 -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_3 (2 downto 0),
-		MPPTclk			=>  GPIO_1(20)
+		Enable			=>	Enable_3 (2 downto 0)
 	);
 
-	GPIO_1(29)	<= scaler(12);						-- Test af klokken
+	GPIO_1(29)	<= scaler(14);						-- Test af klokken
 	GPIO_1(28) 	<= CLOCK2_50;						-- Test af klokken
 	R2R_volt 	<= GPIO_1 (7 downto 0);
 	R2R_curr 	<= GPIO_1 (17 downto 10);
+
+	GPIO_1(27) <= rotate(0);
+	GPIO_1(26) <= rotate(1);
+	GPIO_1(25) <= rotate(2);
 	-- M_x(0) <= GPIO_1(34);
 	-- M_x(1) <= GPIO_1(35);
 
@@ -119,15 +118,13 @@ begin
 	-- 	"00" when others;
 
 
-	clockscaler1 : process(all )
+	clockscaler1 : process( all )
 	begin
 		if rising_edge (CLOCK2_50) then
 			scaler <= scaler + 1;
-
-			if scaler = "1000000000000" then
-				scaler <= "0000000000000";
-				rotate <= rotate(0) & rotate(2 downto 1);
-			end if ;
+		end if ;
+		if rising_edge(scaler(14)) then
+			rotate <= rotate(0) & rotate(2 downto 1);
 		end if ;
 	end process ; -- clockscaler1
 end;

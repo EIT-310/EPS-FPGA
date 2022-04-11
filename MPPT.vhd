@@ -13,8 +13,7 @@ entity MPPT is
 		PWM_clk3		: out std_logic;						-- test af klokken
         PWM_out			: out std_logic;
 		Rotate 			: in std_logic_vector(2 downto 0);
-		Enable			: in std_logic_vector(2 downto 0);
-		MPPTclk			: out std_logic
+		Enable			: in std_logic_vector(2 downto 0)
       ) ;
   end MPPT ;
 
@@ -30,7 +29,6 @@ entity MPPT is
 	signal vej_h 		: std_logic; 
 	signal comp_out 	: std_logic_vector (2 downto 0);
 	signal PWM_clk 		: unsigned (2 downto 0) := "100";
-	signal MPPT_clk		: std_logic;
 
 	component ADC is
 	port (
@@ -96,7 +94,6 @@ result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)
 clockscale10	<= clockscalekey;
 -- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
 PWM_clk3 		<= PWM_clk(2);                 -- PWM_clk3 		= 1/8 ADC klokken
-MPPTclk <= MPPT_clk;
 	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
 
@@ -127,19 +124,19 @@ MPPTclk <= MPPT_clk;
         
 					if saveB16(15 downto 0) = "0000000000000000" then
 						saveB16(15 downto 0) <= result_sig(15 downto 0);
-						duty_cycle <= duty_cycle + 1;
+						duty_cycle <= duty_cycle - 1;
 						vej_h <= '1';
 					end if ;
 
 					--Funktion til højre
 					if vej_h = '1' then
 						if comp_out(0) = '1' or comp_out(1) = '1' then --b>a
-							duty_cycle <= duty_cycle - 1;
+							duty_cycle <= duty_cycle + 1;
 							vej_h <= '0';
 							saveB16(15 downto 0) <= result_sig(15 downto 0);
 						end if;
 						if comp_out(2) = '1' then --a>b
-							duty_cycle <= duty_cycle + 1;
+							duty_cycle <= duty_cycle - 1;
 							vej_h <= '1'; --overflødig linje
 							saveB16(15 downto 0) <= result_sig(15 downto 0);
 						end if ;
@@ -149,12 +146,12 @@ MPPTclk <= MPPT_clk;
 					--Funktion til venstre 
 					if vej_h = '0' then
 						if comp_out(0) = '1' then --b>a
-							duty_cycle <= duty_cycle + 1;
+							duty_cycle <= duty_cycle - 1;
 							vej_h <= '1';
 							saveB16(15 downto 0) <= result_sig(15 downto 0);
 						end if;
 						if comp_out(2) = '1' or comp_out(1) = '1' then --a>b
-							duty_cycle <= duty_cycle - 1;
+							duty_cycle <= duty_cycle + 1;
 							vej_h <= '0'; --overflødig linje
 							saveB16(15 downto 0) <= result_sig(15 downto 0);
 						end if ;
