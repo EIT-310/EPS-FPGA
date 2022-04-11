@@ -36,7 +36,7 @@ architecture top of DE0_CV_golden_top is
 	signal cluck 	: unsigned (25 downto 0);
 	signal R2R_volt : std_logic_vector (7 downto 0);
 	signal R2R_curr : std_logic_vector (7 downto 0);
-	signal scaler 	: unsigned (12 downto 0);
+	signal scaler 	: unsigned (13 downto 0) := "10000000000000";
 	signal rotate 	: std_logic_vector (2 downto 0):= "100";
 	-- signal M_x		: std_logic_vector (1 downto 0);
 	
@@ -102,15 +102,13 @@ begin
 	-- 	"00" when others;
 
 
-	clockscaler1 : process(all )
+	clockscaler1 : process( all )
 	begin
 		if rising_edge (CLOCK2_50) then
 			scaler <= scaler + 1;
-
-			if scaler = "1000000000000" then
-				scaler <= "0000000000000";
-				rotate <= rotate(0) & rotate(2 downto 1);
-			end if ;
+		end if ;
+		if rising_edge(scaler(14)) then
+			rotate <= rotate(0) & rotate(2 downto 1);
 		end if ;
 	end process ; -- clockscaler1
 end;
