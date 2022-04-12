@@ -13,7 +13,8 @@ entity MPPT is
 		PWM_clk3		: out std_logic;						-- test af klokken
         PWM_out			: out std_logic;
 		Rotate 			: in std_logic_vector(2 downto 0);
-		Enable			: in std_logic_vector(2 downto 0)
+		Enable			: in std_logic_vector(2 downto 0);
+		vej_h1			: out std_logic
       ) ;
   end MPPT ;
 
@@ -25,7 +26,7 @@ entity MPPT is
 	signal result_sig 		:std_logic_vector(15 downto 0);
 
 	signal saveB16 		: std_logic_vector (15 downto 0);
-	signal duty_cycle 	: unsigned (7 downto 0) := "00000000";
+	signal duty_cycle 	: unsigned (3 downto 0) := "0000";
 	signal vej_h 		: std_logic; 
 	signal comp_out 	: std_logic_vector (2 downto 0);
 	signal PWM_clk 		: unsigned (2 downto 0) := "100";
@@ -51,7 +52,7 @@ entity MPPT is
 	component PWM_submodule is
 		port (
 			pwm_out 	: out std_logic;
-			duty_cycle 	: in std_logic_vector(7 downto 0);
+			duty_cycle 	: in std_logic_vector(3 downto 0);
 			clk 		: in std_logic
 		);
 	end component;
@@ -91,9 +92,10 @@ begin
 -- Write final adc value to comparator
 result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 
-clockscale10	<= clockscalekey;
+clockscale10	<= clockscalekey;		--Lavet for at teste, så klokken styres af en knap
 -- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
-PWM_clk3 		<= PWM_clk(2);                 -- PWM_clk3 		= 1/8 ADC klokken
+PWM_clk3 		<= PWM_clk(2);          -- PWM_clk3 		= 1/8 ADC klokken
+vej_h1 			<= vej_h;				-- Lavet for at kunne trække vej_h ud til en LED
 	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
 
@@ -124,8 +126,8 @@ PWM_clk3 		<= PWM_clk(2);                 -- PWM_clk3 		= 1/8 ADC klokken
         
 					if saveB16(15 downto 0) = "0000000000000000" then
 						saveB16(15 downto 0) <= result_sig(15 downto 0);
-						duty_cycle <= duty_cycle - 1;
-						vej_h <= '1';
+						duty_cycle <= duty_cycle + 1;
+						vej_h <= '0';
 					end if ;
 
 					--Funktion til højre
