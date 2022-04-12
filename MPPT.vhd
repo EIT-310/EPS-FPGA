@@ -121,7 +121,7 @@ vej_h1 			<= vej_h;				-- Lavet for at kunne trække vej_h ud til en LED
 		begin
 			if Enable = Rotate then  -- Enabel pin = rotate, so you can switch between the 3 MPPT's
 				-- MPPT algoritme
-				if (rising_edge(PWM_clk(2))) then
+				if rising_edge( PWM_clk(2) ) then
 				--opstart
         
 					if saveB16(15 downto 0) = "0000000000000000" then
