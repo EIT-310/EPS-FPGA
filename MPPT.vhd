@@ -119,7 +119,7 @@ PWM_clk3 		<= PWM_clk(2);          -- PWM_clk3 		= 1/8 ADC klokken
 
 	MPPT_algoritme : process( all )
 		begin
-			--if Enable = Rotate then  -- Enabel pin = rotate, so you can switch between the 3 MPPT's
+			if Enable = Rotate then  -- Enabel pin = rotate, so you can switch between the 3 MPPT's
 				-- MPPT algoritme
 				if rising_edge( PWM_clk(2) ) then
 				--opstart
@@ -159,7 +159,7 @@ PWM_clk3 		<= PWM_clk(2);          -- PWM_clk3 		= 1/8 ADC klokken
 						end if ;
 					end if;	
 				end if;		
-			--end if ;
+			end if ;
 			
 		end process ; -- MPPT-algoritme
 
