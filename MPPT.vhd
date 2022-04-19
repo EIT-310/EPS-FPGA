@@ -13,8 +13,7 @@ entity MPPT is
 		PWM_clk3		: out std_logic;						-- test af klokken
         PWM_out			: out std_logic;
 		Rotate 			: in std_logic_vector(2 downto 0);
-		Enable			: in std_logic_vector(2 downto 0);
-		vej_h1			: out std_logic
+		Enable			: in std_logic_vector(2 downto 0)
       ) ;
   end MPPT ;
 
@@ -23,11 +22,11 @@ entity MPPT is
 	signal clockscale		: unsigned(10 downto 0);
 	signal result_sig_volt	: std_logic_vector(7 downto 0);
 	signal result_sig_curr	: std_logic_vector(7 downto 0);
-	signal result_sig 		:std_logic_vector(15 downto 0);
+	signal result_sig 		: std_logic_vector(15 downto 0);
+	signal vej_h			: std_logic;
 
-	signal saveB16 		: std_logic_vector (15 downto 0);
+	signal result_sig_old 		: std_logic_vector (15 downto 0) := "0000000000000000";
 	signal duty_cycle 	: unsigned (3 downto 0) := "0000";
-	signal vej_h 		: std_logic; 
 	signal comp_out 	: std_logic_vector (2 downto 0);
 	signal PWM_clk 		: unsigned (2 downto 0) := "100";
 
@@ -84,18 +83,19 @@ begin
 
 	Comp1 : sixteenBitComparator port map ( 
 			saveA16(15 downto 0) 	=> result_sig(15 downto 0),
-			saveB16(15 downto 0) 	=> saveB16(15 downto 0),
+			saveB16(15 downto 0) 	=> result_sig_old(15 downto 0),
 			exIn16(1) 			 	=> '1',
+			exIn16(2)				=> '0',
+			exIn16(0)				=> '0',
 			exOut16(2 downto 0)  	=> comp_out(2 downto 0)
 		);
+	-- Write final adc value to comparator
+	result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 
--- Write final adc value to comparator
-result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 
 clockscale10	<= clockscalekey;		--Lavet for at teste, så klokken styres af en knap
 -- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
 PWM_clk3 		<= PWM_clk(2);          -- PWM_clk3 		= 1/8 ADC klokken
-vej_h1 			<= vej_h;				-- Lavet for at kunne trække vej_h ud til en LED
 	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
 
@@ -119,13 +119,13 @@ vej_h1 			<= vej_h;				-- Lavet for at kunne trække vej_h ud til en LED
 
 	MPPT_algoritme : process( all )
 		begin
-			if Enable = Rotate then  -- Enabel pin = rotate, so you can switch between the 3 MPPT's
+			--if Enable = Rotate then  -- Enabel pin = rotate, so you can switch between the 3 MPPT's
 				-- MPPT algoritme
 				if rising_edge( PWM_clk(2) ) then
 				--opstart
         
-					if saveB16(15 downto 0) = "0000000000000000" then
-						saveB16(15 downto 0) <= result_sig(15 downto 0);
+					if result_sig_old(15 downto 0) = "0000000000000000" then
+						result_sig_old(15 downto 0) <= result_sig(15 downto 0);
 						duty_cycle <= duty_cycle + 1;
 						vej_h <= '0';
 					end if ;
@@ -135,12 +135,12 @@ vej_h1 			<= vej_h;				-- Lavet for at kunne trække vej_h ud til en LED
 						if comp_out(0) = '1' or comp_out(1) = '1' then --b>a
 							duty_cycle <= duty_cycle + 1;
 							vej_h <= '0';
-							saveB16(15 downto 0) <= result_sig(15 downto 0);
+							result_sig_old(15 downto 0) <= result_sig(15 downto 0);
 						end if;
 						if comp_out(2) = '1' then --a>b
 							duty_cycle <= duty_cycle - 1;
 							vej_h <= '1'; --overflødig linje
-							saveB16(15 downto 0) <= result_sig(15 downto 0);
+							result_sig_old(15 downto 0) <= result_sig(15 downto 0);
 						end if ;
 					
 					end if ;
@@ -150,16 +150,16 @@ vej_h1 			<= vej_h;				-- Lavet for at kunne trække vej_h ud til en LED
 						if comp_out(0) = '1' then --b>a
 							duty_cycle <= duty_cycle - 1;
 							vej_h <= '1';
-							saveB16(15 downto 0) <= result_sig(15 downto 0);
+							result_sig_old(15 downto 0) <= result_sig(15 downto 0);
 						end if;
 						if comp_out(2) = '1' or comp_out(1) = '1' then --a>b
+							result_sig_old(15 downto 0) <= result_sig(15 downto 0);
 							duty_cycle <= duty_cycle + 1;
 							vej_h <= '0'; --overflødig linje
-							saveB16(15 downto 0) <= result_sig(15 downto 0);
 						end if ;
 					end if;	
 				end if;		
-			end if ;
+			--end if ;
 			
 		end process ; -- MPPT-algoritme
 

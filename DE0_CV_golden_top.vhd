@@ -58,63 +58,57 @@ architecture top of DE0_CV_golden_top is
 			main_clk		: in std_logic;
         	PWM_out			: out std_logic;
 			Rotate 			: in std_logic_vector(2 downto 0);
-			Enable			: in std_logic_vector(2 downto 0);
-			vej_h1			: out std_logic
+			Enable			: in std_logic_vector(2 downto 0)
         );
         end component;
 begin
 
 	EPS_MPPT1: MPPT port map (
 		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
-		ADC_Volt_out(7 downto 0)	=>	R2R_volt (7 downto 0),
-		ADC_Curr_out(7 downto 0)	=>	R2R_curr (7 downto 0),
-		clockscale10	=>	GPIO_1(35),             -- Test af ADC klokken 
+		ADC_Volt_out(7 downto 0)	=>	GPIO_1 (7 downto 0),
+		ADC_Curr_out(7 downto 0)	=>	GPIO_1 (17 downto 10),
+		clockscale10	=>	PWM_clk_top,             -- Test af ADC klokken 
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_clk3		=>	GPIO_1(32),				-- Test af PWM klokken
+		PWM_clk3		=>	GPIO_1(33),				-- Test af PWM klokken
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  GPIO_1(32),             -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_1 (2 downto 0),
-		vej_h1			=>	LEDR(9)
+		Enable			=>	Enable_1 (2 downto 0)
 	);
 
-	EPS_MPPT2: MPPT port map (
-		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
-		ADC_Volt_out(7 downto 0)	=>	R2R_volt (7 downto 0),
-		ADC_Curr_out(7 downto 0)	=>	R2R_curr (7 downto 0),
-		clockscale10	=>	GPIO_1(34),  			-- Test af ADC klokken
-		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		--PWM_clk3		=>	GPIO_1(31),				-- Test af PWM klokken
-		main_clk		=>	CLOCK2_50,
-		--PWM_out			=>  ,                -- Skal sættes til en GPIO pin!
-		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_2 (2 downto 0),
-		vej_h1			=>	LEDR(8)
-	);
+	-- EPS_MPPT2: MPPT port map (
+	-- 	clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
+	-- 	ADC_Volt_out(7 downto 0)	=>	R2R_volt (7 downto 0),
+	-- 	ADC_Curr_out(7 downto 0)	=>	R2R_curr (7 downto 0),
+	-- 	clockscale10	=>	GPIO_1(34),  			-- Test af ADC klokken
+	-- 	add_sub_sig		=>	GPIO_0 (1 downto 0),
+	-- 	--PWM_clk3		=>	GPIO_1(31),				-- Test af PWM klokken
+	-- 	main_clk		=>	CLOCK2_50,
+	-- 	--PWM_out			=>  ,                -- Skal sættes til en GPIO pin!
+	-- 	Rotate 			=>	rotate (2 downto 0),
+	-- 	Enable			=>	Enable_2 (2 downto 0),
+	-- );
 
-	EPS_MPPT3: MPPT port map (
-		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
-		ADC_Volt_out(7 downto 0)	=>	R2R_volt (7 downto 0),
-		ADC_Curr_out(7 downto 0)	=>	R2R_curr (7 downto 0),
-		clockscale10	=>	GPIO_1(33),  			-- Test af klokken
-		add_sub_sig		=>	GPIO_0 (1 downto 0),
-		PWM_clk3		=>	GPIO_1(30),				-- Test af klokken
-		main_clk		=>	CLOCK2_50,
-		PWM_out			=>  GPIO_1(29),                 -- Skal sættes til en GPIO pin!
-		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_3 (2 downto 0),
-		vej_h1			=>	LEDR(7)
-	);
+	-- EPS_MPPT3: MPPT port map (
+	-- 	clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
+	-- 	ADC_Volt_out(7 downto 0)	=>	R2R_volt (7 downto 0),
+	-- 	ADC_Curr_out(7 downto 0)	=>	R2R_curr (7 downto 0),
+	-- 	clockscale10	=>	GPIO_1(33),  			-- Test af klokken
+	-- 	add_sub_sig		=>	GPIO_0 (1 downto 0),
+	-- 	PWM_clk3		=>	GPIO_1(30),				-- Test af klokken
+	-- 	main_clk		=>	CLOCK2_50,
+	-- 	PWM_out			=>  GPIO_1(29),                 -- Skal sættes til en GPIO pin!
+	-- 	Rotate 			=>	rotate (2 downto 0),
+	-- 	Enable			=>	Enable_3 (2 downto 0),
+	-- 	vej_h1			=>	LEDR(7)
+	-- );
 
 	--GPIO_1(29)	<= scaler(14);						-- Test af klokken
-	GPIO_1(28) 	<= CLOCK2_50;						-- Test af klokken
-	R2R_volt(7 downto 0) 	<= GPIO_1 (7 downto 0);
-	R2R_curr(7 downto 0) 	<= GPIO_1 (17 downto 10);
+					-- Test af klokken
+	GPIO_1(34)  <= PWM_clk_top;
+	GPIO_1(35) 	<= CLOCK2_50;	
+	LEDR(7 downto 0) <= GPIO_1(7 downto 0);
 
-	GPIO_1(27) <= rotate(0);
-	GPIO_1(26) <= rotate(1);
-	GPIO_1(25) <= rotate(2);
-	GPIO_1(31) <= PWM_clk_top;
 	-- M_x(0) <= GPIO_1(34);
 	-- M_x(1) <= GPIO_1(35);
 
