@@ -4,17 +4,14 @@ use ieee.numeric_std.all;
 
 entity MPPT is
     port (
-		clockscalekey	: in std_logic;
         ADC_Volt_out	: out std_logic_vector(7 downto 0);
         ADC_Curr_out	: out std_logic_vector(7 downto 0);
-		clockscale10	: out std_logic;                        -- test af klokken
 		add_sub_sig		: in std_logic_vector(1 downto 0);
 		main_clk		: in std_logic;
-		PWM_clk3		: out std_logic;						-- test af klokken
         PWM_out			: out std_logic;
 		Rotate 			: in std_logic_vector(2 downto 0);
 		Enable			: in std_logic_vector(2 downto 0);
-		vej_h1			: out std_logic
+		PWM_clk_top		: out std_logic
       ) ;
   end MPPT ;
 
@@ -26,20 +23,20 @@ entity MPPT is
 	signal result_sig 		: std_logic_vector(15 downto 0);
 	signal vej_h			: std_logic;
 
-	signal result_sig_old 		: std_logic_vector (15 downto 0) := "0000000000000000";
-	signal duty_cycle 	: unsigned (3 downto 0) := "0000";
-	signal comp_out 	: std_logic_vector (2 downto 0);
-	signal PWM_clk 		: unsigned (2 downto 0) := "100";
+	signal result_sig_old 	: std_logic_vector (15 downto 0) := "0000000000000000";
+	signal duty_cycle 		: unsigned (7 downto 0) := "00000000";
+	signal comp_out 		: std_logic_vector (2 downto 0);
+	signal PWM_clk 			: unsigned (2 downto 0) := "100";
 
 	component ADC is
-	port (
-		clk         	: in std_logic;
-		gpio1       	: out std_logic_vector(35 downto 0);
-		result_sig_out  : out std_logic_vector (7 downto 0);
-		add_sub_sig 	: in std_logic;
-		Enable_MPPT		: in std_logic_vector(2 downto 0);
-		Rotate_MPPT		: in std_logic_vector(2 downto 0)
-	) ;
+		port (
+			clk         	: in std_logic;
+			gpio1       	: out std_logic_vector(35 downto 0);
+			result_sig_out  : out std_logic_vector (7 downto 0);
+			add_sub_sig 	: in std_logic;
+			Enable_MPPT		: in std_logic_vector(2 downto 0);
+			Rotate_MPPT		: in std_logic_vector(2 downto 0)
+		) ;
 	end component;
 
 	component sixteenBitComparator is
@@ -49,12 +46,12 @@ entity MPPT is
 			exIn16	: in std_logic_vector (2 downto 0);
 			exOut16	: out std_logic_vector (2 downto 0)
 			);
-		end component;
+	end component;
 		
 	component PWM_submodule is
 		port (
 			pwm_out 	: out std_logic;
-			duty_cycle 	: in std_logic_vector(3 downto 0);
+			duty_cycle 	: in std_logic_vector(7 downto 0);
 			clk 		: in std_logic
 		);
 	end component;
@@ -63,8 +60,7 @@ entity MPPT is
 begin
 	-- ADC volt
 	adc_volt : ADC port map (
-			clk					=> clockscalekey,
-			-- clk 				=> clockscale(10),
+			clk 				=> clockscale(10),
 			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0),
 			result_sig_out		=> result_sig_volt,
 			add_sub_sig 		=> add_sub_sig(0),
@@ -73,8 +69,7 @@ begin
 		);
 
 	adc_curr : ADC port map(
-			clk					=> clockscalekey,
-			-- clk					=> clockscale(10),
+			clk					=> clockscale(10),
 			gpio1(7 downto 0)	=> ADC_Curr_out(7 downto 0),
 			result_sig_out		=> result_sig_curr,
 			add_sub_sig 		=> add_sub_sig(1),
@@ -97,15 +92,11 @@ begin
 			exOut16(2 downto 0)  	=> comp_out(2 downto 0)
 		);
 
-	vej_h1 <= vej_h;
+PWM_clk_top 		<= PWM_clk(2);          -- PWM_clk3 		= 1/8 ADC klokken
 
-	
-clockscale10	<= clockscalekey;		--Lavet for at teste, så klokken styres af en knap
--- clockscale10 	<= clockscale(10);         -- Clockscale10 	= ADC klokken
-PWM_clk3 		<= PWM_clk(2);          -- PWM_clk3 		= 1/8 ADC klokken
+
 	clockscaler : process( all )            -- Scale clock from 50MHz 
 	begin
-
 		if rising_edge(main_clk) then
 			clockscale <= clockscale + 1 ;
 		end if ;
@@ -113,13 +104,9 @@ PWM_clk3 		<= PWM_clk(2);          -- PWM_clk3 		= 1/8 ADC klokken
 
 	PWM_clockscaler : process( all )
 	begin
-			if falling_edge(clockscalekey) then
-				PWM_clk <= PWM_clk + 1 ;
-			end if ;
-
-		-- if rising_edge(clockscale(10)) then
-		-- 	PWM_clk <= PWM_clk + 1 ;
-		-- end if ;
+		if falling_edge(clockscale(10)) then
+			PWM_clk <= PWM_clk + 1 ;
+		end if ;
 	end process ; -- PWM_clockscaler
 
 	
