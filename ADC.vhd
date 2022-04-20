@@ -7,7 +7,9 @@ library ieee ;
     clk         : in std_logic;
     gpio1       : out std_logic_vector(35 downto 0);
     result_sig_out  : out std_logic_vector (7 downto 0);
-    add_sub_sig : in std_logic
+    add_sub_sig : in std_logic;
+	Enable_MPPT		: in std_logic_vector(2 downto 0);
+	Rotate_MPPT		: in std_logic_vector(2 downto 0)
   ) ;
 end adc ; 
 
@@ -45,8 +47,10 @@ begin
 	-- Rotate data to be added/subtracted
 	rotator : process(clk)
 	begin
-		if rising_edge(clk) then
-			rotate <= rotate(0) & rotate(7 downto 1);
+		if Enable_MPPT = Rotate_MPPT then
+			if rising_edge(clk) then
+				rotate <= rotate(0) & rotate(7 downto 1);
+			end if ;
 		end if ;
 	end process ; -- rotator
 	

@@ -35,6 +35,10 @@ architecture top of DE0_CV_golden_top is
 
 	signal R2R_volt : std_logic_vector (7 downto 0);
 	signal R2R_curr : std_logic_vector (7 downto 0);
+	signal R2R_volt1 : std_logic_vector (7 downto 0);
+	signal R2R_curr1 : std_logic_vector (7 downto 0);
+	signal R2R_volt2 : std_logic_vector (7 downto 0);
+	signal R2R_curr2 : std_logic_vector (7 downto 0);
 	signal scaler 	: unsigned (14 downto 0);
 	signal rotate 	: std_logic_vector (2 downto 0):= "100";
 	-- signal M_x		: std_logic_vector (1 downto 0);
@@ -59,7 +63,8 @@ architecture top of DE0_CV_golden_top is
 			main_clk		: in std_logic;
         	PWM_out			: out std_logic;
 			Rotate 			: in std_logic_vector(2 downto 0);
-			Enable			: in std_logic_vector(2 downto 0)
+			Enable			: in std_logic_vector(2 downto 0);
+			vej_h1			: out std_logic
         );
         end component;
 begin
@@ -74,36 +79,35 @@ begin
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  GPIO_1(32),             -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_1 (2 downto 0)
+		Enable			=>	Enable_1 (2 downto 0),
+		vej_h1			=> LEDR(9)
 	);
 
 	EPS_MPPT2: MPPT port map (
 		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
-		ADC_Volt_out(7 downto 0)	=>	R2R_volt (7 downto 0),
-		ADC_Curr_out(7 downto 0)	=>	R2R_curr (7 downto 0),
+		ADC_Volt_out(7 downto 0)	=>	R2R_volt1 (7 downto 0),
+		ADC_Curr_out(7 downto 0)	=>	R2R_curr1 (7 downto 0),
 		add_sub_sig		=>	GPIO_0 (1 downto 0),
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  GPIO_1(31),                -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_2 (2 downto 0)
+		Enable			=>	Enable_2 (2 downto 0),
+		vej_h1			=> LEDR(8)
 	);
 
 	EPS_MPPT3: MPPT port map (
 		clockscalekey	=> 	not KEY(0),					-- Test af ADC klokken med en Key
-		ADC_Volt_out(7 downto 0)	=>	R2R_volt (7 downto 0),
-		ADC_Curr_out(7 downto 0)	=>	R2R_curr (7 downto 0),
-		add_sub_sig		=>	GPIO_0 (1 downto 0),
+		ADC_Volt_out(7 downto 0)	=>	R2R_volt2 (7 downto 0),
+		ADC_Curr_out(7 downto 0)	=>	R2R_curr2 (7 downto 0),
+		add_sub_sig		=>	GPIO_0 (1 downto 0),	
 		main_clk		=>	CLOCK2_50,
 		PWM_out			=>  GPIO_1(30),                 -- Skal sættes til en GPIO pin!
 		Rotate 			=>	rotate (2 downto 0),
-		Enable			=>	Enable_3 (2 downto 0)
+		Enable			=>	Enable_3 (2 downto 0),
+		vej_h1			=> LEDR(7)
 	);
 
-	R2R_volt(7 downto 0) <= GPIO_1(7 downto 0);
-	R2R_curr(7 downto 0) <= GPIO_1(17 downto 10);
-
-	GPIO_1(34)  <= PWM_clk_top;
-	GPIO_1(35) 	<= CLOCK2_50;	
+	GPIO_1(34)  <= PWM_clk_top;	
 	LEDR(2 downto 0) <= rotate(2 downto 0);
 	GPIO_1(33) <= PWM_clk3;
 	-- M_x(0) <= GPIO_1(34);
@@ -115,11 +119,23 @@ begin
 	-- 	"10" when "001",
 	-- 	"00" when others;
 
+with rotate select GPIO_1(7 downto 0) <=
+		R2R_volt when "100", 
+		R2R_volt1 when "010",  
+		R2R_volt2 when "001",
+		R2R_volt when others;
+
+		with rotate select GPIO_1(17 downto 10) <=
+		R2R_curr when "100", 
+		R2R_curr1 when "010",  
+		R2R_curr2 when "001",
+		R2R_volt when others;
+	
 	clockscaler1 : process( all )
 	begin
 		if rising_edge (CLOCK2_50) then
 			scaler <= scaler + 1;
-		end if ;
+		end if;
 		if rising_edge(PWM_clk3) then
 			rotate <= rotate(0) & rotate(2 downto 1);
 		end if ;
