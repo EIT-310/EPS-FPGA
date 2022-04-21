@@ -492,7 +492,6 @@ set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name VHDL_FILE MPPT.vhd
 set_global_assignment -name VHDL_FILE sixteenBitComparator.vhd
 set_global_assignment -name VHDL_FILE PWM_submodule.vhd
-set_global_assignment -name VHDL_FILE multiplexer_inst.vhd
 set_global_assignment -name VHDL_FILE fourBitComparator.vhd
 set_global_assignment -name VHDL_FILE eightBitComparator.vhd
 set_global_assignment -name VHDL_FILE adder.vhd
