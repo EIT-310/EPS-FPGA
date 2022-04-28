@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 library altera;
 use altera.altera_syn_attributes.all;
 
+-- Først laves et submodul for fourbitcomparatoren
 entity fourBitComparator is
 	port
 	(
@@ -13,6 +14,8 @@ entity fourBitComparator is
     );
 end; 
 
+-- Her opskrives alt den logik som fourbit comparatoren består af. 
+-- Denne logik er fundet på nettet.
 architecture struct of fourBitComparator is
     signal tmp: std_logic_vector (0 to 27);
 	begin

@@ -47,11 +47,11 @@ begin
 	-- Rotate data to be added/subtracted
 	rotator : process(clk)
 	begin
-		if Enable_MPPT = Rotate_MPPT then
+		-- if Enable_MPPT = Rotate_MPPT then
 			if rising_edge(clk) then
 				rotate <= rotate(0) & rotate(7 downto 1);
 			end if ;
-		end if ;
+		-- end if ;
 	end process ; -- rotator
 	
 
