@@ -3,6 +3,8 @@ use ieee.std_logic_1164.all;
 library altera;
 use altera.altera_syn_attributes.all;
 
+-- I denne fil kaldes der to eightbitcomparator instances, 
+-- som sættes sammen til et sixteenbitcomparator submodul
 
 entity sixteenBitComparator is
   port (
@@ -18,7 +20,6 @@ architecture arch of sixteenBitComparator is
     component eightBitComparator is
         port
         (
-            --tmp: 	inout std_logic_vector (0 to 27);
             saveA: in std_logic_vector (7 downto 0);
             saveB: in std_logic_vector (7 downto 0);
             exIn: in std_logic_vector (2 downto 0);

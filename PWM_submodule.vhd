@@ -2,6 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+
+-- Først laves der et submodul til PWM generatoren
 entity PWM_submodule is
 
 	port
@@ -12,17 +14,22 @@ entity PWM_submodule is
     );
 end; 
 
+
 architecture PWM of PWM_submodule is
     signal cnt : unsigned(6 downto 0);
     signal PWM_clockscaler : unsigned(2 downto 0);
 
+    --Først laves en clockscaler for at reducere frekvensen på PWM signalet.
+    --Dette gøres for at sikre spolen på MPPT-boarded kan når at op og aflade.
 begin
     PWM_clockscaler_pro : process( clk )
     begin
     if rising_edge(clk) then
         PWM_clockscaler <= PWM_clockscaler + 1;
     end if;
-        
+    
+    -- Her kører selve PWM generator koden. 
+    -- Ved at ændre størrelsen på dutycycle ændrer man også hvor meget signalet er højt eller lavt.
     end process; --PWM_clockscaler
     PWM_signal : process( PWM_clockscaler(2) )
     begin
