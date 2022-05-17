@@ -61,8 +61,8 @@ begin
 	
 	--! ADC til måling af volt over solcellerne.
 	adc_volt : ADC port map (
-			clk 				=> adc_clk(15),
-			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0),
+			clk 				=> adc_clk(15), 				--! Clock til adc
+			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0), 	
 			result_sig_out		=> result_sig_volt,
 			add_sub_sig 		=> add_sub_sig(0)
 		);
@@ -110,7 +110,8 @@ begin
 
 	--!  Ganger resultaterne fra de to adc sammen til en repræsentation af effekten.
 	result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
-
+	
+	
 	MPPT_algoritme : process( all )
 		begin
 				--!  MPPT algoritme
