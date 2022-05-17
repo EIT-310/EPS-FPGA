@@ -1,0 +1,1108 @@
+\begin{theindex}
+
+  \item {A}
+    \subitem {fourBitComparator}, \hyperpage{24}
+  \item {ACTIVE\_SERIAL\_CLOCK}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{50}
+  \item {ADC}
+    \subitem {MPPT}, \hyperpage{29}
+  \item {adc}, \hyperpage{7}
+    \subitem {add\_sub\_sig}, \hyperpage{8}
+    \subitem {clk}, \hyperpage{8}
+    \subitem {gpio1}, \hyperpage{9}
+    \subitem {ieee}, \hyperpage{9}
+    \subitem {numeric\_std}, \hyperpage{9}
+    \subitem {result\_sig\_out}, \hyperpage{9}
+    \subitem {std\_logic\_1164}, \hyperpage{9}
+  \item {ADC.vhd}, \hyperpage{41}
+  \item {adc\_clk}
+    \subitem {MPPT}, \hyperpage{29}
+  \item {adc\_curr}
+    \subitem {MPPT}, \hyperpage{30}
+  \item {ADC\_Curr\_out}
+    \subitem {MPPT}, \hyperpage{26}
+  \item {adc\_volt}
+    \subitem {MPPT}, \hyperpage{30}
+  \item {ADC\_Volt\_out}
+    \subitem {MPPT}, \hyperpage{27}
+  \item {add\_sub}
+    \subitem {adder}, \hyperpage{11}
+  \item {add\_sub\_sig}
+    \subitem {adc}, \hyperpage{8}
+    \subitem {MPPT}, \hyperpage{27}
+  \item {adder}, \hyperpage{10}
+    \subitem {add\_sub}, \hyperpage{11}
+    \subitem {arch}, \hyperpage{13}
+    \subitem {clock}, \hyperpage{11}
+    \subitem {dataa}, \hyperpage{11}
+    \subitem {datab}, \hyperpage{11}
+    \subitem {ieee}, \hyperpage{11}
+    \subitem {numeric\_std}, \hyperpage{11}
+    \subitem {result}, \hyperpage{11}
+    \subitem {std\_logic\_1164}, \hyperpage{11}
+  \item {adder.vhd}, \hyperpage{41}
+  \item {adder\_inst}
+    \subitem {arch}, \hyperpage{13}
+  \item {altera}
+    \subitem {eightBitComparator}, \hyperpage{21}
+    \subitem {fourBitComparator}, \hyperpage{24}
+    \subitem {sixteenBitComparator}, \hyperpage{36}
+  \item {altera\_syn\_attributes}
+    \subitem {eightBitComparator}, \hyperpage{21}
+    \subitem {fourBitComparator}, \hyperpage{24}
+    \subitem {sixteenBitComparator}, \hyperpage{36}
+  \item {arch}, \hyperpage{12}, \hyperpage{14--16}
+    \subitem {adder}, \hyperpage{13}
+    \subitem {adder\_inst}, \hyperpage{13}
+    \subitem {artih}, \hyperpage{14}
+    \subitem {byte\_arr}, \hyperpage{13}
+    \subitem {carryOver}, \hyperpage{15, 16}
+    \subitem {comp1}, \hyperpage{15, 16}
+    \subitem {comp2}, \hyperpage{15}, \hyperpage{17}
+    \subitem {dataa\_arr}, \hyperpage{13}
+    \subitem {eightBitComparator}, \hyperpage{17}
+    \subitem {fourBitComparator}, \hyperpage{16}
+    \subitem {result\_sig}, \hyperpage{13}
+    \subitem {rotate}, \hyperpage{13}
+    \subitem {rotator}, \hyperpage{12}
+    \subitem {sel\_sig}, \hyperpage{13}
+    \subitem {u\_dataa}, \hyperpage{14}
+    \subitem {u\_datab}, \hyperpage{14}
+    \subitem {u\_result}, \hyperpage{14}
+  \item {artih}
+    \subitem {arch}, \hyperpage{14}
+
+  \indexspace
+
+  \item {B}
+    \subitem {fourBitComparator}, \hyperpage{24}
+  \item {BOARD}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{50}
+  \item {byte\_arr}
+    \subitem {arch}, \hyperpage{13}
+
+  \indexspace
+
+  \item {carryOver}
+    \subitem {arch}, \hyperpage{15, 16}
+  \item {clk}
+    \subitem {adc}, \hyperpage{8}
+    \subitem {PWM\_submodule}, \hyperpage{34}
+  \item {clock}
+    \subitem {adder}, \hyperpage{11}
+  \item {CLOCK2\_50}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+  \item {clockscaler}
+    \subitem {MPPT}, \hyperpage{29}
+  \item {cnt}
+    \subitem {PWM}, \hyperpage{33}
+  \item {comp1}
+    \subitem {arch}, \hyperpage{15, 16}
+    \subitem {MPPT}, \hyperpage{30}
+  \item {comp2}
+    \subitem {arch}, \hyperpage{15}, \hyperpage{17}
+  \item {comp\_out}
+    \subitem {MPPT}, \hyperpage{30}
+  \item {CRC\_ERROR\_OPEN\_DRAIN}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{50}
+  \item {CYCLONEII\_RESERVE\_NCEO\_AFTER\_CONFIGURATION}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{50}
+
+  \indexspace
+
+  \item {dataa}
+    \subitem {adder}, \hyperpage{11}
+  \item {dataa\_arr}
+    \subitem {arch}, \hyperpage{13}
+  \item {datab}
+    \subitem {adder}, \hyperpage{11}
+  \item {DE0\_CV\_golden\_top}, \hyperpage{17}
+    \subitem {CLOCK2\_50}, \hyperpage{19}
+    \subitem {GPIO\_0}, \hyperpage{19}
+    \subitem {GPIO\_1}, \hyperpage{19}
+    \subitem {ieee}, \hyperpage{19}
+    \subitem {KEY}, \hyperpage{19}
+    \subitem {LEDR}, \hyperpage{19}
+    \subitem {numeric\_std}, \hyperpage{19}
+    \subitem {std\_logic\_1164}, \hyperpage{19}
+    \subitem {std\_logic\_unsigned}, \hyperpage{20}
+    \subitem {SW}, \hyperpage{20}
+  \item {DE0\_CV\_golden\_top.vhd}, \hyperpage{41}
+  \item {DEVICE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{51}
+  \item {duty\_cycle}
+    \subitem {MPPT}, \hyperpage{30}
+    \subitem {PWM\_submodule}, \hyperpage{34}
+
+  \indexspace
+
+  \item {EDA\_GENERATE\_FUNCTIONAL\_NETLIST}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{51}
+  \item {EDA\_OUTPUT\_DATA\_FORMAT}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{51}
+  \item {EDA\_SIMULATION\_TOOL}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{51}
+  \item {EDA\_TIME\_SCALE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{51}
+  \item {eightBitComparator}, \hyperpage{20}
+    \subitem {altera}, \hyperpage{21}
+    \subitem {altera\_syn\_attributes}, \hyperpage{21}
+    \subitem {arch}, \hyperpage{17}
+    \subitem {exIn}, \hyperpage{22}
+    \subitem {exOut}, \hyperpage{22}
+    \subitem {ieee}, \hyperpage{22}
+    \subitem {saveA}, \hyperpage{22}
+    \subitem {saveB}, \hyperpage{22}
+    \subitem {std\_logic\_1164}, \hyperpage{22}
+  \item {eightBitComparator.vhd}, \hyperpage{41}
+  \item {EPS-\/ADC.qsf}, \hyperpage{42}
+    \subitem {ACTIVE\_SERIAL\_CLOCK}, \hyperpage{50}
+    \subitem {BOARD}, \hyperpage{50}
+    \subitem {CRC\_ERROR\_OPEN\_DRAIN}, \hyperpage{50}
+    \subitem {CYCLONEII\_RESERVE\_NCEO\_AFTER\_CONFIGURATION}, 
+		\hyperpage{50}
+    \subitem {DEVICE}, \hyperpage{51}
+    \subitem {EDA\_GENERATE\_FUNCTIONAL\_NETLIST}, \hyperpage{51}
+    \subitem {EDA\_OUTPUT\_DATA\_FORMAT}, \hyperpage{51}
+    \subitem {EDA\_SIMULATION\_TOOL}, \hyperpage{51}
+    \subitem {EDA\_TIME\_SCALE}, \hyperpage{51}
+    \subitem {FAMILY}, \hyperpage{52}
+    \subitem {FITTER\_EFFORT}, \hyperpage{52}
+    \subitem {IO\_STANDARD}, \hyperpage{52--77}
+    \subitem {LAST\_QUARTUS\_VERSION}, \hyperpage{78}
+    \subitem {MAX\_CORE\_JUNCTION\_TEMP}, \hyperpage{78}
+    \subitem {MIN\_CORE\_JUNCTION\_TEMP}, \hyperpage{78}
+    \subitem {OPTIMIZATION\_TECHNIQUE}, \hyperpage{78}
+    \subitem {OPTIMIZE\_HOLD\_TIMING}, \hyperpage{78}
+    \subitem {OPTIMIZE\_MULTI\_CORNER\_TIMING}, \hyperpage{78}
+    \subitem {ORIGINAL\_QUARTUS\_VERSION}, \hyperpage{78}
+    \subitem {OUTPUT\_IO\_TIMING\_FAR\_END\_VMEAS}, \hyperpage{78, 79}
+    \subitem {OUTPUT\_IO\_TIMING\_NEAR\_END\_VMEAS}, \hyperpage{79}
+    \subitem {PARTITION\_COLOR}, \hyperpage{79}
+    \subitem {PARTITION\_FITTER\_PRESERVATION\_LEVEL}, \hyperpage{79}
+    \subitem {PARTITION\_HIERARCHY}, \hyperpage{79}
+    \subitem {PARTITION\_NETLIST\_TYPE}, \hyperpage{79}
+    \subitem {PIN\_A12}, \hyperpage{79}
+    \subitem {PIN\_A13}, \hyperpage{80}
+    \subitem {PIN\_A14}, \hyperpage{80}
+    \subitem {PIN\_A15}, \hyperpage{80}
+    \subitem {PIN\_A5}, \hyperpage{80}
+    \subitem {PIN\_A7}, \hyperpage{80}
+    \subitem {PIN\_A8}, \hyperpage{80}
+    \subitem {PIN\_A9}, \hyperpage{80}
+    \subitem {PIN\_AA1}, \hyperpage{81}
+    \subitem {PIN\_AA10}, \hyperpage{80}
+    \subitem {PIN\_AA12}, \hyperpage{81}
+    \subitem {PIN\_AA13}, \hyperpage{81}
+    \subitem {PIN\_AA14}, \hyperpage{81}
+    \subitem {PIN\_AA15}, \hyperpage{81}
+    \subitem {PIN\_AA17}, \hyperpage{81}
+    \subitem {PIN\_AA18}, \hyperpage{81}
+    \subitem {PIN\_AA19}, \hyperpage{81}
+    \subitem {PIN\_AA2}, \hyperpage{82}
+    \subitem {PIN\_AA20}, \hyperpage{82}
+    \subitem {PIN\_AA22}, \hyperpage{82}
+    \subitem {PIN\_AA7}, \hyperpage{82}
+    \subitem {PIN\_AA8}, \hyperpage{82}
+    \subitem {PIN\_AA9}, \hyperpage{82}
+    \subitem {PIN\_AB10}, \hyperpage{82}
+    \subitem {PIN\_AB11}, \hyperpage{82}
+    \subitem {PIN\_AB12}, \hyperpage{83}
+    \subitem {PIN\_AB13}, \hyperpage{83}
+    \subitem {PIN\_AB15}, \hyperpage{83}
+    \subitem {PIN\_AB17}, \hyperpage{83}
+    \subitem {PIN\_AB18}, \hyperpage{83}
+    \subitem {PIN\_AB20}, \hyperpage{83}
+    \subitem {PIN\_AB21}, \hyperpage{83}
+    \subitem {PIN\_AB22}, \hyperpage{83}
+    \subitem {PIN\_AB5}, \hyperpage{84}
+    \subitem {PIN\_AB6}, \hyperpage{84}
+    \subitem {PIN\_AB7}, \hyperpage{84}
+    \subitem {PIN\_AB8}, \hyperpage{84}
+    \subitem {PIN\_B10}, \hyperpage{84}
+    \subitem {PIN\_B11}, \hyperpage{84}
+    \subitem {PIN\_B12}, \hyperpage{84}
+    \subitem {PIN\_B13}, \hyperpage{84}
+    \subitem {PIN\_B15}, \hyperpage{85}
+    \subitem {PIN\_B16}, \hyperpage{85}
+    \subitem {PIN\_B6}, \hyperpage{85}
+    \subitem {PIN\_B7}, \hyperpage{85}
+    \subitem {PIN\_C1}, \hyperpage{86}
+    \subitem {PIN\_C11}, \hyperpage{85}
+    \subitem {PIN\_C13}, \hyperpage{85}
+    \subitem {PIN\_C15}, \hyperpage{85}
+    \subitem {PIN\_C16}, \hyperpage{85}
+    \subitem {PIN\_C2}, \hyperpage{86}
+    \subitem {PIN\_C9}, \hyperpage{86}
+    \subitem {PIN\_D12}, \hyperpage{86}
+    \subitem {PIN\_D13}, \hyperpage{86}
+    \subitem {PIN\_D17}, \hyperpage{86}
+    \subitem {PIN\_D3}, \hyperpage{86}
+    \subitem {PIN\_E10}, \hyperpage{86}
+    \subitem {PIN\_E12}, \hyperpage{87}
+    \subitem {PIN\_E14}, \hyperpage{87}
+    \subitem {PIN\_E15}, \hyperpage{87}
+    \subitem {PIN\_E16}, \hyperpage{87}
+    \subitem {PIN\_E2}, \hyperpage{87}
+    \subitem {PIN\_F12}, \hyperpage{87}
+    \subitem {PIN\_F13}, \hyperpage{87}
+    \subitem {PIN\_F14}, \hyperpage{87}
+    \subitem {PIN\_F15}, \hyperpage{88}
+    \subitem {PIN\_G1}, \hyperpage{89}
+    \subitem {PIN\_G11}, \hyperpage{88}
+    \subitem {PIN\_G12}, \hyperpage{88}
+    \subitem {PIN\_G13}, \hyperpage{88}
+    \subitem {PIN\_G15}, \hyperpage{88}
+    \subitem {PIN\_G16}, \hyperpage{88}
+    \subitem {PIN\_G17}, \hyperpage{88}
+    \subitem {PIN\_G18}, \hyperpage{88}
+    \subitem {PIN\_G2}, \hyperpage{89}
+    \subitem {PIN\_G8}, \hyperpage{89}
+    \subitem {PIN\_H10}, \hyperpage{89}
+    \subitem {PIN\_H11}, \hyperpage{89}
+    \subitem {PIN\_H13}, \hyperpage{89}
+    \subitem {PIN\_H14}, \hyperpage{89}
+    \subitem {PIN\_H15}, \hyperpage{89}
+    \subitem {PIN\_H16}, \hyperpage{90}
+    \subitem {PIN\_H18}, \hyperpage{90}
+    \subitem {PIN\_H8}, \hyperpage{90}
+    \subitem {PIN\_J11}, \hyperpage{90}
+    \subitem {PIN\_J13}, \hyperpage{90}
+    \subitem {PIN\_J17}, \hyperpage{90}
+    \subitem {PIN\_J18}, \hyperpage{90}
+    \subitem {PIN\_J19}, \hyperpage{90}
+    \subitem {PIN\_J7}, \hyperpage{91}
+    \subitem {PIN\_J8}, \hyperpage{91}
+    \subitem {PIN\_K16}, \hyperpage{91}
+    \subitem {PIN\_K17}, \hyperpage{91}
+    \subitem {PIN\_K19}, \hyperpage{91}
+    \subitem {PIN\_K20}, \hyperpage{91}
+    \subitem {PIN\_K21}, \hyperpage{91}
+    \subitem {PIN\_K22}, \hyperpage{91}
+    \subitem {PIN\_K7}, \hyperpage{92}
+    \subitem {PIN\_K9}, \hyperpage{92}
+    \subitem {PIN\_L1}, \hyperpage{92}
+    \subitem {PIN\_L17}, \hyperpage{92}
+    \subitem {PIN\_L18}, \hyperpage{92}
+    \subitem {PIN\_L19}, \hyperpage{92}
+    \subitem {PIN\_L2}, \hyperpage{92}
+    \subitem {PIN\_L22}, \hyperpage{92}
+    \subitem {PIN\_L7}, \hyperpage{93}
+    \subitem {PIN\_L8}, \hyperpage{93}
+    \subitem {PIN\_M16}, \hyperpage{93}
+    \subitem {PIN\_M18}, \hyperpage{93}
+    \subitem {PIN\_M20}, \hyperpage{93}
+    \subitem {PIN\_M21}, \hyperpage{93}
+    \subitem {PIN\_M22}, \hyperpage{93}
+    \subitem {PIN\_M6}, \hyperpage{93}
+    \subitem {PIN\_M7}, \hyperpage{94}
+    \subitem {PIN\_M8}, \hyperpage{94}
+    \subitem {PIN\_M9}, \hyperpage{94}
+    \subitem {PIN\_N1}, \hyperpage{94}
+    \subitem {PIN\_N16}, \hyperpage{94}
+    \subitem {PIN\_N19}, \hyperpage{94}
+    \subitem {PIN\_N2}, \hyperpage{95}
+    \subitem {PIN\_N20}, \hyperpage{94}
+    \subitem {PIN\_N21}, \hyperpage{94}
+    \subitem {PIN\_N6}, \hyperpage{95}
+    \subitem {PIN\_N8}, \hyperpage{95}
+    \subitem {PIN\_N9}, \hyperpage{95}
+    \subitem {PIN\_P12}, \hyperpage{95}
+    \subitem {PIN\_P14}, \hyperpage{95}
+    \subitem {PIN\_P16}, \hyperpage{95}
+    \subitem {PIN\_P17}, \hyperpage{95}
+    \subitem {PIN\_P18}, \hyperpage{96}
+    \subitem {PIN\_P19}, \hyperpage{96}
+    \subitem {PIN\_P22}, \hyperpage{96}
+    \subitem {PIN\_P6}, \hyperpage{96}
+    \subitem {PIN\_P7}, \hyperpage{96}
+    \subitem {PIN\_P8}, \hyperpage{96}
+    \subitem {PIN\_P9}, \hyperpage{96}
+    \subitem {PIN\_R10}, \hyperpage{96}
+    \subitem {PIN\_R11}, \hyperpage{97}
+    \subitem {PIN\_R12}, \hyperpage{97}
+    \subitem {PIN\_R15}, \hyperpage{97}
+    \subitem {PIN\_R16}, \hyperpage{97}
+    \subitem {PIN\_R17}, \hyperpage{97}
+    \subitem {PIN\_R21}, \hyperpage{97}
+    \subitem {PIN\_R22}, \hyperpage{97}
+    \subitem {PIN\_R5}, \hyperpage{97}
+    \subitem {PIN\_R6}, \hyperpage{98}
+    \subitem {PIN\_R7}, \hyperpage{98}
+    \subitem {PIN\_R9}, \hyperpage{98}
+    \subitem {PIN\_T10}, \hyperpage{98}
+    \subitem {PIN\_T12}, \hyperpage{98}
+    \subitem {PIN\_T13}, \hyperpage{98}
+    \subitem {PIN\_T14}, \hyperpage{98}
+    \subitem {PIN\_T15}, \hyperpage{98}
+    \subitem {PIN\_T17}, \hyperpage{99}
+    \subitem {PIN\_T18}, \hyperpage{99}
+    \subitem {PIN\_T19}, \hyperpage{99}
+    \subitem {PIN\_T20}, \hyperpage{99}
+    \subitem {PIN\_T22}, \hyperpage{99}
+    \subitem {PIN\_T7}, \hyperpage{99}
+    \subitem {PIN\_T8}, \hyperpage{99}
+    \subitem {PIN\_T9}, \hyperpage{99}
+    \subitem {PIN\_U1}, \hyperpage{100}
+    \subitem {PIN\_U10}, \hyperpage{100}
+    \subitem {PIN\_U11}, \hyperpage{100}
+    \subitem {PIN\_U12}, \hyperpage{100}
+    \subitem {PIN\_U13}, \hyperpage{100}
+    \subitem {PIN\_U15}, \hyperpage{100}
+    \subitem {PIN\_U16}, \hyperpage{100}
+    \subitem {PIN\_U17}, \hyperpage{100}
+    \subitem {PIN\_U2}, \hyperpage{101}
+    \subitem {PIN\_U20}, \hyperpage{101}
+    \subitem {PIN\_U21}, \hyperpage{101}
+    \subitem {PIN\_U22}, \hyperpage{101}
+    \subitem {PIN\_U6}, \hyperpage{101}
+    \subitem {PIN\_U7}, \hyperpage{101}
+    \subitem {PIN\_U8}, \hyperpage{101}
+    \subitem {PIN\_V10}, \hyperpage{101}
+    \subitem {PIN\_V13}, \hyperpage{102}
+    \subitem {PIN\_V14}, \hyperpage{102}
+    \subitem {PIN\_V15}, \hyperpage{102}
+    \subitem {PIN\_V16}, \hyperpage{102}
+    \subitem {PIN\_V18}, \hyperpage{102}
+    \subitem {PIN\_V19}, \hyperpage{102}
+    \subitem {PIN\_V20}, \hyperpage{102}
+    \subitem {PIN\_V21}, \hyperpage{102}
+    \subitem {PIN\_V6}, \hyperpage{103}
+    \subitem {PIN\_V9}, \hyperpage{103}
+    \subitem {PIN\_W16}, \hyperpage{103}
+    \subitem {PIN\_W19}, \hyperpage{103}
+    \subitem {PIN\_W2}, \hyperpage{103}
+    \subitem {PIN\_W21}, \hyperpage{103}
+    \subitem {PIN\_W22}, \hyperpage{103}
+    \subitem {PIN\_W8}, \hyperpage{103}
+    \subitem {PIN\_W9}, \hyperpage{104}
+    \subitem {PIN\_Y10}, \hyperpage{104}
+    \subitem {PIN\_Y11}, \hyperpage{104}
+    \subitem {PIN\_Y14}, \hyperpage{104}
+    \subitem {PIN\_Y15}, \hyperpage{104}
+    \subitem {PIN\_Y16}, \hyperpage{104}
+    \subitem {PIN\_Y17}, \hyperpage{104}
+    \subitem {PIN\_Y19}, \hyperpage{104}
+    \subitem {PIN\_Y20}, \hyperpage{105}
+    \subitem {PIN\_Y21}, \hyperpage{105}
+    \subitem {PIN\_Y22}, \hyperpage{105}
+    \subitem {PIN\_Y3}, \hyperpage{105}
+    \subitem {PIN\_Y9}, \hyperpage{105}
+    \subitem {POWER\_BOARD\_THERMAL\_MODEL}, \hyperpage{105}
+    \subitem {POWER\_PRESET\_COOLING\_SOLUTION}, \hyperpage{105}
+    \subitem {PROJECT\_CREATION\_TIME\_DATE}, \hyperpage{105}
+    \subitem {PROJECT\_OUTPUT\_DIRECTORY}, \hyperpage{106}
+    \subitem {QIP\_FILE}, \hyperpage{106}
+    \subitem {STRATIX\_DEVICE\_IO\_STANDARD}, \hyperpage{106}
+    \subitem {STRATIXII\_CONFIGURATION\_DEVICE}, \hyperpage{106}
+    \subitem {STRATIXV\_CONFIGURATION\_SCHEME}, \hyperpage{106}
+    \subitem {SYNTH\_TIMING\_DRIVEN\_SYNTHESIS}, \hyperpage{106}
+    \subitem {TOP\_LEVEL\_ENTITY}, \hyperpage{106}
+    \subitem {USE\_CONFIGURATION\_DEVICE}, \hyperpage{106}
+    \subitem {VHDL\_FILE}, \hyperpage{107}
+    \subitem {VHDL\_INPUT\_VERSION}, \hyperpage{108}
+    \subitem {VHDL\_SHOW\_LMF\_MAPPING\_MESSAGES}, \hyperpage{108}
+  \item {eps\_mppt1}
+    \subitem {top}, \hyperpage{38}
+  \item {exIn}
+    \subitem {eightBitComparator}, \hyperpage{22}
+  \item {exIn16}
+    \subitem {sixteenBitComparator}, \hyperpage{37}
+  \item {exOut}
+    \subitem {eightBitComparator}, \hyperpage{22}
+  \item {exOut16}
+    \subitem {sixteenBitComparator}, \hyperpage{37}
+
+  \indexspace
+
+  \item {FAMILY}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{52}
+  \item {FITTER\_EFFORT}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{52}
+  \item {fourBitComparator}, \hyperpage{23}
+    \subitem {A}, \hyperpage{24}
+    \subitem {altera}, \hyperpage{24}
+    \subitem {altera\_syn\_attributes}, \hyperpage{24}
+    \subitem {arch}, \hyperpage{16}
+    \subitem {B}, \hyperpage{24}
+    \subitem {ieee}, \hyperpage{24}
+    \subitem {ind}, \hyperpage{24}
+    \subitem {std\_logic\_1164}, \hyperpage{24}
+    \subitem {ud}, \hyperpage{24}
+  \item {fourBitComparator.vhd}, \hyperpage{108}
+
+  \indexspace
+
+  \item {gpio1}
+    \subitem {adc}, \hyperpage{9}
+  \item {GPIO\_0}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+  \item {GPIO\_1}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+
+  \indexspace
+
+  \item {ieee}
+    \subitem {adc}, \hyperpage{9}
+    \subitem {adder}, \hyperpage{11}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+    \subitem {eightBitComparator}, \hyperpage{22}
+    \subitem {fourBitComparator}, \hyperpage{24}
+    \subitem {MPPT}, \hyperpage{27}
+    \subitem {PWM\_submodule}, \hyperpage{34}
+    \subitem {sixteenBitComparator}, \hyperpage{37}
+  \item {ind}
+    \subitem {fourBitComparator}, \hyperpage{24}
+  \item {IO\_STANDARD}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{52--77}
+
+  \indexspace
+
+  \item {KEY}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+
+  \indexspace
+
+  \item {LAST\_QUARTUS\_VERSION}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78}
+  \item {LEDR}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+
+  \indexspace
+
+  \item {main\_clk}
+    \subitem {MPPT}, \hyperpage{27}
+  \item {MAX\_CORE\_JUNCTION\_TEMP}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78}
+  \item {MIN\_CORE\_JUNCTION\_TEMP}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78}
+  \item {MPPT}, \hyperpage{25}, \hyperpage{28}
+    \subitem {ADC}, \hyperpage{29}
+    \subitem {adc\_clk}, \hyperpage{29}
+    \subitem {adc\_curr}, \hyperpage{30}
+    \subitem {ADC\_Curr\_out}, \hyperpage{26}
+    \subitem {adc\_volt}, \hyperpage{30}
+    \subitem {ADC\_Volt\_out}, \hyperpage{27}
+    \subitem {add\_sub\_sig}, \hyperpage{27}
+    \subitem {clockscaler}, \hyperpage{29}
+    \subitem {comp1}, \hyperpage{30}
+    \subitem {comp\_out}, \hyperpage{30}
+    \subitem {duty\_cycle}, \hyperpage{30}
+    \subitem {ieee}, \hyperpage{27}
+    \subitem {main\_clk}, \hyperpage{27}
+    \subitem {MPPT\_algoritme}, \hyperpage{29}
+    \subitem {MPPT\_clk}, \hyperpage{30}
+    \subitem {numeric\_std}, \hyperpage{27}
+    \subitem {PWM\_clockscaler}, \hyperpage{29}
+    \subitem {pwm\_comp}, \hyperpage{31}
+    \subitem {PWM\_out}, \hyperpage{27}
+    \subitem {PWM\_submodule}, \hyperpage{31}
+    \subitem {res\_sig}, \hyperpage{27}
+    \subitem {result\_sig}, \hyperpage{31}
+    \subitem {result\_sig\_curr}, \hyperpage{31}
+    \subitem {result\_sig\_old}, \hyperpage{31}
+    \subitem {result\_sig\_volt}, \hyperpage{31}
+    \subitem {sixteenBitComparator}, \hyperpage{32}
+    \subitem {std\_logic\_1164}, \hyperpage{27}
+    \subitem {top}, \hyperpage{39}
+    \subitem {vej\_h}, \hyperpage{32}
+  \item {MPPT.vhd}, \hyperpage{108}
+  \item {MPPT\_algoritme}
+    \subitem {MPPT}, \hyperpage{29}
+  \item {MPPT\_clk}
+    \subitem {MPPT}, \hyperpage{30}
+
+  \indexspace
+
+  \item {numeric\_std}
+    \subitem {adc}, \hyperpage{9}
+    \subitem {adder}, \hyperpage{11}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+    \subitem {MPPT}, \hyperpage{27}
+    \subitem {PWM\_submodule}, \hyperpage{34}
+
+  \indexspace
+
+  \item {OPTIMIZATION\_TECHNIQUE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78}
+  \item {OPTIMIZE\_HOLD\_TIMING}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78}
+  \item {OPTIMIZE\_MULTI\_CORNER\_TIMING}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78}
+  \item {ORIGINAL\_QUARTUS\_VERSION}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78}
+  \item {OUTPUT\_IO\_TIMING\_FAR\_END\_VMEAS}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{78, 79}
+  \item {OUTPUT\_IO\_TIMING\_NEAR\_END\_VMEAS}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{79}
+
+  \indexspace
+
+  \item {PARTITION\_COLOR}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{79}
+  \item {PARTITION\_FITTER\_PRESERVATION\_LEVEL}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{79}
+  \item {PARTITION\_HIERARCHY}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{79}
+  \item {PARTITION\_NETLIST\_TYPE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{79}
+  \item {PIN\_A12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{79}
+  \item {PIN\_A13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_A14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_A15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_A5}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_A7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_A8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_A9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_AA1}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{80}
+  \item {PIN\_AA12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{81}
+  \item {PIN\_AA2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AA20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AA22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AA7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AA8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AA9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AB10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AB11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{82}
+  \item {PIN\_AB12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{83}
+  \item {PIN\_AB5}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_AB6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_AB7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_AB8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_B10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_B11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_B12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_B13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{84}
+  \item {PIN\_B15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_B16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_B6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_B7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_C1}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_C11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_C13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_C15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_C16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{85}
+  \item {PIN\_C2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_C9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_D12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_D13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_D17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_D3}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_E10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{86}
+  \item {PIN\_E12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_E14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_E15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_E16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_E2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_F12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_F13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_F14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{87}
+  \item {PIN\_F15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G1}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_G11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{88}
+  \item {PIN\_G2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_G8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_H10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_H11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_H13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_H14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_H15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{89}
+  \item {PIN\_H16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_H18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_H8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_J11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_J13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_J17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_J18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_J19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{90}
+  \item {PIN\_J7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_J8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_K16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_K17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_K19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_K20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_K21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_K22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{91}
+  \item {PIN\_K7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_K9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_L1}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_L17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_L18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_L19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_L2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_L22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{92}
+  \item {PIN\_L7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_L8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_M16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_M18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_M20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_M21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_M22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_M6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{93}
+  \item {PIN\_M7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_M8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_M9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_N1}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_N16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_N19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_N2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_N20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_N21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{94}
+  \item {PIN\_N6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_N8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_N9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_P12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_P14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_P16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_P17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{95}
+  \item {PIN\_P18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_P19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_P22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_P6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_P7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_P8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_P9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_R10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{96}
+  \item {PIN\_R11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R5}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{97}
+  \item {PIN\_R6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_R7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_R9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_T10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_T12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_T13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_T14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_T15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{98}
+  \item {PIN\_T17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_T18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_T19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_T20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_T22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_T7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_T8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_T9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{99}
+  \item {PIN\_U1}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U12}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{100}
+  \item {PIN\_U2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_U20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_U21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_U22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_U6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_U7}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_U8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_V10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{101}
+  \item {PIN\_V13}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V18}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{102}
+  \item {PIN\_V6}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_V9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_W16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_W19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_W2}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_W21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_W22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_W8}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{103}
+  \item {PIN\_W9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y10}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y11}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y14}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y15}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y16}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y17}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y19}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{104}
+  \item {PIN\_Y20}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {PIN\_Y21}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {PIN\_Y22}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {PIN\_Y3}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {PIN\_Y9}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {POWER\_BOARD\_THERMAL\_MODEL}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {POWER\_PRESET\_COOLING\_SOLUTION}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {PROJECT\_CREATION\_TIME\_DATE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{105}
+  \item {PROJECT\_OUTPUT\_DIRECTORY}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+  \item {PWM}, \hyperpage{32}
+    \subitem {cnt}, \hyperpage{33}
+    \subitem {PWM\_clockscaler}, \hyperpage{33}
+    \subitem {PWM\_clockscaler\_pro}, \hyperpage{32}
+    \subitem {PWM\_signal}, \hyperpage{33}
+  \item {PWM\_clockscaler}
+    \subitem {MPPT}, \hyperpage{29}
+    \subitem {PWM}, \hyperpage{33}
+  \item {PWM\_clockscaler\_pro}
+    \subitem {PWM}, \hyperpage{32}
+  \item {pwm\_comp}
+    \subitem {MPPT}, \hyperpage{31}
+  \item {PWM\_mes}
+    \subitem {top}, \hyperpage{39}
+  \item {PWM\_out}
+    \subitem {MPPT}, \hyperpage{27}
+  \item {pwm\_out}
+    \subitem {PWM\_submodule}, \hyperpage{34}
+  \item {PWM\_signal}
+    \subitem {PWM}, \hyperpage{33}
+  \item {PWM\_submodule}, \hyperpage{33}
+    \subitem {clk}, \hyperpage{34}
+    \subitem {duty\_cycle}, \hyperpage{34}
+    \subitem {ieee}, \hyperpage{34}
+    \subitem {MPPT}, \hyperpage{31}
+    \subitem {numeric\_std}, \hyperpage{34}
+    \subitem {pwm\_out}, \hyperpage{34}
+    \subitem {std\_logic\_1164}, \hyperpage{35}
+  \item {PWM\_submodule.vhd}, \hyperpage{108}
+
+  \indexspace
+
+  \item {QIP\_FILE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+
+  \indexspace
+
+  \item {res\_sig}
+    \subitem {MPPT}, \hyperpage{27}
+  \item {result}
+    \subitem {adder}, \hyperpage{11}
+  \item {result\_sig}
+    \subitem {arch}, \hyperpage{13}
+    \subitem {MPPT}, \hyperpage{31}
+  \item {result\_sig\_curr}
+    \subitem {MPPT}, \hyperpage{31}
+  \item {result\_sig\_old}
+    \subitem {MPPT}, \hyperpage{31}
+  \item {result\_sig\_out}
+    \subitem {adc}, \hyperpage{9}
+  \item {result\_sig\_volt}
+    \subitem {MPPT}, \hyperpage{31}
+  \item {rotate}
+    \subitem {arch}, \hyperpage{13}
+  \item {rotator}
+    \subitem {arch}, \hyperpage{12}
+
+  \indexspace
+
+  \item {saveA}
+    \subitem {eightBitComparator}, \hyperpage{22}
+  \item {saveA16}
+    \subitem {sixteenBitComparator}, \hyperpage{37}
+  \item {saveB}
+    \subitem {eightBitComparator}, \hyperpage{22}
+  \item {saveB16}
+    \subitem {sixteenBitComparator}, \hyperpage{37}
+  \item {sel\_sig}
+    \subitem {arch}, \hyperpage{13}
+  \item {sixteenBitComparator}, \hyperpage{35}
+    \subitem {altera}, \hyperpage{36}
+    \subitem {altera\_syn\_attributes}, \hyperpage{36}
+    \subitem {exIn16}, \hyperpage{37}
+    \subitem {exOut16}, \hyperpage{37}
+    \subitem {ieee}, \hyperpage{37}
+    \subitem {MPPT}, \hyperpage{32}
+    \subitem {saveA16}, \hyperpage{37}
+    \subitem {saveB16}, \hyperpage{37}
+    \subitem {std\_logic\_1164}, \hyperpage{37}
+  \item {sixteenBitComparator.vhd}, \hyperpage{108}
+  \item {std\_logic\_1164}
+    \subitem {adc}, \hyperpage{9}
+    \subitem {adder}, \hyperpage{11}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{19}
+    \subitem {eightBitComparator}, \hyperpage{22}
+    \subitem {fourBitComparator}, \hyperpage{24}
+    \subitem {MPPT}, \hyperpage{27}
+    \subitem {PWM\_submodule}, \hyperpage{35}
+    \subitem {sixteenBitComparator}, \hyperpage{37}
+  \item {std\_logic\_unsigned}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{20}
+  \item {STRATIX\_DEVICE\_IO\_STANDARD}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+  \item {STRATIXII\_CONFIGURATION\_DEVICE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+  \item {STRATIXV\_CONFIGURATION\_SCHEME}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+  \item {struct}, \hyperpage{38}
+    \subitem {tmp}, \hyperpage{38}
+  \item {SW}
+    \subitem {DE0\_CV\_golden\_top}, \hyperpage{20}
+  \item {SYNTH\_TIMING\_DRIVEN\_SYNTHESIS}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+
+  \indexspace
+
+  \item {tmp}
+    \subitem {struct}, \hyperpage{38}
+  \item {top}, \hyperpage{38}
+    \subitem {eps\_mppt1}, \hyperpage{38}
+    \subitem {MPPT}, \hyperpage{39}
+    \subitem {PWM\_mes}, \hyperpage{39}
+  \item {TOP\_LEVEL\_ENTITY}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+
+  \indexspace
+
+  \item {u\_dataa}
+    \subitem {arch}, \hyperpage{14}
+  \item {u\_datab}
+    \subitem {arch}, \hyperpage{14}
+  \item {u\_result}
+    \subitem {arch}, \hyperpage{14}
+  \item {ud}
+    \subitem {fourBitComparator}, \hyperpage{24}
+  \item {USE\_CONFIGURATION\_DEVICE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{106}
+
+  \indexspace
+
+  \item {vej\_h}
+    \subitem {MPPT}, \hyperpage{32}
+  \item {VHDL\_FILE}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{107}
+  \item {VHDL\_INPUT\_VERSION}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{108}
+  \item {VHDL\_SHOW\_LMF\_MAPPING\_MESSAGES}
+    \subitem {EPS-\/ADC.qsf}, \hyperpage{108}
+
+\end{theindex}
