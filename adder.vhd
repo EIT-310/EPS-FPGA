@@ -13,6 +13,7 @@ entity adder is
   ) ;
 end adder ; 
 
+--! Arkitekturen for 8-bit adderen.
 architecture arch of adder is
 
     signal u_dataa : unsigned (7 downto 0) := unsigned(dataa);  --! resultat fra tidligere adder

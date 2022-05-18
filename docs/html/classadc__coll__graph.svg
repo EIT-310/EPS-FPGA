@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="8&#45;bit 8&#45;step ADC modul">
 <polygon fill="#bfbfbf" stroke="black" points="4.5,-0.5 4.5,-19.5 36.5,-19.5 36.5,-0.5 4.5,-0.5"/>
 <text text-anchor="middle" x="20.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">adc</text>
 </a>

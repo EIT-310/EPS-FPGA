@@ -51,7 +51,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="class_m_p_p_t.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="class_m_p_p_t.html" target="_top" xlink:title="MPPT modul &#45; Ikke impementationsspecifik.">
 <polygon fill="white" stroke="black" points="33,-56.5 33,-75.5 77,-75.5 77,-56.5 33,-56.5"/>
 <text text-anchor="middle" x="55" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">MPPT</text>
 </a>
@@ -66,7 +66,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="class_d_e0___c_v__golden__top.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="class_d_e0___c_v__golden__top.html" target="_top" xlink:title="Testbench til implementationsspecifik opsætning.">
 <polygon fill="white" stroke="black" points="1.5,-0.5 1.5,-19.5 108.5,-19.5 108.5,-0.5 1.5,-0.5"/>
 <text text-anchor="middle" x="55" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DE0_CV_golden_top</text>
 </a>

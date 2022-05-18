@@ -12,7 +12,6 @@ var searchData=
   ['stratix_5fdevice_5fio_5fstandard_5f423_9',['STRATIX_DEVICE_IO_STANDARD_423',['../_e_p_s-_a_d_c_8qsf.html#acb12e4258ab09ed3bc4e206af5b6beff',1,'EPS-ADC.qsf']]],
   ['stratixii_5fconfiguration_5fdevice_5f431_10',['STRATIXII_CONFIGURATION_DEVICE_431',['../_e_p_s-_a_d_c_8qsf.html#ae5f012060352040639792983c505e871',1,'EPS-ADC.qsf']]],
   ['stratixv_5fconfiguration_5fscheme_5f429_11',['STRATIXV_CONFIGURATION_SCHEME_429',['../_e_p_s-_a_d_c_8qsf.html#aeac4d567179aad995cf610f02bcb79e0',1,'EPS-ADC.qsf']]],
-  ['struct_12',['struct',['../classfour_bit_comparator_1_1struct.html',1,'fourBitComparator']]],
-  ['sw_13',['SW',['../class_d_e0___c_v__golden__top.html#a8df0de5137b3a17d0d4d63b2156d3bc1',1,'DE0_CV_golden_top']]],
-  ['synth_5ftiming_5fdriven_5fsynthesis_5f425_14',['SYNTH_TIMING_DRIVEN_SYNTHESIS_425',['../_e_p_s-_a_d_c_8qsf.html#a123e58e068e22cc1f50e6b9533fb18c5',1,'EPS-ADC.qsf']]]
+  ['sw_12',['SW',['../class_d_e0___c_v__golden__top.html#a8df0de5137b3a17d0d4d63b2156d3bc1',1,'DE0_CV_golden_top']]],
+  ['synth_5ftiming_5fdriven_5fsynthesis_5f425_13',['SYNTH_TIMING_DRIVEN_SYNTHESIS_425',['../_e_p_s-_a_d_c_8qsf.html#a123e58e068e22cc1f50e6b9533fb18c5',1,'EPS-ADC.qsf']]]
 ];

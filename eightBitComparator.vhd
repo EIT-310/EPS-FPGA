@@ -13,6 +13,7 @@ entity eightBitComparator is
     ) ;
 end eightBitComparator ;
 
+--! Arkitekturen for 8-bit komparatoren.
 architecture arch of eightBitComparator is
     signal carryOver : std_logic_vector (2 downto 0); --! Signal til at overføre resultatet fra den fourbit comparator, der sammenligner de fire least significant bits videre til den fourbit comparator, som sammenligner de fire most significant bits.
     --! Submodul for fourbitcomparator.

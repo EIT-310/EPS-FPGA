@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classadc.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classadc.html" target="_top" xlink:title="8&#45;bit 8&#45;step ADC modul">
 <polygon fill="white" stroke="black" points="306,-76.5 306,-95.5 338,-95.5 338,-76.5 306,-76.5"/>
 <text text-anchor="middle" x="322" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">adc</text>
 </a>
@@ -36,7 +36,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="class_m_p_p_t.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="class_m_p_p_t.html" target="_top" xlink:title="MPPT modul &#45; Ikke impementationsspecifik.">
 <polygon fill="white" stroke="black" points="413,-38.5 413,-57.5 457,-57.5 457,-38.5 413,-38.5"/>
 <text text-anchor="middle" x="435" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">MPPT</text>
 </a>
@@ -51,7 +51,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="class_d_e0___c_v__golden__top.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="class_d_e0___c_v__golden__top.html" target="_top" xlink:title="Testbench til implementationsspecifik opsætning.">
 <polygon fill="white" stroke="black" points="493,-38.5 493,-57.5 600,-57.5 600,-38.5 493,-38.5"/>
 <text text-anchor="middle" x="546.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">DE0_CV_golden_top</text>
 </a>
@@ -111,7 +111,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="class_p_w_m__submodule.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="class_p_w_m__submodule.html" target="_top" xlink:title="7&#45;bit PWM modul">
 <polygon fill="white" stroke="black" points="275,-0.5 275,-19.5 369,-19.5 369,-0.5 275,-0.5"/>
 <text text-anchor="middle" x="322" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PWM_submodule</text>
 </a>

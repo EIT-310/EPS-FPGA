@@ -13,6 +13,7 @@ entity sixteenBitComparator is
     ) ;
 end sixteenBitComparator ;
 
+--! Arkitekturen for 16-bit komparatoren.
 architecture arch of sixteenBitComparator is
     signal carryOver : std_logic_vector (2 downto 0); --! Signal til at overførere resultatet fra den eightbit comparator, der sammenligner de otte least significant bits videre til den eightbit comparator, som sammenligner de otte most significant bits.
     --! Submodul for eightbitcomparator.

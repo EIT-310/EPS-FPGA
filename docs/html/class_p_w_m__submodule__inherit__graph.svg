@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="7&#45;bit PWM modul">
 <polygon fill="#bfbfbf" stroke="black" points="6.5,-112.5 6.5,-131.5 100.5,-131.5 100.5,-112.5 6.5,-112.5"/>
 <text text-anchor="middle" x="53.5" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">PWM_submodule</text>
 </a>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_m_p_p_t.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="class_m_p_p_t.html" target="_top" xlink:title="MPPT modul &#45; Ikke impementationsspecifik.">
 <polygon fill="white" stroke="black" points="31.5,-56.5 31.5,-75.5 75.5,-75.5 75.5,-56.5 31.5,-56.5"/>
 <text text-anchor="middle" x="53.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">MPPT</text>
 </a>
@@ -36,7 +36,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="class_d_e0___c_v__golden__top.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="class_d_e0___c_v__golden__top.html" target="_top" xlink:title="Testbench til implementationsspecifik opsætning.">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-19.5 107,-19.5 107,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="53.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">DE0_CV_golden_top</text>
 </a>

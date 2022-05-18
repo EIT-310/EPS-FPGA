@@ -2,7 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-
+--! \brief MPPT modul - Ikke impementationsspecifik 
+--!
 --! Submodul for MPPT'en består af portmap til ADC for måling af analog spænding,
 --! portmap til PWM generator for justering af Buck/Boost converteren,
 --! og portmap til comparatoren for at sammenligne målte ADC værdier.

@@ -14,8 +14,8 @@ entity fourBitComparator is
     );
 end; 
 
---! Her laves logikken for Fourbitcomparatoren.
-architecture struct of fourBitComparator is
+--! Arkitekturen for 4-bit komparatoren.
+architecture arch of fourBitComparator is
     signal tmp: std_logic_vector (0 to 27);
 	begin
 

@@ -2,7 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
-
+--! \brief  Testbench til implementationsspecifik opsætning
+--!
 --! Topfilen (også kaldet testbench) er en implementation af moduler
 --! specifik til en given opstilling, porte er koblet til fysiske
 --! pins på FPGA devboardet.
@@ -19,6 +20,7 @@ entity DE0_CV_golden_top is
 
 end DE0_CV_golden_top;
 
+--! Arkitekturen for testbenchen.
 architecture arch of DE0_CV_golden_top is
 
 	signal PWM_mes : std_logic; --! Signal til at kunne få PWM signalet ud på to GPIO pins.

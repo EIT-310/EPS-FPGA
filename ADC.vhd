@@ -2,7 +2,9 @@ library ieee ;
     use ieee.std_logic_1164.all ;
     use ieee.numeric_std.all ;
 	
---! ADC submodul finder en given spænding ved at skabe en spænding ud fra et 8 bit
+--! \brief 8-bit 8-step ADC modul 
+--!
+--! ADC modulet finder en given spænding ved at skabe en spænding ud fra et 8 bit
 --! tal og en fysisk comparator, der viser om den produceret spænding er høje ellere
 --! lavere end den der måles
 entity adc is
@@ -14,6 +16,7 @@ entity adc is
   ) ;
 end adc ; 
 
+--! Arkitekturen for ADC'en.
 architecture arch of adc is
 		
 	type byte_arr is array (7 downto 0) of std_logic_vector (7 downto 0); 	--! Array type med 8 pladser til 8bit tal 

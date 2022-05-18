@@ -1,9 +1,9 @@
 <map id="MPPT" name="MPPT">
-<area shape="rect" id="node1" title=" " alt="" coords="111,229,170,256"/>
-<area shape="rect" id="node8" href="$class_d_e0___c_v__golden__top.html" title=" " alt="" coords="69,304,212,331"/>
-<area shape="rect" id="node2" href="$classadc.html" title=" " alt="" coords="11,155,54,181"/>
+<area shape="rect" id="node1" title="MPPT modul &#45; Ikke impementationsspecifik." alt="" coords="111,229,170,256"/>
+<area shape="rect" id="node8" href="$class_d_e0___c_v__golden__top.html" title="Testbench til implementationsspecifik opsætning." alt="" coords="69,304,212,331"/>
+<area shape="rect" id="node2" href="$classadc.html" title="8&#45;bit 8&#45;step ADC modul" alt="" coords="11,155,54,181"/>
 <area shape="rect" id="node3" href="$classadder.html" title="Modul adder består af en process der syntesiterer en clock aktiveret 8bit adder." alt="" coords="5,80,60,107"/>
-<area shape="rect" id="node4" href="$class_p_w_m__submodule.html" title=" " alt="" coords="78,155,203,181"/>
+<area shape="rect" id="node4" href="$class_p_w_m__submodule.html" title="7&#45;bit PWM modul" alt="" coords="78,155,203,181"/>
 <area shape="rect" id="node5" href="$classsixteen_bit_comparator.html" title="Submodul for sixteenbitcomparator består af 2 8&#45;bit comparators der sættes sammen." alt="" coords="227,155,374,181"/>
 <area shape="rect" id="node6" href="$classeight_bit_comparator.html" title="Submodul for eightbitcomparator består af 2 4&#45;bit comparators der sættes sammen." alt="" coords="234,80,367,107"/>
 <area shape="rect" id="node7" href="$classfour_bit_comparator.html" title="Submodul for fourbitcomparator består udelukkende af statisk logik." alt="" coords="237,5,364,32"/>

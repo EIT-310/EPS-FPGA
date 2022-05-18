@@ -2,7 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-
+--! \brief 7-bit PWM modul
+--!
 --! PWM modul består at en 7 bit repræsentation af duty cycle og en 7 bit counter.
 --! counteren tæller op hver gang clocken har har rising edge. Så længe counteren
 --! er lavere end dutycycle repræsentationen, vil output signalet være høj, og så
@@ -18,7 +19,7 @@ entity PWM_submodule is
     );
 end; 
 
-
+--! Arkitekturen for PWM generatoren.
 architecture arch of PWM_submodule is
     signal cnt : unsigned(6 downto 0);              --! Counter repræsenterer hvor i dutycyclen vi er kommet, hvis denne er lavere end dc er pwm signal høj, og vice versa.
     signal PWM_clockscaler : unsigned(2 downto 0);  --! Clockscaler for at reducere frekvensen på PWM signalet
