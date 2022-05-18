@@ -36,7 +36,7 @@ architecture arch of MPPT is
 	component ADC is
 	port (
 		clk         	: in std_logic;
-		gpio1       	: out std_logic_vector(35 downto 0);
+		gpio1       	: out std_logic_vector(7 downto 0);
 		result_sig_out  : out std_logic_vector (7 downto 0);
 		add_sub_sig 	: in std_logic
 	) ;
