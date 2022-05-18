@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,8 +104,11 @@ Processes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Signals" name="Signals"></a>
 Signals</h2></td></tr>
  <tr class="memitem:abbb072661927ee5bee16a5e994b72857"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadder_1_1arch.html#abbb072661927ee5bee16a5e994b72857">u_dataa</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">unsigned</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="keywordtype">unsigned</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="classadder.html#a11d3bc9da7c99b0d59826a59c975deb8">dataa</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:abbb072661927ee5bee16a5e994b72857"><td class="mdescLeft">&#160;</td><td class="mdescRight">resultat fra tidligere adder  <a href="#abbb072661927ee5bee16a5e994b72857"></a><br /></td></tr>
 <tr class="memitem:a4a649515665a20df502e283eb5160c7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadder_1_1arch.html#a4a649515665a20df502e283eb5160c7d">u_datab</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">unsigned</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="keywordtype">unsigned</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="classadder.html#ae10a39cff515ddac7e17521ecdcafd6c">datab</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a4a649515665a20df502e283eb5160c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">tal der skal lægges til / trækkes fra  <a href="#a4a649515665a20df502e283eb5160c7d"></a><br /></td></tr>
 <tr class="memitem:a9ec1752756d69057c4727729c568f727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadder_1_1arch.html#a9ec1752756d69057c4727729c568f727">u_result</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">unsigned</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a9ec1752756d69057c4727729c568f727"><td class="mdescLeft">&#160;</td><td class="mdescRight">resultatet af adderen  <a href="#a9ec1752756d69057c4727729c568f727"></a><br /></td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0f6182c161d217ed8ec5b756bf325876" name="a0f6182c161d217ed8ec5b756bf325876"></a>
@@ -128,6 +138,7 @@ Signals</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Process der styres af signalet add_sub. Er add_sub = '1', vil u_dataa og u_datab blive lagt sammen og gemt i u_result. Er add_sub = '0', vil u_datab blive trukket fra u_dataa og gemt i u_result. </p>
 
 </div>
 </div>
@@ -152,6 +163,8 @@ Signals</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>resultat fra tidligere adder </p>
+
 </div>
 </div>
 <a id="a4a649515665a20df502e283eb5160c7d" name="a4a649515665a20df502e283eb5160c7d"></a>
@@ -174,6 +187,8 @@ Signals</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>tal der skal lægges til / trækkes fra </p>
+
 </div>
 </div>
 <a id="a9ec1752756d69057c4727729c568f727" name="a9ec1752756d69057c4727729c568f727"></a>
@@ -195,6 +210,8 @@ Signals</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>resultatet af adderen </p>
 
 </div>
 </div>

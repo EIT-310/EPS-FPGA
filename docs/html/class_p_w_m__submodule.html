@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -92,17 +99,12 @@ $(document).ready(function(){initNavTree('class_p_w_m__submodule.html',''); init
 <div class="dynheader">
 Inheritance diagram for PWM_submodule:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_p_w_m__submodule__inherit__graph.png" border="0" usemap="#a_p_w_m__submodule_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_p_w_m__submodule_inherit__map" id="a_p_w_m__submodule_inherit__map">
-<area shape="rect" title=" " alt="" coords="14,5,139,32"/>
-<area shape="rect" href="class_m_p_p_t.html" title=" " alt="" coords="47,80,106,107"/>
-<area shape="rect" href="class_d_e0___c_v__golden__top.html" title=" " alt="" coords="5,155,148,181"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_p_w_m__submodule__inherit__graph.svg" width="154" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Entities</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_w_m__submodule_1_1_p_w_m.html">PWM</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_w_m__submodule_1_1arch.html">arch</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Libraries" name="Libraries"></a>
@@ -117,10 +119,15 @@ Use Clauses</h2></td></tr>
 <tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Ports" name="Ports"></a>
 Ports</h2></td></tr>
  <tr class="memitem:a28ba21b58371583a39b5c7d8111e0e83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_w_m__submodule.html#a28ba21b58371583a39b5c7d8111e0e83">pwm_out</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a28ba21b58371583a39b5c7d8111e0e83"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal der er højt eller lavt alt efter hvor vi er i duty cyclen.  <a href="#a28ba21b58371583a39b5c7d8111e0e83"></a><br /></td></tr>
 <tr class="memitem:a72221e1cb955415466140bb274221940"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_w_m__submodule.html#a72221e1cb955415466140bb274221940">duty_cycle</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">6</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a72221e1cb955415466140bb274221940"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">7-bit repræsentation af dutycycle \( (D) \) hvor \(\frac{D_{7bit}}{2^7} = D \% \)  <a href="#a72221e1cb955415466140bb274221940"></a><br /></td></tr>
 <tr class="memitem:a50da91b765765ac486df1b41692e962f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_w_m__submodule.html#a50da91b765765ac486df1b41692e962f">clk</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a50da91b765765ac486df1b41692e962f"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Main clock uskaleret mht. PWM.  <a href="#a50da91b765765ac486df1b41692e962f"></a><br /></td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >PWM modul består at en 7 bit repræsentation af duty cycle og en 7 bit counter. counteren tæller op hver gang clocken har har rising edge. Så længe counteren er lavere end dutycycle repræsentationen, vil output signalet være høj, og så længe counteren er højere end dutycycle repræsentationen, vil output signalet være lavt. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a50da91b765765ac486df1b41692e962f" name="a50da91b765765ac486df1b41692e962f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50da91b765765ac486df1b41692e962f">&#9670;&nbsp;</a></span>clk</h2>
 
@@ -140,6 +147,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Main clock uskaleret mht. PWM. </p>
 
 </div>
 </div>
@@ -162,6 +171,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>7-bit repræsentation af dutycycle \( (D) \) hvor \(\frac{D_{7bit}}{2^7} = D \% \) </p>
 
 </div>
 </div>
@@ -228,6 +239,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Signal der er højt eller lavt alt efter hvor vi er i duty cyclen. </p>
 
 </div>
 </div>

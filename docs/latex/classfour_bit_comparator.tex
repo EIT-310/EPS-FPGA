@@ -2,8 +2,12 @@
 \label{classfour_bit_comparator}\index{fourBitComparator@{fourBitComparator}}
 
 
-Inheritance diagram for four\+Bit\+Comparator\+:
-\nopagebreak
+Submodul for fourbitcomparator består udelukkende af statisk logik.  
+
+
+
+
+Inheritance diagram for four\+Bit\+Comparator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,7 +18,7 @@ Inheritance diagram for four\+Bit\+Comparator\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classfour_bit_comparator_1_1struct}{struct}} architecture
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Her laves logikken for Fourbitcomparatoren. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Libraries}
  \begin{DoxyCompactItemize}
 \item 
@@ -33,14 +37,17 @@ Inheritance diagram for four\+Bit\+Comparator\+:
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classfour_bit_comparator_a339c4b68bec5b4093d060d5ddc0bdbf6}{A}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em Nye værdi til sammenligning. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfour_bit_comparator_ae16c0dffae71dee00b0dff3643ea7428}{B}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em Værdi fra tidligere sammenligning. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfour_bit_comparator_a7cef606cd3e101839eac4e1ccd53b275}{ind}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Carry\char`\"{} input fra tidligere comarator / starting conditions \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfour_bit_comparator_ad96dfc3c387761a6d1da787713f565a1}{ud}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Resultat af sammenligningen 0 = (A \texorpdfstring{$>$}{>} B), 1 = (A = B), 2 = (B \texorpdfstring{$>$}{>} A) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Submodul for fourbitcomparator består udelukkende af statisk logik. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classfour_bit_comparator_a339c4b68bec5b4093d060d5ddc0bdbf6}\label{classfour_bit_comparator_a339c4b68bec5b4093d060d5ddc0bdbf6}} 
@@ -48,6 +55,10 @@ Inheritance diagram for four\+Bit\+Comparator\+:
 \index{A@{A}!fourBitComparator@{fourBitComparator}}
 \doxysubsubsection{\texorpdfstring{A}{A}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classfour_bit_comparator_a339c4b68bec5b4093d060d5ddc0bdbf6}{A}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Nye værdi til sammenligning. 
 
 \mbox{\Hypertarget{classfour_bit_comparator_a6225a53bc3f8773294fcf63b77915332}\label{classfour_bit_comparator_a6225a53bc3f8773294fcf63b77915332}} 
 \index{fourBitComparator@{fourBitComparator}!altera@{altera}}
@@ -67,6 +78,10 @@ Inheritance diagram for four\+Bit\+Comparator\+:
 \doxysubsubsection{\texorpdfstring{B}{B}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classfour_bit_comparator_ae16c0dffae71dee00b0dff3643ea7428}{B}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+Værdi fra tidligere sammenligning. 
+
 \mbox{\Hypertarget{classfour_bit_comparator_a0a6af6eef40212dbaf130d57ce711256}\label{classfour_bit_comparator_a0a6af6eef40212dbaf130d57ce711256}} 
 \index{fourBitComparator@{fourBitComparator}!ieee@{ieee}}
 \index{ieee@{ieee}!fourBitComparator@{fourBitComparator}}
@@ -79,6 +94,10 @@ Inheritance diagram for four\+Bit\+Comparator\+:
 \doxysubsubsection{\texorpdfstring{ind}{ind}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classfour_bit_comparator_a7cef606cd3e101839eac4e1ccd53b275}{ind}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+\char`\"{}\+Carry\char`\"{} input fra tidligere comarator / starting conditions 
+
 \mbox{\Hypertarget{classfour_bit_comparator_acd03516902501cd1c7296a98e22c6fcb}\label{classfour_bit_comparator_acd03516902501cd1c7296a98e22c6fcb}} 
 \index{fourBitComparator@{fourBitComparator}!std\_logic\_1164@{std\_logic\_1164}}
 \index{std\_logic\_1164@{std\_logic\_1164}!fourBitComparator@{fourBitComparator}}
@@ -90,6 +109,10 @@ Inheritance diagram for four\+Bit\+Comparator\+:
 \index{ud@{ud}!fourBitComparator@{fourBitComparator}}
 \doxysubsubsection{\texorpdfstring{ud}{ud}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classfour_bit_comparator_ad96dfc3c387761a6d1da787713f565a1}{ud}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Resultat af sammenligningen 0 = (A \texorpdfstring{$>$}{>} B), 1 = (A = B), 2 = (B \texorpdfstring{$>$}{>} A) 
 
 
 

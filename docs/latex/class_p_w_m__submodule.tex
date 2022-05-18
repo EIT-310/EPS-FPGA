@@ -2,8 +2,7 @@
 \label{class_p_w_m__submodule}\index{PWM\_submodule@{PWM\_submodule}}
 
 
-Inheritance diagram for PWM\+\_\+submodule\+:
-\nopagebreak
+Inheritance diagram for PWM\+\_\+submodule\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,7 +12,7 @@ Inheritance diagram for PWM\+\_\+submodule\+:
 \doxysubsection*{Entities}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_p_w_m__submodule_1_1_p_w_m}{PWM}} architecture
+\mbox{\hyperlink{class_p_w_m__submodule_1_1arch}{arch}} architecture
 \end{DoxyCompactItemize}
 \doxysubsection*{Libraries}
  \begin{DoxyCompactItemize}
@@ -31,12 +30,15 @@ Inheritance diagram for PWM\+\_\+submodule\+:
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_p_w_m__submodule_a28ba21b58371583a39b5c7d8111e0e83}{pwm\+\_\+out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em Signal der er højt eller lavt alt efter hvor vi er i duty cyclen. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_w_m__submodule_a72221e1cb955415466140bb274221940}{duty\+\_\+cycle}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em 7-\/bit repræsentation af dutycycle \textbackslash{}( (D) \textbackslash{}) hvor \textbackslash{}(\textbackslash{}frac\{D\+\_\+\{7bit\}\}\{2$^\wedge$7\} = D \textbackslash{}\% \textbackslash{}) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_p_w_m__submodule_a50da91b765765ac486df1b41692e962f}{clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Main clock uskaleret mht. PWM. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+PWM modul består at en 7 bit repræsentation af duty cycle og en 7 bit counter. counteren tæller op hver gang clocken har har rising edge. Så længe counteren er lavere end dutycycle repræsentationen, vil output signalet være høj, og så længe counteren er højere end dutycycle repræsentationen, vil output signalet være lavt. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{class_p_w_m__submodule_a50da91b765765ac486df1b41692e962f}\label{class_p_w_m__submodule_a50da91b765765ac486df1b41692e962f}} 
@@ -45,11 +47,19 @@ Inheritance diagram for PWM\+\_\+submodule\+:
 \doxysubsubsection{\texorpdfstring{clk}{clk}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_p_w_m__submodule_a50da91b765765ac486df1b41692e962f}{clk}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+Main clock uskaleret mht. PWM. 
+
 \mbox{\Hypertarget{class_p_w_m__submodule_a72221e1cb955415466140bb274221940}\label{class_p_w_m__submodule_a72221e1cb955415466140bb274221940}} 
 \index{PWM\_submodule@{PWM\_submodule}!duty\_cycle@{duty\_cycle}}
 \index{duty\_cycle@{duty\_cycle}!PWM\_submodule@{PWM\_submodule}}
 \doxysubsubsection{\texorpdfstring{duty\_cycle}{duty\_cycle}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_p_w_m__submodule_a72221e1cb955415466140bb274221940}{duty\+\_\+cycle}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+7-\/bit repræsentation af dutycycle \textbackslash{}( (D) \textbackslash{}) hvor \textbackslash{}(\textbackslash{}frac\{D\+\_\+\{7bit\}\}\{2$^\wedge$7\} = D \textbackslash{}\% \textbackslash{}) 
 
 \mbox{\Hypertarget{class_p_w_m__submodule_a0a6af6eef40212dbaf130d57ce711256}\label{class_p_w_m__submodule_a0a6af6eef40212dbaf130d57ce711256}} 
 \index{PWM\_submodule@{PWM\_submodule}!ieee@{ieee}}
@@ -68,6 +78,10 @@ Inheritance diagram for PWM\+\_\+submodule\+:
 \index{pwm\_out@{pwm\_out}!PWM\_submodule@{PWM\_submodule}}
 \doxysubsubsection{\texorpdfstring{pwm\_out}{pwm\_out}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_p_w_m__submodule_a28ba21b58371583a39b5c7d8111e0e83}{pwm\+\_\+out}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal der er højt eller lavt alt efter hvor vi er i duty cyclen. 
 
 \mbox{\Hypertarget{class_p_w_m__submodule_acd03516902501cd1c7296a98e22c6fcb}\label{class_p_w_m__submodule_acd03516902501cd1c7296a98e22c6fcb}} 
 \index{PWM\_submodule@{PWM\_submodule}!std\_logic\_1164@{std\_logic\_1164}}

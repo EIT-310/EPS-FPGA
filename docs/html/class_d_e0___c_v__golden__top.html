@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -92,37 +99,17 @@ $(document).ready(function(){initNavTree('class_d_e0___c_v__golden__top.html',''
 <div class="dynheader">
 Inheritance diagram for DE0_CV_golden_top:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_d_e0___c_v__golden__top__inherit__graph.png" border="0" usemap="#a_d_e0___c_v__golden__top_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_d_e0___c_v__golden__top_inherit__map" id="a_d_e0___c_v__golden__top_inherit__map">
-<area shape="rect" title=" " alt="" coords="69,304,212,331"/>
-<area shape="rect" href="class_m_p_p_t.html" title=" " alt="" coords="111,229,170,256"/>
-<area shape="rect" href="classadc.html" title=" " alt="" coords="11,155,54,181"/>
-<area shape="rect" href="classadder.html" title=" " alt="" coords="5,80,60,107"/>
-<area shape="rect" href="class_p_w_m__submodule.html" title=" " alt="" coords="78,155,203,181"/>
-<area shape="rect" href="classsixteen_bit_comparator.html" title=" " alt="" coords="227,155,374,181"/>
-<area shape="rect" href="classeight_bit_comparator.html" title=" " alt="" coords="234,80,367,107"/>
-<area shape="rect" href="classfour_bit_comparator.html" title=" " alt="" coords="237,5,364,32"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_d_e0___c_v__golden__top__inherit__graph.svg" width="380" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for DE0_CV_golden_top:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_d_e0___c_v__golden__top__coll__graph.png" border="0" usemap="#a_d_e0___c_v__golden__top_coll__map" alt="Collaboration graph"/></div>
-<map name="a_d_e0___c_v__golden__top_coll__map" id="a_d_e0___c_v__golden__top_coll__map">
-<area shape="rect" title=" " alt="" coords="69,304,212,331"/>
-<area shape="rect" href="class_m_p_p_t.html" title=" " alt="" coords="111,229,170,256"/>
-<area shape="rect" href="classadc.html" title=" " alt="" coords="11,155,54,181"/>
-<area shape="rect" href="classadder.html" title=" " alt="" coords="5,80,60,107"/>
-<area shape="rect" href="class_p_w_m__submodule.html" title=" " alt="" coords="78,155,203,181"/>
-<area shape="rect" href="classsixteen_bit_comparator.html" title=" " alt="" coords="227,155,374,181"/>
-<area shape="rect" href="classeight_bit_comparator.html" title=" " alt="" coords="234,80,367,107"/>
-<area shape="rect" href="classfour_bit_comparator.html" title=" " alt="" coords="237,5,364,32"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_d_e0___c_v__golden__top__coll__graph.svg" width="380" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Entities</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top_1_1top.html">top</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top_1_1arch.html">arch</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Libraries" name="Libraries"></a>
@@ -138,13 +125,21 @@ Use Clauses</h2></td></tr>
 <tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Ports" name="Ports"></a>
 Ports</h2></td></tr>
  <tr class="memitem:aa232acb1b5f9f51a45c7819e9aacc7fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top.html#aa232acb1b5f9f51a45c7819e9aacc7fd">CLOCK2_50</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:aa232acb1b5f9f51a45c7819e9aacc7fd"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock port forbundet til 40MHz clock på devboardet.  <a href="#aa232acb1b5f9f51a45c7819e9aacc7fd"></a><br /></td></tr>
 <tr class="memitem:aee60d35b3a0c784cc93d6533a435d28b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top.html#aee60d35b3a0c784cc93d6533a435d28b">GPIO_0</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">35</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:aee60d35b3a0c784cc93d6533a435d28b"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">20x2 box header connector hvor 2 pins er GND og 2 er forsyning  <a href="#aee60d35b3a0c784cc93d6533a435d28b"></a><br /></td></tr>
 <tr class="memitem:adaa37d49b403674216fd2f6943fdcb09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top.html#adaa37d49b403674216fd2f6943fdcb09">GPIO_1</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">35</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:adaa37d49b403674216fd2f6943fdcb09"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">20x2 box header connector hvor 2 pins er GND og 2 er forsyning  <a href="#adaa37d49b403674216fd2f6943fdcb09"></a><br /></td></tr>
 <tr class="memitem:a9adc5591f40bff02a7d7acba4e3e7b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top.html#a9adc5591f40bff02a7d7acba4e3e7b83">KEY</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">3</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a9adc5591f40bff02a7d7acba4e3e7b83"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">4 knapper på devoardet til manuel input - bruges til debugging  <a href="#a9adc5591f40bff02a7d7acba4e3e7b83"></a><br /></td></tr>
 <tr class="memitem:a824f8d52d0cd42bef05c2877dba620cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top.html#a824f8d52d0cd42bef05c2877dba620cb">LEDR</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">9</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a824f8d52d0cd42bef05c2877dba620cb"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">10 LED'er på devboardet - bruges til debugging  <a href="#a824f8d52d0cd42bef05c2877dba620cb"></a><br /></td></tr>
 <tr class="memitem:a8df0de5137b3a17d0d4d63b2156d3bc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_d_e0___c_v__golden__top.html#a8df0de5137b3a17d0d4d63b2156d3bc1">SW</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">9</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a8df0de5137b3a17d0d4d63b2156d3bc1"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">10 switches på devboardet - bruges til debugging  <a href="#a8df0de5137b3a17d0d4d63b2156d3bc1"></a><br /></td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Topfilen (også kaldet testbench) er en implementation af moduler specifik til en given opstilling, porte er koblet til fysiske pins på FPGA devboardet. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aa232acb1b5f9f51a45c7819e9aacc7fd" name="aa232acb1b5f9f51a45c7819e9aacc7fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa232acb1b5f9f51a45c7819e9aacc7fd">&#9670;&nbsp;</a></span>CLOCK2_50</h2>
 
@@ -164,6 +159,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Clock port forbundet til 40MHz clock på devboardet. </p>
 
 </div>
 </div>
@@ -187,6 +184,8 @@ Ports</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>20x2 box header connector hvor 2 pins er GND og 2 er forsyning </p>
+
 </div>
 </div>
 <a id="adaa37d49b403674216fd2f6943fdcb09" name="adaa37d49b403674216fd2f6943fdcb09"></a>
@@ -208,6 +207,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>20x2 box header connector hvor 2 pins er GND og 2 er forsyning </p>
 
 </div>
 </div>
@@ -253,6 +254,8 @@ Ports</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>4 knapper på devoardet til manuel input - bruges til debugging </p>
+
 </div>
 </div>
 <a id="a824f8d52d0cd42bef05c2877dba620cb" name="a824f8d52d0cd42bef05c2877dba620cb"></a>
@@ -274,6 +277,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>10 LED'er på devboardet - bruges til debugging </p>
 
 </div>
 </div>
@@ -362,6 +367,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>10 switches på devboardet - bruges til debugging </p>
 
 </div>
 </div>

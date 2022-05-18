@@ -1,6 +1,6 @@
 var class_d_e0___c_v__golden__top =
 [
-    [ "DE0_CV_golden_top.top", "class_d_e0___c_v__golden__top_1_1top.html", "class_d_e0___c_v__golden__top_1_1top" ],
+    [ "DE0_CV_golden_top.arch", "class_d_e0___c_v__golden__top_1_1arch.html", "class_d_e0___c_v__golden__top_1_1arch" ],
     [ "CLOCK2_50", "class_d_e0___c_v__golden__top.html#aa232acb1b5f9f51a45c7819e9aacc7fd", null ],
     [ "GPIO_0", "class_d_e0___c_v__golden__top.html#aee60d35b3a0c784cc93d6533a435d28b", null ],
     [ "GPIO_1", "class_d_e0___c_v__golden__top.html#adaa37d49b403674216fd2f6943fdcb09", null ],

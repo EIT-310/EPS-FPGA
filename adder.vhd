@@ -1,7 +1,8 @@
 library ieee ;
     use ieee.std_logic_1164.all ;
     use ieee.numeric_std.all ;
---! Her opstilles submodul til adder.
+
+--! Modul adder består af en process der syntesiterer en clock aktiveret 8bit adder.
 entity adder is
   port (
     clock : in std_logic;
@@ -14,9 +15,9 @@ end adder ;
 
 architecture arch of adder is
 
-    signal u_dataa : unsigned (7 downto 0) := unsigned(dataa); 
-    signal u_datab : unsigned (7 downto 0) := unsigned(datab); 
-    signal u_result: unsigned (7 downto 0);
+    signal u_dataa : unsigned (7 downto 0) := unsigned(dataa);  --! resultat fra tidligere adder
+    signal u_datab : unsigned (7 downto 0) := unsigned(datab);  --! tal der skal lægges til / trækkes fra
+    signal u_result: unsigned (7 downto 0);                     --! resultatet af adderen
 
 begin
     --! Process der styres af signalet add_sub.

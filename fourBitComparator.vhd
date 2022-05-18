@@ -3,14 +3,14 @@ use ieee.std_logic_1164.all;
 library altera;
 use altera.altera_syn_attributes.all;
 
---! Submodul for fourbitcomparator opstilles.
+--! Submodul for fourbitcomparator består udelukkende af statisk logik.
 entity fourBitComparator is
 	port
 	(
-    A: in std_logic_vector (3 downto 0);
-    B: in std_logic_vector (3 downto 0);
-    ind: in std_logic_vector (2 downto 0);
-    ud: out std_logic_vector (2 downto 0)
+    A: in std_logic_vector (3 downto 0); 	--! Nye værdi til sammenligning
+    B: in std_logic_vector (3 downto 0);	--! Værdi fra tidligere sammenligning
+    ind: in std_logic_vector (2 downto 0);	--! "Carry" input fra tidligere comarator / starting conditions
+    ud: out std_logic_vector (2 downto 0)	--! Resultat af sammenligningen 0 = (A > B), 1 = (A = B), 2 = (B > A)
     );
 end; 
 

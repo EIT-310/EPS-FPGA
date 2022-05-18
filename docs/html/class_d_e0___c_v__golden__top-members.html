@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -107,7 +114,7 @@ $(document).ready(function(){initNavTree('class_d_e0___c_v__golden__top.html',''
   <tr class="even"><td class="entry"><a class="el" href="classsixteen_bit_comparator.html#aab5d04c7eb7709fdb3d0406508f633ac">exIn16</a></td><td class="entry"><a class="el" href="classsixteen_bit_comparator.html">sixteenBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classeight_bit_comparator.html#a7be8a4440f562118749c194ed9b42c77">exOut</a></td><td class="entry"><a class="el" href="classeight_bit_comparator.html">eightBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsixteen_bit_comparator.html#ac66c524fa98cf3f39e552c09f674937a">exOut16</a></td><td class="entry"><a class="el" href="classsixteen_bit_comparator.html">sixteenBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classadc.html#a005cecfc7606862682d5179d2dba3bd0">gpio1</a></td><td class="entry"><a class="el" href="classadc.html">adc</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classadc.html#aab4c58f80e82303c78692151f521b6ac">gpio1</a></td><td class="entry"><a class="el" href="classadc.html">adc</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#aee60d35b3a0c784cc93d6533a435d28b">GPIO_0</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#adaa37d49b403674216fd2f6943fdcb09">GPIO_1</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#a0a6af6eef40212dbaf130d57ce711256">ieee</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">Library</span></td></tr>
@@ -118,17 +125,16 @@ $(document).ready(function(){initNavTree('class_d_e0___c_v__golden__top.html',''
   <tr class="odd"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#a2edc34402b573437d5f25fa90ba4013e">numeric_std</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">use clause</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_p_w_m__submodule.html#a28ba21b58371583a39b5c7d8111e0e83">pwm_out</a></td><td class="entry"><a class="el" href="class_p_w_m__submodule.html">PWM_submodule</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_m_p_p_t.html#a7d4e82e9f18ada98cb378147268ee8f5">PWM_out</a></td><td class="entry"><a class="el" href="class_m_p_p_t.html">MPPT</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_m_p_p_t.html#ae4215385663a810d23b47cf5c32ea792">res_sig</a></td><td class="entry"><a class="el" href="class_m_p_p_t.html">MPPT</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classadder.html#ad7d6824404923df22d880f3329b20f7c">result</a></td><td class="entry"><a class="el" href="classadder.html">adder</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classadc.html#a5eb1f667bbd94839c9595e126031fcc0">result_sig_out</a></td><td class="entry"><a class="el" href="classadc.html">adc</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classeight_bit_comparator.html#aec9dc763b14e8c9ead63e6202594689a">saveA</a></td><td class="entry"><a class="el" href="classeight_bit_comparator.html">eightBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsixteen_bit_comparator.html#a1e6788fac2e9bf8f1cdf157ec3d2e5e0">saveA16</a></td><td class="entry"><a class="el" href="classsixteen_bit_comparator.html">sixteenBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classeight_bit_comparator.html#abf47bed9c56758952ce2822e543e59e8">saveB</a></td><td class="entry"><a class="el" href="classeight_bit_comparator.html">eightBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsixteen_bit_comparator.html#af21c1913dc13e4d8ca35a2e6c1907525">saveB16</a></td><td class="entry"><a class="el" href="classsixteen_bit_comparator.html">sixteenBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#acd03516902501cd1c7296a98e22c6fcb">std_logic_1164</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">use clause</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#a598da929e807d58939b47499e8bc9fa8">std_logic_unsigned</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">use clause</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#a8df0de5137b3a17d0d4d63b2156d3bc1">SW</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classfour_bit_comparator.html#ad96dfc3c387761a6d1da787713f565a1">ud</a></td><td class="entry"><a class="el" href="classfour_bit_comparator.html">fourBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classadder.html#ad7d6824404923df22d880f3329b20f7c">result</a></td><td class="entry"><a class="el" href="classadder.html">adder</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classadc.html#a5eb1f667bbd94839c9595e126031fcc0">result_sig_out</a></td><td class="entry"><a class="el" href="classadc.html">adc</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classeight_bit_comparator.html#aec9dc763b14e8c9ead63e6202594689a">saveA</a></td><td class="entry"><a class="el" href="classeight_bit_comparator.html">eightBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsixteen_bit_comparator.html#a1e6788fac2e9bf8f1cdf157ec3d2e5e0">saveA16</a></td><td class="entry"><a class="el" href="classsixteen_bit_comparator.html">sixteenBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classeight_bit_comparator.html#abf47bed9c56758952ce2822e543e59e8">saveB</a></td><td class="entry"><a class="el" href="classeight_bit_comparator.html">eightBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsixteen_bit_comparator.html#af21c1913dc13e4d8ca35a2e6c1907525">saveB16</a></td><td class="entry"><a class="el" href="classsixteen_bit_comparator.html">sixteenBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#acd03516902501cd1c7296a98e22c6fcb">std_logic_1164</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">use clause</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#a598da929e807d58939b47499e8bc9fa8">std_logic_unsigned</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">use clause</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html#a8df0de5137b3a17d0d4d63b2156d3bc1">SW</a></td><td class="entry"><a class="el" href="class_d_e0___c_v__golden__top.html">DE0_CV_golden_top</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classfour_bit_comparator.html#ad96dfc3c387761a6d1da787713f565a1">ud</a></td><td class="entry"><a class="el" href="classfour_bit_comparator.html">fourBitComparator</a></td><td class="entry"><span class="mlabel">Port</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

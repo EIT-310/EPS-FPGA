@@ -2,8 +2,7 @@
 \label{class_m_p_p_t}\index{MPPT@{MPPT}}
 
 
-Inheritance diagram for MPPT\+:
-\nopagebreak
+Inheritance diagram for MPPT\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for MPPT\+:
 \end{figure}
 
 
-Collaboration diagram for MPPT\+:
-\nopagebreak
+Collaboration diagram for MPPT\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,8 +21,8 @@ Collaboration diagram for MPPT\+:
 \doxysubsection*{Entities}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_m_p_p_t_1_1_m_p_p_t}{MPPT}} architecture
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_m_p_p_t_1_1arch}{arch}} architecture
+\begin{DoxyCompactList}\small\item\em Signaler og komponenter der anvendes af \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}en. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Libraries}
  \begin{DoxyCompactItemize}
 \item 
@@ -40,19 +38,20 @@ Collaboration diagram for MPPT\+:
 \doxysubsection*{Ports}
  \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_m_p_p_t_a5c1aff1737aad2246e063a9dc86ac820}{ADC\+\_\+\+Volt\+\_\+out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
-\mbox{\hyperlink{class_m_p_p_t_abdc217e25798511503e71ba7c1137236}{ADC\+\_\+\+Curr\+\_\+out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
 \mbox{\hyperlink{class_m_p_p_t_a3b82326e27bb670dfb40526ac2affa27}{add\+\_\+sub\+\_\+sig}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em Input port til ADC modulet fra den fysiske comparator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_m_p_p_t_a7af43a5cc67f3ab79e5e5f37974ea644}{main\+\_\+clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em Main clock på 40 MHz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_a5c1aff1737aad2246e063a9dc86ac820}{ADC\+\_\+\+Volt\+\_\+out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Output fra ADC modulet til R2\+R-\/ladderen for spændingsmåling af \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}erne. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_abdc217e25798511503e71ba7c1137236}{ADC\+\_\+\+Curr\+\_\+out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Output fra ADC modulet til R2\+R-\/ladderen for strømmåling af \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}erne. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_m_p_p_t_a7d4e82e9f18ada98cb378147268ee8f5}{PWM\+\_\+out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
-\item 
-\mbox{\hyperlink{class_m_p_p_t_ae4215385663a810d23b47cf5c32ea792}{res\+\_\+sig}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Output fra PWM modulet til buck/boost converteren. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Submodul for \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}en består af portmap til ADC for måling af analog spænding, portmap til PWM generator for justering af Buck/\+Boost converteren, og portmap til comparatoren for at sammenligne målte ADC værdier. Herudover er selve algoritmen MPPT\+\_\+algoritme processen. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{class_m_p_p_t_abdc217e25798511503e71ba7c1137236}\label{class_m_p_p_t_abdc217e25798511503e71ba7c1137236}} 
@@ -61,17 +60,29 @@ Collaboration diagram for MPPT\+:
 \doxysubsubsection{\texorpdfstring{ADC\_Curr\_out}{ADC\_Curr\_out}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_abdc217e25798511503e71ba7c1137236}{ADC\+\_\+\+Curr\+\_\+out}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+Output fra ADC modulet til R2\+R-\/ladderen for strømmåling af \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}erne. 
+
 \mbox{\Hypertarget{class_m_p_p_t_a5c1aff1737aad2246e063a9dc86ac820}\label{class_m_p_p_t_a5c1aff1737aad2246e063a9dc86ac820}} 
 \index{MPPT@{MPPT}!ADC\_Volt\_out@{ADC\_Volt\_out}}
 \index{ADC\_Volt\_out@{ADC\_Volt\_out}!MPPT@{MPPT}}
 \doxysubsubsection{\texorpdfstring{ADC\_Volt\_out}{ADC\_Volt\_out}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_a5c1aff1737aad2246e063a9dc86ac820}{ADC\+\_\+\+Volt\+\_\+out}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+Output fra ADC modulet til R2\+R-\/ladderen for spændingsmåling af \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}erne. 
+
 \mbox{\Hypertarget{class_m_p_p_t_a3b82326e27bb670dfb40526ac2affa27}\label{class_m_p_p_t_a3b82326e27bb670dfb40526ac2affa27}} 
 \index{MPPT@{MPPT}!add\_sub\_sig@{add\_sub\_sig}}
 \index{add\_sub\_sig@{add\_sub\_sig}!MPPT@{MPPT}}
 \doxysubsubsection{\texorpdfstring{add\_sub\_sig}{add\_sub\_sig}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_a3b82326e27bb670dfb40526ac2affa27}{add\+\_\+sub\+\_\+sig}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Input port til ADC modulet fra den fysiske comparator. 
 
 \mbox{\Hypertarget{class_m_p_p_t_a0a6af6eef40212dbaf130d57ce711256}\label{class_m_p_p_t_a0a6af6eef40212dbaf130d57ce711256}} 
 \index{MPPT@{MPPT}!ieee@{ieee}}
@@ -85,6 +96,10 @@ Collaboration diagram for MPPT\+:
 \doxysubsubsection{\texorpdfstring{main\_clk}{main\_clk}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_a7af43a5cc67f3ab79e5e5f37974ea644}{main\+\_\+clk}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+Main clock på 40 MHz. 
+
 \mbox{\Hypertarget{class_m_p_p_t_a2edc34402b573437d5f25fa90ba4013e}\label{class_m_p_p_t_a2edc34402b573437d5f25fa90ba4013e}} 
 \index{MPPT@{MPPT}!numeric\_std@{numeric\_std}}
 \index{numeric\_std@{numeric\_std}!MPPT@{MPPT}}
@@ -97,11 +112,9 @@ Collaboration diagram for MPPT\+:
 \doxysubsubsection{\texorpdfstring{PWM\_out}{PWM\_out}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_a7d4e82e9f18ada98cb378147268ee8f5}{PWM\+\_\+out}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
-\mbox{\Hypertarget{class_m_p_p_t_ae4215385663a810d23b47cf5c32ea792}\label{class_m_p_p_t_ae4215385663a810d23b47cf5c32ea792}} 
-\index{MPPT@{MPPT}!res\_sig@{res\_sig}}
-\index{res\_sig@{res\_sig}!MPPT@{MPPT}}
-\doxysubsubsection{\texorpdfstring{res\_sig}{res\_sig}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_ae4215385663a810d23b47cf5c32ea792}{res\+\_\+sig}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+Output fra PWM modulet til buck/boost converteren. 
 
 \mbox{\Hypertarget{class_m_p_p_t_acd03516902501cd1c7296a98e22c6fcb}\label{class_m_p_p_t_acd03516902501cd1c7296a98e22c6fcb}} 
 \index{MPPT@{MPPT}!std\_logic\_1164@{std\_logic\_1164}}

@@ -1,0 +1,250 @@
+\hypertarget{class_m_p_p_t_1_1arch}{}\doxysection{arch Architecture Reference}
+\label{class_m_p_p_t_1_1arch}\index{arch@{arch}}
+
+
+Signaler og komponenter der anvendes af \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}en.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{class_m_p_p_t_1_1arch}{arch}}\newline
+\doxysubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a6005dea192b853a23638c4147fe89381}{clockscaler}}{\bfseries  ( {\bfseries \textcolor{keywordflow}{all}\textcolor{vhdlchar}{ }} )}
+\begin{DoxyCompactList}\small\item\em Clockscaler\+: downscale fra main-\/clk til ADC, for at den fysiske comparator kan følge med. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a4faf8d756ff0b33b2073c9c067bfe84f}{PWM\+\_\+clockscaler}}{\bfseries  ( {\bfseries \textcolor{keywordflow}{all}\textcolor{vhdlchar}{ }} )}
+\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_affc28710b404a869f9fbd52c7b815114}{MPPT\+\_\+algoritme}}{\bfseries  ( {\bfseries \textcolor{keywordflow}{all}\textcolor{vhdlchar}{ }} )}
+\begin{DoxyCompactList}\small\item\em Ganger resultaterne fra de to ADC\textquotesingle{}er sammen til en repræsentation af effekten. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_ad251174263b28388454816799ffd91ae}{ADC}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Herefter opstilles alle submodulerne. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_ab33b69e7cc8ca232a0fca34d8dff557e}{sixteen\+Bit\+Comparator}}  {\bfseries }  
+\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a95484a328f3711e0938d7be410f7897d}{PWM\+\_\+submodule}}  {\bfseries }  
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a0b5980891b5337642f3c1006922daa79}{adc\+\_\+clk}} {\bfseries \textcolor{keywordtype}{unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal til at downscale main clock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a5970123b7e97e26490c44b2ea286c68d}{result\+\_\+sig\+\_\+volt}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Vector til at gemme resultatet fra ADC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_ab5c139500024441d37e6b249e12f880d}{result\+\_\+sig\+\_\+curr}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Vector til at gemme resultatet fra ADC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_ae5a358d58d5d45deb31e049b126e85c4}{result\+\_\+sig}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Vector til at gemme resultatet fra ADC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_aebf92e8973a4d8b556b1ac69c84a0d60}{vej\+\_\+h}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Værdi, som holder styr på hvilken vej algorithmen lige har gået. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_ad2b0f7f989b0c156e25bf1958337896e}{result\+\_\+sig\+\_\+old}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Den forrige værdi for effekten. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a45ca03ee4802ed62ca6a087e28903980}{duty\+\_\+cycle}} {\bfseries \textcolor{keywordtype}{unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Duty cycle som går ned i PWM sub modulet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a6f805b41ff8b22578a10edd09175e84b}{comp\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Outputs fra sixteenbit comparatoren. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a9ce31e255c180d1d4f978a24806ad06e}{MPPT\+\_\+clk}} {\bfseries \textcolor{keywordtype}{unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keyword}{\char`\"{} 100 \char`\"{}}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Clock for PWM signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a1784cfc896867dad99e85ae41976b344}{adc\+\_\+volt}}  {\bfseries adc}   
+\begin{DoxyCompactList}\small\item\em ADC til måling af volt over solcellerne. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a506811bc3cf2e74ec42a20ef89cc2826}{adc\+\_\+curr}}  {\bfseries adc}   
+\begin{DoxyCompactList}\small\item\em ADC til måling af volt over shuntmodstand, hvilket er afhængig af strømmen igennem mondstanden. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_aa6a1c879901e0ccb62e50d29149a5e89}{pwm\+\_\+comp}}  {\bfseries PWM\+\_\+submodule}   
+\begin{DoxyCompactList}\small\item\em PWM generator til buck/boost converteren. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_m_p_p_t_1_1arch_a4f294513fd29518060edeba78bf489d6}{comp1}}  {\bfseries sixteen\+Bit\+Comparator}   
+\begin{DoxyCompactList}\small\item\em Sixteenbitcomparator til at compare effekten fra solcellerne. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Signaler og komponenter der anvendes af \mbox{\hyperlink{class_m_p_p_t}{MPPT}}\textquotesingle{}en. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_a6005dea192b853a23638c4147fe89381}\label{class_m_p_p_t_1_1arch_a6005dea192b853a23638c4147fe89381}} 
+\index{arch@{arch}!clockscaler@{clockscaler}}
+\index{clockscaler@{clockscaler}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{clockscaler()}{clockscaler()}}
+{\footnotesize\ttfamily clockscaler (\begin{DoxyParamCaption}\item[{}]{all }\end{DoxyParamCaption})}
+
+
+
+Clockscaler\+: downscale fra main-\/clk til ADC, for at den fysiske comparator kan følge med. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_affc28710b404a869f9fbd52c7b815114}\label{class_m_p_p_t_1_1arch_affc28710b404a869f9fbd52c7b815114}} 
+\index{arch@{arch}!MPPT\_algoritme@{MPPT\_algoritme}}
+\index{MPPT\_algoritme@{MPPT\_algoritme}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{MPPT\_algoritme()}{MPPT\_algoritme()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} MPPT\+\_\+algoritme(\begin{DoxyParamCaption}\item[{}]{{\bfseries \textcolor{keywordflow}{all}\textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+
+
+Ganger resultaterne fra de to ADC\textquotesingle{}er sammen til en repræsentation af effekten. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_a4faf8d756ff0b33b2073c9c067bfe84f}\label{class_m_p_p_t_1_1arch_a4faf8d756ff0b33b2073c9c067bfe84f}} 
+\index{arch@{arch}!PWM\_clockscaler@{PWM\_clockscaler}}
+\index{PWM\_clockscaler@{PWM\_clockscaler}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{PWM\_clockscaler()}{PWM\_clockscaler()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} PWM\+\_\+clockscaler(\begin{DoxyParamCaption}\item[{}]{{\bfseries \textcolor{keywordflow}{all}\textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_ad251174263b28388454816799ffd91ae}\label{class_m_p_p_t_1_1arch_ad251174263b28388454816799ffd91ae}} 
+\index{arch@{arch}!ADC@{ADC}}
+\index{ADC@{ADC}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{ADC}{ADC}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_ad251174263b28388454816799ffd91ae}{ADC}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Herefter opstilles alle submodulerne. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_a0b5980891b5337642f3c1006922daa79}\label{class_m_p_p_t_1_1arch_a0b5980891b5337642f3c1006922daa79}} 
+\index{arch@{arch}!adc\_clk@{adc\_clk}}
+\index{adc\_clk@{adc\_clk}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{adc\_clk}{adc\_clk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a0b5980891b5337642f3c1006922daa79}{adc\+\_\+clk}} {\bfseries \textcolor{keywordtype}{unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Signal til at downscale main clock. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_a506811bc3cf2e74ec42a20ef89cc2826}\label{class_m_p_p_t_1_1arch_a506811bc3cf2e74ec42a20ef89cc2826}} 
+\index{arch@{arch}!adc\_curr@{adc\_curr}}
+\index{adc\_curr@{adc\_curr}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{adc\_curr}{adc\_curr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a506811bc3cf2e74ec42a20ef89cc2826}{adc\+\_\+curr}} {\bfseries \textcolor{vhdlchar}{adc}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+ADC til måling af volt over shuntmodstand, hvilket er afhængig af strømmen igennem mondstanden. 
+
+Forbindelse for at få signalet fra komparator komponenten ind i submodulet. \mbox{\Hypertarget{class_m_p_p_t_1_1arch_a1784cfc896867dad99e85ae41976b344}\label{class_m_p_p_t_1_1arch_a1784cfc896867dad99e85ae41976b344}} 
+\index{arch@{arch}!adc\_volt@{adc\_volt}}
+\index{adc\_volt@{adc\_volt}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{adc\_volt}{adc\_volt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a1784cfc896867dad99e85ae41976b344}{adc\+\_\+volt}} {\bfseries \textcolor{vhdlchar}{adc}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+ADC til måling af volt over solcellerne. 
+
+Forbindelse for at få signalet fra komparator komponenten ind i submodulet. \mbox{\Hypertarget{class_m_p_p_t_1_1arch_a4f294513fd29518060edeba78bf489d6}\label{class_m_p_p_t_1_1arch_a4f294513fd29518060edeba78bf489d6}} 
+\index{arch@{arch}!comp1@{comp1}}
+\index{comp1@{comp1}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{comp1}{comp1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a4f294513fd29518060edeba78bf489d6}{comp1}} {\bfseries \textcolor{vhdlchar}{sixteen\+Bit\+Comparator}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Sixteenbitcomparator til at compare effekten fra solcellerne. 
+
+Resultat fra sixteenbitcomparatoren forbindes. \mbox{\Hypertarget{class_m_p_p_t_1_1arch_a6f805b41ff8b22578a10edd09175e84b}\label{class_m_p_p_t_1_1arch_a6f805b41ff8b22578a10edd09175e84b}} 
+\index{arch@{arch}!comp\_out@{comp\_out}}
+\index{comp\_out@{comp\_out}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{comp\_out}{comp\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a6f805b41ff8b22578a10edd09175e84b}{comp\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Outputs fra sixteenbit comparatoren. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_a45ca03ee4802ed62ca6a087e28903980}\label{class_m_p_p_t_1_1arch_a45ca03ee4802ed62ca6a087e28903980}} 
+\index{arch@{arch}!duty\_cycle@{duty\_cycle}}
+\index{duty\_cycle@{duty\_cycle}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle}{duty\_cycle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a45ca03ee4802ed62ca6a087e28903980}{duty\+\_\+cycle}} {\bfseries \textcolor{keywordtype}{unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Duty cycle som går ned i PWM sub modulet. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_a9ce31e255c180d1d4f978a24806ad06e}\label{class_m_p_p_t_1_1arch_a9ce31e255c180d1d4f978a24806ad06e}} 
+\index{arch@{arch}!MPPT\_clk@{MPPT\_clk}}
+\index{MPPT\_clk@{MPPT\_clk}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{MPPT\_clk}{MPPT\_clk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a9ce31e255c180d1d4f978a24806ad06e}{MPPT\+\_\+clk}} {\bfseries \textcolor{keywordtype}{unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keyword}{\char`\"{} 100 \char`\"{}}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Clock for PWM signal. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_aa6a1c879901e0ccb62e50d29149a5e89}\label{class_m_p_p_t_1_1arch_aa6a1c879901e0ccb62e50d29149a5e89}} 
+\index{arch@{arch}!pwm\_comp@{pwm\_comp}}
+\index{pwm\_comp@{pwm\_comp}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{pwm\_comp}{pwm\_comp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_aa6a1c879901e0ccb62e50d29149a5e89}{pwm\+\_\+comp}} {\bfseries \textcolor{vhdlchar}{PWM\+\_\+submodule}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+PWM generator til buck/boost converteren. 
+
+clock til at generere PWM signalet. \mbox{\Hypertarget{class_m_p_p_t_1_1arch_a95484a328f3711e0938d7be410f7897d}\label{class_m_p_p_t_1_1arch_a95484a328f3711e0938d7be410f7897d}} 
+\index{arch@{arch}!PWM\_submodule@{PWM\_submodule}}
+\index{PWM\_submodule@{PWM\_submodule}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{PWM\_submodule}{PWM\_submodule}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a95484a328f3711e0938d7be410f7897d}{PWM\+\_\+submodule}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_ae5a358d58d5d45deb31e049b126e85c4}\label{class_m_p_p_t_1_1arch_ae5a358d58d5d45deb31e049b126e85c4}} 
+\index{arch@{arch}!result\_sig@{result\_sig}}
+\index{result\_sig@{result\_sig}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{result\_sig}{result\_sig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_ae5a358d58d5d45deb31e049b126e85c4}{result\+\_\+sig}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Vector til at gemme resultatet fra ADC. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_ab5c139500024441d37e6b249e12f880d}\label{class_m_p_p_t_1_1arch_ab5c139500024441d37e6b249e12f880d}} 
+\index{arch@{arch}!result\_sig\_curr@{result\_sig\_curr}}
+\index{result\_sig\_curr@{result\_sig\_curr}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{result\_sig\_curr}{result\_sig\_curr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_ab5c139500024441d37e6b249e12f880d}{result\+\_\+sig\+\_\+curr}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Vector til at gemme resultatet fra ADC. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_ad2b0f7f989b0c156e25bf1958337896e}\label{class_m_p_p_t_1_1arch_ad2b0f7f989b0c156e25bf1958337896e}} 
+\index{arch@{arch}!result\_sig\_old@{result\_sig\_old}}
+\index{result\_sig\_old@{result\_sig\_old}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{result\_sig\_old}{result\_sig\_old}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_ad2b0f7f989b0c156e25bf1958337896e}{result\+\_\+sig\+\_\+old}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\textquotesingle{}}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Den forrige værdi for effekten. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_a5970123b7e97e26490c44b2ea286c68d}\label{class_m_p_p_t_1_1arch_a5970123b7e97e26490c44b2ea286c68d}} 
+\index{arch@{arch}!result\_sig\_volt@{result\_sig\_volt}}
+\index{result\_sig\_volt@{result\_sig\_volt}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{result\_sig\_volt}{result\_sig\_volt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_a5970123b7e97e26490c44b2ea286c68d}{result\+\_\+sig\+\_\+volt}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Vector til at gemme resultatet fra ADC. 
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_ab33b69e7cc8ca232a0fca34d8dff557e}\label{class_m_p_p_t_1_1arch_ab33b69e7cc8ca232a0fca34d8dff557e}} 
+\index{arch@{arch}!sixteenBitComparator@{sixteenBitComparator}}
+\index{sixteenBitComparator@{sixteenBitComparator}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{sixteenBitComparator}{sixteenBitComparator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_ab33b69e7cc8ca232a0fca34d8dff557e}{sixteen\+Bit\+Comparator}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+\mbox{\Hypertarget{class_m_p_p_t_1_1arch_aebf92e8973a4d8b556b1ac69c84a0d60}\label{class_m_p_p_t_1_1arch_aebf92e8973a4d8b556b1ac69c84a0d60}} 
+\index{arch@{arch}!vej\_h@{vej\_h}}
+\index{vej\_h@{vej\_h}!arch@{arch}}
+\doxysubsubsection{\texorpdfstring{vej\_h}{vej\_h}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_p_p_t_1_1arch_aebf92e8973a4d8b556b1ac69c84a0d60}{vej\+\_\+h}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Værdi, som holder styr på hvilken vej algorithmen lige har gået. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_m_p_p_t_8vhd}{MPPT.\+vhd}}\end{DoxyCompactItemize}

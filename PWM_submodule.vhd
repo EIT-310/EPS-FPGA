@@ -3,35 +3,39 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
---! Submodul til PWM generator opstilles.
+--! PWM modul består at en 7 bit repræsentation af duty cycle og en 7 bit counter.
+--! counteren tæller op hver gang clocken har har rising edge. Så længe counteren
+--! er lavere end dutycycle repræsentationen, vil output signalet være høj, og så
+--! længe counteren er højere end dutycycle repræsentationen, vil output signalet
+--! være lavt.
 entity PWM_submodule is
 
 	port
 	(
-    pwm_out : out std_logic;
-    duty_cycle : in std_logic_vector(6 downto 0);
-    clk : in std_logic
+    pwm_out : out std_logic;                        --! Signal der er højt eller lavt alt efter hvor vi er i duty cyclen
+    duty_cycle : in std_logic_vector(6 downto 0);   --! 7-bit repræsentation af dutycycle \( (D) \) hvor \(\frac{D_{7bit}}{2^7} = D \\% \)
+    clk : in std_logic                              --! Main clock uskaleret mht. PWM
     );
 end; 
 
 
-architecture PWM of PWM_submodule is
-    signal cnt : unsigned(6 downto 0); --! counter, som bruges til at genere PWM signalet.
-    signal PWM_clockscaler : unsigned(2 downto 0); --!Først laves en clockscaler for at reducere frekvensen på PWM signalet. Dette gøres for at sikre spolen på MPPT-boarded kan når at op og aflade.
+architecture arch of PWM_submodule is
+    signal cnt : unsigned(6 downto 0);              --! Counter repræsenterer hvor i dutycyclen vi er kommet, hvis denne er lavere end dc er pwm signal høj, og vice versa.
+    signal PWM_clockscaler : unsigned(2 downto 0);  --! Clockscaler for at reducere frekvensen på PWM signalet
 begin
-    --! process for PWM clockscaler.
+    --! Clock frekvens \f$(f)\f$ scaleret mht. PWM perioden \f$(T)\f$ således \f$\frac{2^7}{f} = T\f$ 
     PWM_clockscaler_pro : process( clk )
     begin
     if rising_edge(clk) then
         PWM_clockscaler <= PWM_clockscaler + 1;
     end if;
-    
-    --! Process der genere PWM signalet.
-    --! PWM signalet bliver generet ved at cnt signalet hele tiden tæller op.
-    --! Når cnt er lavere end duty_cycle er output benet høj.
-    --! Når cnt er højere end duty_cycle er outputbenet lavt.
-    --! På den måde kan man ved at ændre duty_cycle bestemme hvor meget af tiden PWM signalet er højt og lavt.
     end process; --PWM_clockscaler
+    
+    --! Process der generer PWM signalet.
+    --! PWM signalet bliver generet ved at cnt signalet tæller op med clocken.
+    --! Når cnt er lavere end duty_cycle er output benet høj.
+    --! Når cnt er højere end duty_cycle er output benet lavt.
+    --! På den måde kan man ved at ændre duty_cycle bestemme hvor meget af tiden PWM signalet er højt og lavt.
     PWM_signal : process( PWM_clockscaler(2) )
     begin
         if rising_edge( PWM_clockscaler(2) ) then
@@ -46,4 +50,4 @@ begin
         end if ;
     end process ; -- PWM_signal
 
-end PWM ; -- PWM
+end arch ; -- PWM

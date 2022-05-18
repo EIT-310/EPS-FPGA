@@ -214,13 +214,12 @@ var searchData=
   ['power_5fpreset_5fcooling_5fsolution_5f448_211',['POWER_PRESET_COOLING_SOLUTION_448',['../_e_p_s-_a_d_c_8qsf.html#a4eee54b0812428a0db962dd9d9920e2c',1,'EPS-ADC.qsf']]],
   ['project_5fcreation_5ftime_5fdate_5f4_212',['PROJECT_CREATION_TIME_DATE_4',['../_e_p_s-_a_d_c_8qsf.html#a4d801bdc0c5f027f5768763818294d1e',1,'EPS-ADC.qsf']]],
   ['project_5foutput_5fdirectory_5f6_213',['PROJECT_OUTPUT_DIRECTORY_6',['../_e_p_s-_a_d_c_8qsf.html#aeca3aec4715d85dc6e882cad8038f949',1,'EPS-ADC.qsf']]],
-  ['pwm_214',['PWM',['../class_p_w_m__submodule_1_1_p_w_m.html',1,'PWM_submodule']]],
-  ['pwm_5fclockscaler_215',['PWM_clockscaler',['../class_m_p_p_t_1_1_m_p_p_t.html#a4faf8d756ff0b33b2073c9c067bfe84f',1,'MPPT.MPPT.PWM_clockscaler()'],['../class_p_w_m__submodule_1_1_p_w_m.html#a9a17650289e8b1f64aefcff39cedf72d',1,'PWM_submodule.PWM.PWM_clockscaler()']]],
-  ['pwm_5fclockscaler_5fpro_216',['PWM_clockscaler_pro',['../class_p_w_m__submodule_1_1_p_w_m.html#ae53ceb8f313042b630e490e8ebb30979',1,'PWM_submodule::PWM']]],
-  ['pwm_5fmes_217',['PWM_mes',['../class_d_e0___c_v__golden__top_1_1top.html#af96631a8ce77dedf5ff8e08f74822376',1,'DE0_CV_golden_top::top']]],
+  ['pwm_5fclockscaler_214',['PWM_clockscaler',['../class_m_p_p_t_1_1arch.html#a4faf8d756ff0b33b2073c9c067bfe84f',1,'MPPT.arch.PWM_clockscaler()'],['../class_p_w_m__submodule_1_1arch.html#a9a17650289e8b1f64aefcff39cedf72d',1,'PWM_submodule.arch.PWM_clockscaler()']]],
+  ['pwm_5fclockscaler_5fpro_215',['PWM_clockscaler_pro',['../class_p_w_m__submodule_1_1arch.html#ae53ceb8f313042b630e490e8ebb30979',1,'PWM_submodule::arch']]],
+  ['pwm_5fmes_216',['PWM_mes',['../class_d_e0___c_v__golden__top_1_1arch.html#af96631a8ce77dedf5ff8e08f74822376',1,'DE0_CV_golden_top::arch']]],
+  ['pwm_5fout_217',['pwm_out',['../class_p_w_m__submodule.html#a28ba21b58371583a39b5c7d8111e0e83',1,'PWM_submodule']]],
   ['pwm_5fout_218',['PWM_out',['../class_m_p_p_t.html#a7d4e82e9f18ada98cb378147268ee8f5',1,'MPPT']]],
-  ['pwm_5fout_219',['pwm_out',['../class_p_w_m__submodule.html#a28ba21b58371583a39b5c7d8111e0e83',1,'PWM_submodule']]],
-  ['pwm_5fsignal_220',['PWM_signal',['../class_p_w_m__submodule_1_1_p_w_m.html#a6a0e84ee3bac6e959b04d95cb459e2d5',1,'PWM_submodule::PWM']]],
-  ['pwm_5fsubmodule_221',['PWM_submodule',['../class_p_w_m__submodule.html',1,'PWM_submodule'],['../class_m_p_p_t_1_1_m_p_p_t.html#a95484a328f3711e0938d7be410f7897d',1,'MPPT.MPPT.PWM_submodule()']]],
-  ['pwm_5fsubmodule_2evhd_222',['PWM_submodule.vhd',['../_p_w_m__submodule_8vhd.html',1,'']]]
+  ['pwm_5fsignal_219',['PWM_signal',['../class_p_w_m__submodule_1_1arch.html#a6a0e84ee3bac6e959b04d95cb459e2d5',1,'PWM_submodule::arch']]],
+  ['pwm_5fsubmodule_220',['PWM_submodule',['../class_p_w_m__submodule.html',1,'PWM_submodule'],['../class_m_p_p_t_1_1arch.html#a95484a328f3711e0938d7be410f7897d',1,'MPPT.arch.PWM_submodule()']]],
+  ['pwm_5fsubmodule_2evhd_221',['PWM_submodule.vhd',['../_p_w_m__submodule_8vhd.html',1,'']]]
 ];

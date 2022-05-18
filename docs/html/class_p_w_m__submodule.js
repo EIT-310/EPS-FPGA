@@ -1,6 +1,6 @@
 var class_p_w_m__submodule =
 [
-    [ "PWM_submodule.PWM", "class_p_w_m__submodule_1_1_p_w_m.html", "class_p_w_m__submodule_1_1_p_w_m" ],
+    [ "PWM_submodule.arch", "class_p_w_m__submodule_1_1arch.html", "class_p_w_m__submodule_1_1arch" ],
     [ "clk", "class_p_w_m__submodule.html#a50da91b765765ac486df1b41692e962f", null ],
     [ "duty_cycle", "class_p_w_m__submodule.html#a72221e1cb955415466140bb274221940", null ],
     [ "ieee", "class_p_w_m__submodule.html#a0a6af6eef40212dbaf130d57ce711256", null ],

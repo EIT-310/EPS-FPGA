@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -102,7 +109,9 @@ Signals</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Instantiations" name="Instantiations"></a>
 Instantiations</h2></td></tr>
  <tr class="memitem:a4f294513fd29518060edeba78bf489d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsixteen_bit_comparator_1_1arch.html#a4f294513fd29518060edeba78bf489d6">comp1</a>&#160;</td><td class="memItemRight" valign="bottom">  <b>eightBitComparator</b>  <em><a class="el" href="classeight_bit_comparator.html">&lt;Entity eightBitComparator&gt;</a></em></td></tr>
+<tr class="memdesc:a4f294513fd29518060edeba78bf489d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Første instance af eightbitcomparator.  <a href="#a4f294513fd29518060edeba78bf489d6"></a><br /></td></tr>
 <tr class="memitem:a4425a5a8bb89b76804a1faca18b9e423"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsixteen_bit_comparator_1_1arch.html#a4425a5a8bb89b76804a1faca18b9e423">comp2</a>&#160;</td><td class="memItemRight" valign="bottom">  <b>eightBitComparator</b>  <em><a class="el" href="classeight_bit_comparator.html">&lt;Entity eightBitComparator&gt;</a></em></td></tr>
+<tr class="memdesc:a4425a5a8bb89b76804a1faca18b9e423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anden instance af eightbitcomparator.  <a href="#a4425a5a8bb89b76804a1faca18b9e423"></a><br /></td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="aa17c7f45238616557fec3bc7aefdc1eb" name="aa17c7f45238616557fec3bc7aefdc1eb"></a>
@@ -147,6 +156,9 @@ Instantiations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Første instance af eightbitcomparator. </p>
+<p >Resultat for otte least significant bits comparator. </p>
+
 </div>
 </div>
 <a id="a4425a5a8bb89b76804a1faca18b9e423" name="a4425a5a8bb89b76804a1faca18b9e423"></a>
@@ -169,6 +181,9 @@ Instantiations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Anden instance af eightbitcomparator. </p>
+<p >Resultat fra sixteenbit comparatoren. </p>
+
 </div>
 </div>
 <a id="a20d17049daff0e2697040f48d909cd6b" name="a20d17049daff0e2697040f48d909cd6b"></a>
@@ -190,6 +205,7 @@ Instantiations</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Signal til at overførere resultatet fra den eightbit comparator, der sammenligner de otte least significant bits videre til den eightbit comparator, som sammenligner de otte most significant bits. Submodul for eightbitcomparator. </p>
 
 </div>
 </div>

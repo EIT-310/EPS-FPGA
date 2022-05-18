@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -89,27 +96,18 @@ $(document).ready(function(){initNavTree('classsixteen_bit_comparator.html','');
   <div class="headertitle"><div class="title">sixteenBitComparator Entity Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Submodul for sixteenbitcomparator består af 2 8-bit comparators der sættes sammen.  
+ <a href="classsixteen_bit_comparator.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for sixteenBitComparator:</div>
 <div class="dyncontent">
-<div class="center"><img src="classsixteen_bit_comparator__inherit__graph.png" border="0" usemap="#asixteen_bit_comparator_inherit__map" alt="Inheritance graph"/></div>
-<map name="asixteen_bit_comparator_inherit__map" id="asixteen_bit_comparator_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,155,152,181"/>
-<area shape="rect" href="class_m_p_p_t.html" title=" " alt="" coords="49,229,108,256"/>
-<area shape="rect" href="classeight_bit_comparator.html" title=" " alt="" coords="12,80,145,107"/>
-<area shape="rect" href="classfour_bit_comparator.html" title=" " alt="" coords="15,5,142,32"/>
-<area shape="rect" href="class_d_e0___c_v__golden__top.html" title=" " alt="" coords="7,304,150,331"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classsixteen_bit_comparator__inherit__graph.svg" width="158" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for sixteenBitComparator:</div>
 <div class="dyncontent">
-<div class="center"><img src="classsixteen_bit_comparator__coll__graph.png" border="0" usemap="#asixteen_bit_comparator_coll__map" alt="Collaboration graph"/></div>
-<map name="asixteen_bit_comparator_coll__map" id="asixteen_bit_comparator_coll__map">
-<area shape="rect" title=" " alt="" coords="5,155,152,181"/>
-<area shape="rect" href="classeight_bit_comparator.html" title=" " alt="" coords="12,80,145,107"/>
-<area shape="rect" href="classfour_bit_comparator.html" title=" " alt="" coords="15,5,142,32"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classsixteen_bit_comparator__coll__graph.svg" width="158" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -130,11 +128,17 @@ Use Clauses</h2></td></tr>
 <tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Ports" name="Ports"></a>
 Ports</h2></td></tr>
  <tr class="memitem:a1e6788fac2e9bf8f1cdf157ec3d2e5e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsixteen_bit_comparator.html#a1e6788fac2e9bf8f1cdf157ec3d2e5e0">saveA16</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a1e6788fac2e9bf8f1cdf157ec3d2e5e0"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Nye værdi til sammenligning.  <a href="#a1e6788fac2e9bf8f1cdf157ec3d2e5e0"></a><br /></td></tr>
 <tr class="memitem:af21c1913dc13e4d8ca35a2e6c1907525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsixteen_bit_comparator.html#af21c1913dc13e4d8ca35a2e6c1907525">saveB16</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:af21c1913dc13e4d8ca35a2e6c1907525"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Værdi fra tidligere sammenligning.  <a href="#af21c1913dc13e4d8ca35a2e6c1907525"></a><br /></td></tr>
 <tr class="memitem:aab5d04c7eb7709fdb3d0406508f633ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsixteen_bit_comparator.html#aab5d04c7eb7709fdb3d0406508f633ac">exIn16</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">2</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:aab5d04c7eb7709fdb3d0406508f633ac"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">"Carry" input fra tidligere comarator / starting conditions  <a href="#aab5d04c7eb7709fdb3d0406508f633ac"></a><br /></td></tr>
 <tr class="memitem:ac66c524fa98cf3f39e552c09f674937a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsixteen_bit_comparator.html#ac66c524fa98cf3f39e552c09f674937a">exOut16</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">2</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ac66c524fa98cf3f39e552c09f674937a"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Resultat af sammenligningen 0 = (A &gt; B), 1 = (A = B), 2 = (B &gt; A)  <a href="#ac66c524fa98cf3f39e552c09f674937a"></a><br /></td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Submodul for sixteenbitcomparator består af 2 8-bit comparators der sættes sammen. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a6225a53bc3f8773294fcf63b77915332" name="a6225a53bc3f8773294fcf63b77915332"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6225a53bc3f8773294fcf63b77915332">&#9670;&nbsp;</a></span>altera</h2>
 
@@ -199,6 +203,8 @@ Ports</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>"Carry" input fra tidligere comarator / starting conditions </p>
+
 </div>
 </div>
 <a id="ac66c524fa98cf3f39e552c09f674937a" name="ac66c524fa98cf3f39e552c09f674937a"></a>
@@ -220,6 +226,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Resultat af sammenligningen 0 = (A &gt; B), 1 = (A = B), 2 = (B &gt; A) </p>
 
 </div>
 </div>
@@ -265,6 +273,8 @@ Ports</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Nye værdi til sammenligning. </p>
+
 </div>
 </div>
 <a id="af21c1913dc13e4d8ca35a2e6c1907525" name="af21c1913dc13e4d8ca35a2e6c1907525"></a>
@@ -286,6 +296,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Værdi fra tidligere sammenligning. </p>
 
 </div>
 </div>

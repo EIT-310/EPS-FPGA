@@ -214,9 +214,9 @@ var searchData=
   ['power_5fpreset_5fcooling_5fsolution_5f448_211',['POWER_PRESET_COOLING_SOLUTION_448',['../_e_p_s-_a_d_c_8qsf.html#a4eee54b0812428a0db962dd9d9920e2c',1,'EPS-ADC.qsf']]],
   ['project_5fcreation_5ftime_5fdate_5f4_212',['PROJECT_CREATION_TIME_DATE_4',['../_e_p_s-_a_d_c_8qsf.html#a4d801bdc0c5f027f5768763818294d1e',1,'EPS-ADC.qsf']]],
   ['project_5foutput_5fdirectory_5f6_213',['PROJECT_OUTPUT_DIRECTORY_6',['../_e_p_s-_a_d_c_8qsf.html#aeca3aec4715d85dc6e882cad8038f949',1,'EPS-ADC.qsf']]],
-  ['pwm_5fclockscaler_214',['PWM_clockscaler',['../class_p_w_m__submodule_1_1_p_w_m.html#a9a17650289e8b1f64aefcff39cedf72d',1,'PWM_submodule::PWM']]],
-  ['pwm_5fmes_215',['PWM_mes',['../class_d_e0___c_v__golden__top_1_1top.html#af96631a8ce77dedf5ff8e08f74822376',1,'DE0_CV_golden_top::top']]],
+  ['pwm_5fclockscaler_214',['PWM_clockscaler',['../class_p_w_m__submodule_1_1arch.html#a9a17650289e8b1f64aefcff39cedf72d',1,'PWM_submodule::arch']]],
+  ['pwm_5fmes_215',['PWM_mes',['../class_d_e0___c_v__golden__top_1_1arch.html#af96631a8ce77dedf5ff8e08f74822376',1,'DE0_CV_golden_top::arch']]],
   ['pwm_5fout_216',['PWM_out',['../class_m_p_p_t.html#a7d4e82e9f18ada98cb378147268ee8f5',1,'MPPT']]],
   ['pwm_5fout_217',['pwm_out',['../class_p_w_m__submodule.html#a28ba21b58371583a39b5c7d8111e0e83',1,'PWM_submodule']]],
-  ['pwm_5fsubmodule_218',['PWM_submodule',['../class_m_p_p_t_1_1_m_p_p_t.html#a95484a328f3711e0938d7be410f7897d',1,'MPPT::MPPT']]]
+  ['pwm_5fsubmodule_218',['PWM_submodule',['../class_m_p_p_t_1_1arch.html#a95484a328f3711e0938d7be410f7897d',1,'MPPT::arch']]]
 ];

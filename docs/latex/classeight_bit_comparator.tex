@@ -2,8 +2,12 @@
 \label{classeight_bit_comparator}\index{eightBitComparator@{eightBitComparator}}
 
 
-Inheritance diagram for eight\+Bit\+Comparator\+:
-\nopagebreak
+Submodul for eightbitcomparator består af 2 4-\/bit comparators der sættes sammen.  
+
+
+
+
+Inheritance diagram for eight\+Bit\+Comparator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -42,14 +46,17 @@ Collaboration diagram for eight\+Bit\+Comparator\+:\nopagebreak
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classeight_bit_comparator_aec9dc763b14e8c9ead63e6202594689a}{saveA}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em Nye værdi til sammenligning. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classeight_bit_comparator_abf47bed9c56758952ce2822e543e59e8}{saveB}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em Værdi fra tidligere sammenligning. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classeight_bit_comparator_a99ddad45a81619e51f7f1e13f30d1f44}{ex\+In}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\item 
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Carry\char`\"{} input fra tidligere comarator / starting conditions \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classeight_bit_comparator_a7be8a4440f562118749c194ed9b42c77}{ex\+Out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Resultat af sammenligningen 0 = (A \texorpdfstring{$>$}{>} B), 1 = (A = B), 2 = (B \texorpdfstring{$>$}{>} A) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Submodul for eightbitcomparator består af 2 4-\/bit comparators der sættes sammen. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classeight_bit_comparator_a6225a53bc3f8773294fcf63b77915332}\label{classeight_bit_comparator_a6225a53bc3f8773294fcf63b77915332}} 
@@ -70,11 +77,19 @@ Collaboration diagram for eight\+Bit\+Comparator\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{exIn}{exIn}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classeight_bit_comparator_a99ddad45a81619e51f7f1e13f30d1f44}{ex\+In}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+\char`\"{}\+Carry\char`\"{} input fra tidligere comarator / starting conditions 
+
 \mbox{\Hypertarget{classeight_bit_comparator_a7be8a4440f562118749c194ed9b42c77}\label{classeight_bit_comparator_a7be8a4440f562118749c194ed9b42c77}} 
 \index{eightBitComparator@{eightBitComparator}!exOut@{exOut}}
 \index{exOut@{exOut}!eightBitComparator@{eightBitComparator}}
 \doxysubsubsection{\texorpdfstring{exOut}{exOut}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classeight_bit_comparator_a7be8a4440f562118749c194ed9b42c77}{ex\+Out}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Resultat af sammenligningen 0 = (A \texorpdfstring{$>$}{>} B), 1 = (A = B), 2 = (B \texorpdfstring{$>$}{>} A) 
 
 \mbox{\Hypertarget{classeight_bit_comparator_a0a6af6eef40212dbaf130d57ce711256}\label{classeight_bit_comparator_a0a6af6eef40212dbaf130d57ce711256}} 
 \index{eightBitComparator@{eightBitComparator}!ieee@{ieee}}
@@ -88,11 +103,19 @@ Collaboration diagram for eight\+Bit\+Comparator\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{saveA}{saveA}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classeight_bit_comparator_aec9dc763b14e8c9ead63e6202594689a}{saveA}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
 
+
+
+Nye værdi til sammenligning. 
+
 \mbox{\Hypertarget{classeight_bit_comparator_abf47bed9c56758952ce2822e543e59e8}\label{classeight_bit_comparator_abf47bed9c56758952ce2822e543e59e8}} 
 \index{eightBitComparator@{eightBitComparator}!saveB@{saveB}}
 \index{saveB@{saveB}!eightBitComparator@{eightBitComparator}}
 \doxysubsubsection{\texorpdfstring{saveB}{saveB}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classeight_bit_comparator_abf47bed9c56758952ce2822e543e59e8}{saveB}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Værdi fra tidligere sammenligning. 
 
 \mbox{\Hypertarget{classeight_bit_comparator_acd03516902501cd1c7296a98e22c6fcb}\label{classeight_bit_comparator_acd03516902501cd1c7296a98e22c6fcb}} 
 \index{eightBitComparator@{eightBitComparator}!std\_logic\_1164@{std\_logic\_1164}}

@@ -1,10 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classadder.html" title=" " alt="" coords="219,5,274,32"/>
+<area shape="rect" id="node1" href="$classadder.html" title="Modul adder består af en process der syntesiterer en clock aktiveret 8bit adder." alt="" coords="219,5,274,32"/>
 <area shape="rect" id="node2" href="$classadc.html" title=" " alt="" coords="413,5,456,32"/>
 <area shape="rect" id="node3" href="$class_m_p_p_t.html" title=" " alt="" coords="556,56,615,83"/>
 <area shape="rect" id="node4" href="$class_d_e0___c_v__golden__top.html" title=" " alt="" coords="663,56,805,83"/>
-<area shape="rect" id="node5" href="$classfour_bit_comparator.html" title=" " alt="" coords="5,56,132,83"/>
-<area shape="rect" id="node6" href="$classeight_bit_comparator.html" title=" " alt="" coords="180,56,313,83"/>
-<area shape="rect" id="node7" href="$classsixteen_bit_comparator.html" title=" " alt="" coords="361,56,508,83"/>
+<area shape="rect" id="node5" href="$classfour_bit_comparator.html" title="Submodul for fourbitcomparator består udelukkende af statisk logik." alt="" coords="5,56,132,83"/>
+<area shape="rect" id="node6" href="$classeight_bit_comparator.html" title="Submodul for eightbitcomparator består af 2 4&#45;bit comparators der sættes sammen." alt="" coords="180,56,313,83"/>
+<area shape="rect" id="node7" href="$classsixteen_bit_comparator.html" title="Submodul for sixteenbitcomparator består af 2 8&#45;bit comparators der sættes sammen." alt="" coords="361,56,508,83"/>
 <area shape="rect" id="node8" href="$class_p_w_m__submodule.html" title=" " alt="" coords="372,107,497,133"/>
 </map>

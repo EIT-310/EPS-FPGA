@@ -3,9 +3,9 @@ var searchData=
   ['a_0',['A',['../classfour_bit_comparator.html#a339c4b68bec5b4093d060d5ddc0bdbf6',1,'fourBitComparator']]],
   ['active_5fserial_5fclock_5f437_1',['ACTIVE_SERIAL_CLOCK_437',['../_e_p_s-_a_d_c_8qsf.html#a8bbd07ff7964165cb153e1649307b678',1,'EPS-ADC.qsf']]],
   ['adc_2',['adc',['../classadc.html',1,'']]],
-  ['adc_3',['ADC',['../class_m_p_p_t_1_1_m_p_p_t.html#ad251174263b28388454816799ffd91ae',1,'MPPT::MPPT']]],
+  ['adc_3',['ADC',['../class_m_p_p_t_1_1arch.html#ad251174263b28388454816799ffd91ae',1,'MPPT::arch']]],
   ['adc_2evhd_4',['ADC.vhd',['../_a_d_c_8vhd.html',1,'']]],
-  ['adc_5fclk_5',['adc_clk',['../class_m_p_p_t_1_1_m_p_p_t.html#a0b5980891b5337642f3c1006922daa79',1,'MPPT::MPPT']]],
+  ['adc_5fclk_5',['adc_clk',['../class_m_p_p_t_1_1arch.html#a0b5980891b5337642f3c1006922daa79',1,'MPPT::arch']]],
   ['adc_5fcurr_5fout_6',['ADC_Curr_out',['../class_m_p_p_t.html#abdc217e25798511503e71ba7c1137236',1,'MPPT']]],
   ['adc_5fvolt_5fout_7',['ADC_Volt_out',['../class_m_p_p_t.html#a5c1aff1737aad2246e063a9dc86ac820',1,'MPPT']]],
   ['add_5fsub_8',['add_sub',['../classadder.html#a27b980144acddf87256ccf93d8a6623c',1,'adder']]],
@@ -14,6 +14,6 @@ var searchData=
   ['adder_2evhd_11',['adder.vhd',['../adder_8vhd.html',1,'']]],
   ['altera_12',['altera',['../classeight_bit_comparator.html#a6225a53bc3f8773294fcf63b77915332',1,'eightBitComparator.altera()'],['../classfour_bit_comparator.html#a6225a53bc3f8773294fcf63b77915332',1,'fourBitComparator.altera()'],['../classsixteen_bit_comparator.html#a6225a53bc3f8773294fcf63b77915332',1,'sixteenBitComparator.altera()']]],
   ['altera_5fsyn_5fattributes_13',['altera_syn_attributes',['../classeight_bit_comparator.html#a3d79f59b088a2bbe9d581cfa88249720',1,'eightBitComparator.altera_syn_attributes()'],['../classfour_bit_comparator.html#a3d79f59b088a2bbe9d581cfa88249720',1,'fourBitComparator.altera_syn_attributes()'],['../classsixteen_bit_comparator.html#a3d79f59b088a2bbe9d581cfa88249720',1,'sixteenBitComparator.altera_syn_attributes()']]],
-  ['arch_14',['arch',['../classadc_1_1arch.html',1,'arch'],['../classadder_1_1arch.html',1,'arch'],['../classeight_bit_comparator_1_1arch.html',1,'arch'],['../classsixteen_bit_comparator_1_1arch.html',1,'arch']]],
+  ['arch_14',['arch',['../classadc_1_1arch.html',1,'arch'],['../classadder_1_1arch.html',1,'arch'],['../class_d_e0___c_v__golden__top_1_1arch.html',1,'arch'],['../classeight_bit_comparator_1_1arch.html',1,'arch'],['../class_m_p_p_t_1_1arch.html',1,'arch'],['../class_p_w_m__submodule_1_1arch.html',1,'arch'],['../classsixteen_bit_comparator_1_1arch.html',1,'arch']]],
   ['artih_15',['artih',['../classadder_1_1arch.html#a0f6182c161d217ed8ec5b756bf325876',1,'adder::arch']]]
 ];

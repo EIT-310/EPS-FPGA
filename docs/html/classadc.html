@@ -16,6 +16,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -92,22 +99,12 @@ $(document).ready(function(){initNavTree('classadc.html',''); initResizable(); }
 <div class="dynheader">
 Inheritance diagram for adc:</div>
 <div class="dyncontent">
-<div class="center"><img src="classadc__inherit__graph.png" border="0" usemap="#aadc_inherit__map" alt="Inheritance graph"/></div>
-<map name="aadc_inherit__map" id="aadc_inherit__map">
-<area shape="rect" title=" " alt="" coords="55,80,98,107"/>
-<area shape="rect" href="class_m_p_p_t.html" title=" " alt="" coords="47,155,106,181"/>
-<area shape="rect" href="classadder.html" title=" " alt="" coords="49,5,104,32"/>
-<area shape="rect" href="class_d_e0___c_v__golden__top.html" title=" " alt="" coords="5,229,148,256"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classadc__inherit__graph.svg" width="154" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for adc:</div>
 <div class="dyncontent">
-<div class="center"><img src="classadc__coll__graph.png" border="0" usemap="#aadc_coll__map" alt="Collaboration graph"/></div>
-<map name="aadc_coll__map" id="aadc_coll__map">
-<area shape="rect" title=" " alt="" coords="11,80,54,107"/>
-<area shape="rect" href="classadder.html" title=" " alt="" coords="5,5,60,32"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classadc__coll__graph.svg" width="66" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -127,11 +124,17 @@ Use Clauses</h2></td></tr>
 <tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Ports" name="Ports"></a>
 Ports</h2></td></tr>
  <tr class="memitem:a50da91b765765ac486df1b41692e962f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc.html#a50da91b765765ac486df1b41692e962f">clk</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memitem:a005cecfc7606862682d5179d2dba3bd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc.html#a005cecfc7606862682d5179d2dba3bd0">gpio1</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">35</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a50da91b765765ac486df1b41692e962f"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Nedskaleret clock.  <a href="#a50da91b765765ac486df1b41692e962f"></a><br /></td></tr>
+<tr class="memitem:aab4c58f80e82303c78692151f521b6ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc.html#aab4c58f80e82303c78692151f521b6ac">gpio1</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:aab4c58f80e82303c78692151f521b6ac"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Output til R2R-ladder.  <a href="#aab4c58f80e82303c78692151f521b6ac"></a><br /></td></tr>
 <tr class="memitem:a5eb1f667bbd94839c9595e126031fcc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc.html#a5eb1f667bbd94839c9595e126031fcc0">result_sig_out</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a5eb1f667bbd94839c9595e126031fcc0"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Endelige spænding fundet.  <a href="#a5eb1f667bbd94839c9595e126031fcc0"></a><br /></td></tr>
 <tr class="memitem:a0659f92161e1fc6ce786a891be857a7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc.html#a0659f92161e1fc6ce786a891be857a7b">add_sub_sig</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a0659f92161e1fc6ce786a891be857a7b"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Input fra den fysiske komparator.  <a href="#a0659f92161e1fc6ce786a891be857a7b"></a><br /></td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >ADC submodul finder en given spænding ved at skabe en spænding ud fra et 8 bit tal og en fysisk comparator, der viser om den produceret spænding er høje ellere lavere end den der måles </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a0659f92161e1fc6ce786a891be857a7b" name="a0659f92161e1fc6ce786a891be857a7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0659f92161e1fc6ce786a891be857a7b">&#9670;&nbsp;</a></span>add_sub_sig</h2>
 
@@ -151,6 +154,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Input fra den fysiske komparator. </p>
 
 </div>
 </div>
@@ -174,10 +179,12 @@ Ports</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Nedskaleret clock. </p>
+
 </div>
 </div>
-<a id="a005cecfc7606862682d5179d2dba3bd0" name="a005cecfc7606862682d5179d2dba3bd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a005cecfc7606862682d5179d2dba3bd0">&#9670;&nbsp;</a></span>gpio1</h2>
+<a id="aab4c58f80e82303c78692151f521b6ac" name="aab4c58f80e82303c78692151f521b6ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab4c58f80e82303c78692151f521b6ac">&#9670;&nbsp;</a></span>gpio1</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +193,7 @@ Ports</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classadc.html#a005cecfc7606862682d5179d2dba3bd0">gpio1</a> <b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">35</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+          <td class="memname"><a class="el" href="classadc.html#aab4c58f80e82303c78692151f521b6ac">gpio1</a> <b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
         </tr>
       </table>
   </td>
@@ -195,6 +202,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Output til R2R-ladder. </p>
 
 </div>
 </div>
@@ -261,6 +270,8 @@ Ports</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Endelige spænding fundet. </p>
 
 </div>
 </div>

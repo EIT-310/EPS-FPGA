@@ -6,5 +6,5 @@ var searchData=
   ['de0_5fcv_5fgolden_5ftop_3',['DE0_CV_golden_top',['../class_d_e0___c_v__golden__top.html',1,'']]],
   ['de0_5fcv_5fgolden_5ftop_2evhd_4',['DE0_CV_golden_top.vhd',['../_d_e0___c_v__golden__top_8vhd.html',1,'']]],
   ['device_5f1_5',['DEVICE_1',['../_e_p_s-_a_d_c_8qsf.html#a14045b7d4fe62a12f041a78ef46f5ecc',1,'EPS-ADC.qsf']]],
-  ['duty_5fcycle_6',['duty_cycle',['../class_m_p_p_t_1_1_m_p_p_t.html#a45ca03ee4802ed62ca6a087e28903980',1,'MPPT.MPPT.duty_cycle()'],['../class_p_w_m__submodule.html#a72221e1cb955415466140bb274221940',1,'PWM_submodule.duty_cycle()']]]
+  ['duty_5fcycle_6',['duty_cycle',['../class_m_p_p_t_1_1arch.html#a45ca03ee4802ed62ca6a087e28903980',1,'MPPT.arch.duty_cycle()'],['../class_p_w_m__submodule.html#a72221e1cb955415466140bb274221940',1,'PWM_submodule.duty_cycle()']]]
 ];

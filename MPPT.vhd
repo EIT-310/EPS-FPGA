@@ -3,19 +3,22 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
---! Submodul for MPPT'en opstilles.
+--! Submodul for MPPT'en består af portmap til ADC for måling af analog spænding,
+--! portmap til PWM generator for justering af Buck/Boost converteren,
+--! og portmap til comparatoren for at sammenligne målte ADC værdier.
+--! Herudover er selve algoritmen MPPT_algoritme processen.
 entity MPPT is
     port (
-        ADC_Volt_out	: out std_logic_vector(7 downto 0);
-        ADC_Curr_out	: out std_logic_vector(7 downto 0);
-		add_sub_sig		: in std_logic_vector(1 downto 0);
-		main_clk		: in std_logic;
-        PWM_out			: out std_logic;
-		res_sig			: out std_logic_vector(7 downto 0)
+		add_sub_sig		: in std_logic_vector(1 downto 0); 	--! Input port til ADC modulet fra den fysiske comparator
+		main_clk		: in std_logic;						--! Main clock på 40 MHz
+        ADC_Volt_out	: out std_logic_vector(7 downto 0);	--! Output fra ADC modulet til R2R-ladderen for spændingsmåling af MPPT'erne
+        ADC_Curr_out	: out std_logic_vector(7 downto 0);	--! Output fra ADC modulet til R2R-ladderen for strømmåling af MPPT'erne
+        PWM_out			: out std_logic						--! Output fra PWM modulet til buck/boost converteren
       ) ;
-  end MPPT ;
+end MPPT ;
 
-  architecture arch of MPPT is
+--! Signaler og komponenter der anvendes af MPPT'en.
+architecture arch of MPPT is
 
 	signal adc_clk			: unsigned(15 downto 0); 			--! Signal til at downscale main clock.
 	signal result_sig_volt	: std_logic_vector(7 downto 0); 	--! Vector til at gemme resultatet fra ADC.
@@ -61,7 +64,7 @@ begin
 	--! ADC til måling af volt over solcellerne.
 	adc_volt : ADC port map (
 			clk 				=> adc_clk(15), 				--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
-			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0), 	--! Forbindelse fra ADC'en og videre ud til GPIO pins.
+			gpio1				=> ADC_Volt_out, 				--! Forbindelse fra ADC'en og videre ud til GPIO pins.
 			result_sig_out		=> result_sig_volt,				--! Forbindelse for at få resultatet ud af submodulet.
 			add_sub_sig 		=> add_sub_sig(0)				--! Forbindelse for at få signalet fra komparator komponenten ind i submodulet.
 		);
@@ -69,7 +72,7 @@ begin
 	--! ADC til måling af volt over shuntmodstand, hvilket er afhængig af strømmen igennem mondstanden.
 	adc_curr : ADC port map(
 			clk					=> adc_clk(15),					--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
-			gpio1(7 downto 0)	=> ADC_Curr_out(7 downto 0),	--! Forbindelse fra ADC'en og videre ud til GPIO pins.
+			gpio1				=> ADC_Curr_out,				--! Forbindelse fra ADC'en og videre ud til GPIO pins.
 			result_sig_out		=> result_sig_curr,				--! Forbindelse for at få resultatet ud af submodulet.
 			add_sub_sig 		=> add_sub_sig(1)				--! Forbindelse for at få signalet fra komparator komponenten ind i submodulet.
 		);
@@ -91,7 +94,7 @@ begin
 			exOut16(2 downto 0)  	=> comp_out(2 downto 0)			--! Resultat fra sixteenbitcomparatoren forbindes.
 		);
 
-	--! Clockscaler: downscale fra main-clk til ADC, for at comparator modulet kan følge med.
+	--! Clockscaler: downscale fra main-clk til ADC, for at den fysiske comparator kan følge med.
 	clockscaler : process( all )
 	begin
 		if rising_edge(main_clk) then
@@ -110,7 +113,7 @@ begin
 	--!  Ganger resultaterne fra de to ADC'er sammen til en repræsentation af effekten.
 	result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 	
-	--! MPPT algoritme, lavet som en peturb and observe with constant stepsizes.
+	--! MPPT algoritme, lavet som en perturb and observe med konstant stepsizes.
 	--! Første skridt bliver der altid lagt til duty-cycle og vej_h bliver sat til '0'.
 	--! Herefter bliver der lavet en ny måling, som bliver holdt op imod den tidligere måling.
 	--! Er den nye måling større end den forrige vil der igen blive lagt til duty-cycle og vej_h sættes til '0'.
