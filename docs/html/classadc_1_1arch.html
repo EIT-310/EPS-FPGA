@@ -113,10 +113,12 @@ Components</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Types" name="Types"></a>
 Types</h2></td></tr>
  <tr class="memitem:a160afa284d58f4f8edeccd18dc8c8852"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc_1_1arch.html#a160afa284d58f4f8edeccd18dc8c8852">byte_arr</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a160afa284d58f4f8edeccd18dc8c8852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array type med 8 pladser til 8bit tal.  <a href="#a160afa284d58f4f8edeccd18dc8c8852"></a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Signals" name="Signals"></a>
 Signals</h2></td></tr>
  <tr class="memitem:a1bb3012cfa65657cca1aecb75df72649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc_1_1arch.html#a1bb3012cfa65657cca1aecb75df72649">dataa_arr</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><a class="el" href="classadc_1_1arch.html#a160afa284d58f4f8edeccd18dc8c8852">byte_arr</a></b> <span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a1bb3012cfa65657cca1aecb75df72649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array til at holde midlertidige adder input og output.  <a href="#a1bb3012cfa65657cca1aecb75df72649"></a><br /></td></tr>
 <tr class="memitem:a7fc7de6105536abb209682866d70c1d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc_1_1arch.html#a7fc7de6105536abb209682866d70c1d1">rotate</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="keyword">&quot; 10000000 &quot;</span><span class="vhdlchar"> </span></b></td></tr>
 <tr class="memitem:a2f5d300cf3e758b6f45d76245f81784f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadc_1_1arch.html#a2f5d300cf3e758b6f45d76245f81784f">sel_sig</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">2</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
 <tr class="memdesc:a2f5d300cf3e758b6f45d76245f81784f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input til sw multiplexer for at skrive adder outputs ud til R2R-ladder.  <a href="#a2f5d300cf3e758b6f45d76245f81784f"></a><br /></td></tr>
@@ -231,6 +233,8 @@ Instantiations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Array type med 8 pladser til 8bit tal. </p>
+
 </div>
 </div>
 <a id="a1bb3012cfa65657cca1aecb75df72649" name="a1bb3012cfa65657cca1aecb75df72649"></a>
@@ -252,6 +256,8 @@ Instantiations</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Array til at holde midlertidige adder input og output. </p>
 
 </div>
 </div>
@@ -298,6 +304,7 @@ Instantiations</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Hver cyklus bliver denne roteret højre om. Den agerer både som den værdi der lægges til / trækkes fra, og de individuelle bits aktiverer de respektive adder submoduler </p>
 
 </div>
 </div>
@@ -322,7 +329,6 @@ Instantiations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Input til sw multiplexer for at skrive adder outputs ud til R2R-ladder. </p>
-<p >Hver cyklus bliver denne roteret højre om. Den agerer både som den værdi der lægges til / trækkes fra, og de individuelle bits aktiverer de respektive adder submoduler </p>
 
 </div>
 </div>

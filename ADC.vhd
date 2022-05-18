@@ -16,12 +16,14 @@ end adc ;
 
 architecture arch of adc is
 		
-	type byte_arr is array (7 downto 0) of std_logic_vector (7 downto 0);
-	signal dataa_arr: byte_arr;
+	type byte_arr is array (7 downto 0) of std_logic_vector (7 downto 0); 	--! Array type med 8 pladser til 8bit tal 
+	signal dataa_arr: byte_arr; 											--! Array til at holde midlertidige adder input og output 
 
-    signal rotate 	: std_logic_vector(7 downto 0) := "10000000";	--! Hver cyklus bliver denne roteret højre om. Den agerer både som den
-																	--! værdi der lægges til / trækkes fra, og de individuelle bits aktiverer
-																	--! de respektive adder submoduler
+	--! Hver cyklus bliver denne roteret højre om. Den agerer både som den
+	--! værdi der lægges til / trækkes fra, og de individuelle bits aktiverer
+	--! de respektive adder submoduler
+    signal rotate 	: std_logic_vector(7 downto 0) := "10000000";	
+														
 	signal sel_sig 	: std_logic_vector(2 downto 0);					--! Input til sw multiplexer for at skrive adder outputs ud til R2R-ladder
 	signal result_sig: std_logic_vector(7 downto 0);				--! Endelige spænding fundet, opdateres hver gang ADC har kørt en omgang
 
