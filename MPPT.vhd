@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
---! 
+--! Submodul for MPPT'en opstilles.
 entity MPPT is
     port (
         ADC_Volt_out	: out std_logic_vector(7 downto 0);
@@ -57,39 +57,38 @@ entity MPPT is
   
 
 begin
-	--! Her kaldes alle instances af submodulerne.
 	
 	--! ADC til måling af volt over solcellerne.
 	adc_volt : ADC port map (
-			clk 				=> adc_clk(15), 				--! Clock til adc
-			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0), 	
-			result_sig_out		=> result_sig_volt,
-			add_sub_sig 		=> add_sub_sig(0)
+			clk 				=> adc_clk(15), 				--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
+			gpio1(7 downto 0)	=> ADC_Volt_out(7 downto 0), 	--! Forbindelse fra ADC'en og videre ud til GPIO pins.
+			result_sig_out		=> result_sig_volt,				--! Forbindelse for at få resultatet ud af submodulet.
+			add_sub_sig 		=> add_sub_sig(0)				--! Forbindelse for at få signalet fra komparator komponenten ind i submodulet.
 		);
 
 	--! ADC til måling af volt over shuntmodstand, hvilket er afhængig af strømmen igennem mondstanden.
 	adc_curr : ADC port map(
-			clk					=> adc_clk(15),
-			gpio1(7 downto 0)	=> ADC_Curr_out(7 downto 0),
-			result_sig_out		=> result_sig_curr,
-			add_sub_sig 		=> add_sub_sig(1)
+			clk					=> adc_clk(15),					--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
+			gpio1(7 downto 0)	=> ADC_Curr_out(7 downto 0),	--! Forbindelse fra ADC'en og videre ud til GPIO pins.
+			result_sig_out		=> result_sig_curr,				--! Forbindelse for at få resultatet ud af submodulet.
+			add_sub_sig 		=> add_sub_sig(1)				--! Forbindelse for at få signalet fra komparator komponenten ind i submodulet.
 		);
 
-	--! PWM generator til buck/boost conveteren.
+	--! PWM generator til buck/boost converteren.
 	PWM_comp : PWM_submodule port map (
-			pwm_out 		=> PWM_out,
-			duty_cycle 		=> std_logic_vector(duty_cycle),
-			clk 			=> main_clk
+			pwm_out 		=> PWM_out,							--! PWM signalets output forbindes.
+			duty_cycle 		=> std_logic_vector(duty_cycle),	--! duty_cycle forbindes, så det kan bruges i algoritmen.
+			clk 			=> main_clk							--! clock til at generere PWM signalet.
 		);
 
 	--! Sixteenbitcomparator til at compare effekten fra solcellerne.
 	Comp1 : sixteenBitComparator port map ( 
-			saveA16(15 downto 0) 	=> result_sig(15 downto 0),
-			saveB16(15 downto 0) 	=> result_sig_old(15 downto 0),
-			exIn16(1) 			 	=> '1',
-			exIn16(2)				=> '0',
-			exIn16(0)				=> '0',
-			exOut16(2 downto 0)  	=> comp_out(2 downto 0)
+			saveA16(15 downto 0) 	=> result_sig(15 downto 0),		--! Signal for den nye måling af effekten solcellerne producere.
+			saveB16(15 downto 0) 	=> result_sig_old(15 downto 0),	--! Signal for den gamle måling af effekten solcellerne producere.
+			exIn16(1) 			 	=> '1',							--! Decimaltal sættes til at lige store, så det kun er de 16 bit der bliver comparet.
+			exIn16(2)				=> '0',							--! Decimaltal sættes til ikke at være større eller mindre end hinanden.
+			exIn16(0)				=> '0',							--! Decimaltal sættes til ikke at være større eller mindre end hinanden.
+			exOut16(2 downto 0)  	=> comp_out(2 downto 0)			--! Resultat fra sixteenbitcomparatoren forbindes.
 		);
 
 	--! Clockscaler: downscale fra main-clk til ADC, for at comparator modulet kan følge med.
@@ -100,7 +99,7 @@ begin
 		end if ;
 	end process ; -- clockscaler
 
-	--Clockscaler: Downscale adc-clk (adc_clk(15)) til MPPT_clk
+	--Clockscaler: Downscale adc-clk (adc_clk(15)) til MPPT_clk, så MPPT'en kun kører når der er kommet nye ADC målinger.
 	PWM_clockscaler : process( all )
 	begin
 		if falling_edge(adc_clk(15)) then
@@ -108,11 +107,15 @@ begin
 		end if ;
 	end process ; -- PWM_clockscaler
 
-	--!  Ganger resultaterne fra de to adc sammen til en repræsentation af effekten.
+	--!  Ganger resultaterne fra de to ADC'er sammen til en repræsentation af effekten.
 	result_sig(15 downto 0) <= std_logic_vector(unsigned(result_sig_curr(7 downto 0)) * unsigned(result_sig_volt(7 downto 0)));
 	
-	
-	MPPT_algoritme : process( all )
+	--! MPPT algoritme, lavet som en peturb and observe with constant stepsizes.
+	--! Første skridt bliver der altid lagt til duty-cycle og vej_h bliver sat til '0'.
+	--! Herefter bliver der lavet en ny måling, som bliver holdt op imod den tidligere måling.
+	--! Er den nye måling større end den forrige vil der igen blive lagt til duty-cycle og vej_h sættes til '0'.
+	--! Er den nye måling mindre end den forrige vil der blive trukket en fra duty-cycle og vej_h vil blive sat til '1'.
+		MPPT_algoritme : process( all )
 		begin
 				--!  MPPT algoritme
 				if rising_edge( MPPT_clk(2) ) then

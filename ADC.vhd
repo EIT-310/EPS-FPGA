@@ -1,7 +1,7 @@
 library ieee ;
     use ieee.std_logic_1164.all ;
     use ieee.numeric_std.all ;
-
+	--! Adc submodul bliver opstillet.
     entity adc is
     port (
     clk         : in std_logic;
@@ -19,6 +19,7 @@ architecture arch of adc is
     signal rotate 	: std_logic_vector(7 downto 0) := "10000000";
 	signal sel_sig 	: std_logic_vector(2 downto 0);
 	signal result_sig: std_logic_vector(7 downto 0);
+	--! Her bliver adder submodulet defineret.
     component adder is
 		port (
 		  clock : in std_logic;
@@ -30,19 +31,20 @@ architecture arch of adc is
 	end component;
 
 begin
-	--always start ADC in middle
+	--! Her sættes startværdien, så ADC'en altid starter i midten.
 	dataa_arr(0)<= "10000000";
 
+	--! For loop for at generere resultatet af ADC målingen. 
 	outputt : for i in 0 to 7 generate
 		result_sig_out(i)<=dataa_arr(7)(i);
 	end generate ; -- outputt
 
-	-- Write multiplexer output to DAC
+	--! Write multiplexer output to DAC.
 	GPIO_write : for i in 0 to 7 generate
 		gpio1(i) <= result_sig(7-i);
 	end generate ; -- GPIO_write 
 	
-	-- Rotate data to be added/subtracted
+	--! Rotate data to be added/subtracted
 	rotator : process(clk)
 	begin
 			if rising_edge(clk) then
@@ -51,7 +53,7 @@ begin
 	end process ; -- rotator
 	
 
-	-- Generate 6 Addders
+	--! Generate 6 Addders
 	adder_loop : for i in 0 to 6 generate
 		adder_inst : adder port map (
 			clock => rotate(6-i),
@@ -62,7 +64,7 @@ begin
 		);
 	end generate ; -- adder_loop
 	
-	-- Multiplexer for DAC
+	--! Multiplexer for DAC
 	with rotate select result_sig <=
 		dataa_arr(0) when "10000000", -- Do nothing first cycle
 		dataa_arr(0) when "01000000", -- Write prev. byte to DAC when add/sub  

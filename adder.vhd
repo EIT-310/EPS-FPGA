@@ -1,7 +1,7 @@
 library ieee ;
     use ieee.std_logic_1164.all ;
     use ieee.numeric_std.all ;
-
+--! Her opstilles submodul til adder.
 entity adder is
   port (
     clock : in std_logic;
@@ -19,7 +19,9 @@ architecture arch of adder is
     signal u_result: unsigned (7 downto 0);
 
 begin
-    
+    --! Process der styres af signalet add_sub.
+    --! Er add_sub = '1', vil u_dataa og u_datab blive lagt sammen og gemt i u_result.
+    --! Er add_sub = '0', vil u_datab blive trukket fra u_dataa og gemt i u_result.
     artih : process( all )
     begin
         if (falling_edge(clock)) then
