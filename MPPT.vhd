@@ -21,7 +21,7 @@ end MPPT ;
 --! Signaler og komponenter der anvendes af MPPT'en.
 architecture arch of MPPT is
 
-	signal adc_clk			: unsigned(15 downto 0); 			--! Signal til at downscale main clock.
+	signal adc_clk			: unsigned(9 downto 0); 			--! Signal til at downscale main clock.
 	signal result_sig_volt	: std_logic_vector(7 downto 0); 	--! Vector til at gemme resultatet fra ADC.
 	signal result_sig_curr	: std_logic_vector(7 downto 0); 	--! Vector til at gemme resultatet fra ADC.
 	signal result_sig 		: std_logic_vector(15 downto 0); 	--! Vector til at gemme resultatet fra ADC.
@@ -64,7 +64,7 @@ begin
 	
 	--! ADC til måling af volt over solcellerne.
 	adc_volt : ADC port map (
-			clk 				=> adc_clk(15), 				--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
+			clk 				=> adc_clk(9), 				--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
 			gpio1				=> ADC_Volt_out, 				--! Forbindelse fra ADC'en og videre ud til GPIO pins.
 			result_sig_out		=> result_sig_volt,				--! Forbindelse for at få resultatet ud af submodulet.
 			add_sub_sig 		=> add_sub_sig(0)				--! Forbindelse for at få signalet fra komparator komponenten ind i submodulet.
@@ -72,7 +72,7 @@ begin
 
 	--! ADC til måling af volt over shuntmodstand, hvilket er afhængig af strømmen igennem mondstanden.
 	adc_curr : ADC port map(
-			clk					=> adc_clk(15),					--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
+			clk					=> adc_clk(9),					--! Clock til adc. Denne er downscalet for at de fysiske komponenter kan følge med.
 			gpio1				=> ADC_Curr_out,				--! Forbindelse fra ADC'en og videre ud til GPIO pins.
 			result_sig_out		=> result_sig_curr,				--! Forbindelse for at få resultatet ud af submodulet.
 			add_sub_sig 		=> add_sub_sig(1)				--! Forbindelse for at få signalet fra komparator komponenten ind i submodulet.
